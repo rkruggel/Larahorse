@@ -1,0 +1,59 @@
+/*
+ * Projekt  Larahorse
+ * ----------------------------------------------------
+ *
+ * Copyright (c) 2020-2020,  Roland Kruggel
+ * All Rights Reserved.
+ * License: MIT
+ *
+ * @author		Roland Kruggel, rkruggel@bbf7.de
+ * @file		app.css
+ * @path		/home/roland/Develop/Larahorse/public/css/app.css
+ * @lastChange	20.11.20, 10:22 by roland
+ */
+
+.maincontainer {
+  margin-top: 0.1em;
+}
+
+.tbl {
+  margin-top: 1em;
+  margin-left: 0.5em;
+}
+
+.tbl td {
+  color: darkgray;
+  padding-right: 1em;
+  font-size: small;
+}
+
+.setable {
+  margin-top: 1em;
+  margin-left: 0.5em;
+}
+
+.setable td {
+  color: darkgray;
+  padding-right: 1em;
+  font-size: small;
+}
+
+#message {
+  position: fixed;
+  top: 70px;
+  left: 10px;
+  width: 230px;
+}
+
+#message .m1 {
+  padding: 5px;
+}
+
+#message .inner {
+  margin: 0 auto;
+}
+
+h2 {
+  color: red;
+}
+
