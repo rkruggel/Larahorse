@@ -1,5 +1,5 @@
 # Larahorse
 
-Larahorse ist ein Programm zr Verwaltung von Pferdeställem und Pferdestallbetrieben.
+Larahorse ist ein Programm zur Verwaltung von Pferdeställem und Pferdestallbetrieben.
 
 rkruggel
