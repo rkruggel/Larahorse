@@ -1,7 +1,7 @@
 # Larahorse - Git-Install
 
 
-nach dem auscecken:
+Nach dem Auschecken:
 > npm install
 
 ## Sass & css
