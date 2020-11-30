@@ -1,12 +1,54 @@
 # Larahorse
 
+Inhalt
+
+- [Allgemeines](#allgemeines)
+- [Die vier Hauptgruppen](#dievierhauptgruppen)
+  - [Personen](#personen)
+  - [Tiere](#tiere)
+  - [Gebäude](#gebaeude)
+  - [Geräte](#geraete)
+- [Der technische Aufbau](#dertechnischeaufbau)
+  - [Die Datenbank](#diedatenbank)
+  - [Die Datenbank Alternative](#diedatenbankalternative)
+  - [Das Json in FIELDS](#dasjsoninfields)
+- [Menüs](#menues)
+  - [Allgemein](#menuesallgemein)
+
+
+
+<a name=""/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a name="allgemeines"/>
+
+## Allgemeines
+
 Larahorse ist ein Programm zur Verwaltung von Pferdeställem und 
 Pferdestallbetrieben.
 
 Copyright Roland Kruggel, August 2020
 Alle Rechte Vorbehalten
-
-[ein link test](#uuu)
 
 Es werden folgende Teile verwaltet:
 
@@ -15,7 +57,14 @@ Es werden folgende Teile verwaltet:
 - Die Gebäude
 
 
+
+
+
+<a name="dievierhauptgruppen"/>
+
 ## Die vier Hauptgruppen 
+
+<a name="personen"/>
 
 ### Die Personen
 
@@ -44,7 +93,8 @@ ist verbunden mit:
   - Ein Einsteller hat eine mehrere Freunde
 
 
- 
+<a name="tiere"/>
+
 ### Die Tiere
 
 Die meisten Tiere, die sich in einem Pferdestall befinden, werden wohl 
@@ -68,6 +118,8 @@ ist verbunden mit:
 - einem Bewegungsplan
 
 
+<a name="gebaeude"/>
+
 ### Die Gebäude
 
 Zu den Gebäuden gehören neben Pferdeställen auch Reithallen, Reitplätze, 
@@ -76,6 +128,7 @@ Reiterstübchen.
 
 Die Plätze sind verknüpft mit Pferden und Personen.
 
+<a name="geraete"/>
 
 ### Die Geräte
 
@@ -83,8 +136,11 @@ Geräte sind der Springparcurs, Stangen, Pilonen, etc. sowie Gerten,
 Stricke, Sättel (die nicht privat sind) ebenso der Trecker zum Platz 
 abziehen und die Firmenfahrzeuge wie die Heckenschere und der Rasenmäher. 
 
+<a name="dertechnischeaufbau"/>
 
 ## Der technische Aufbau
+
+<a name="diedatenbank"/>
 
 ### Die Datenbank
 
@@ -121,12 +177,14 @@ eine gewisse Einheitlichkeit erzeugt werden kann.
 
 
 
+<a name="diedatenbankalternative"/>
 
 ### Die Datenbank Alternative
 
 Der gesamte Part *Datenbank* kann auch mit einer MongoDB abgedeckt werden. Muss noch geprüft werden.
 
 
+<a name="dasjsoninfields"/>
 
 ### Das Json in FIELDS
 
@@ -198,7 +256,11 @@ So werden die Daten gespeichert.
 </pre>
 
 
+<a name="menues"/>
+
 ## Menüs
+
+<a name="menuesallgemein"/>
 
 #### Allgemein
 
@@ -209,9 +271,7 @@ das drei Menüpunkte
 - Tiere
 - Gebäude
 
-<a name="uuu"/>
 
-## uuu
 
 Der Header enthält die Schaltleiste
 
