@@ -3,6 +3,11 @@
 Larahorse ist ein Programm zur Verwaltung von Pferdeställem und 
 Pferdestallbetrieben.
 
+Copyright Roland Kruggel, August 2020
+Alle Rechte Vorbehalten
+
+[ein link test](uuu)
+
 Es werden folgende Teile verwaltet:
 
 - Die Personen
@@ -17,7 +22,7 @@ Es werden folgende Teile verwaltet:
 #### Allgemein
 
 Personen sind Einsteller, Reitbeteiligungen, Pflegepersonen, aber 
-auch Reitlerer, Trainer, Putz- und Mistpersonal. Des weiteren gehören
+auch Reitlerer, Trainer, Putz- und Mistpersonal. Des Weiteren gehören
 Tierärzte, Physio- und Osteopathen etc., Hufschmiede und -pfleger dazu. 
 Der/die Stallbetreiber gehören auch dazu.
 
@@ -192,5 +197,20 @@ So werden die Daten gespeichert.
 }
 </pre>
 
---  
-rkruggel, August 2020
+
+## Menüs
+
+#### Allgemein
+
+Das Menü spiegelt die Daten-Tabellen der Datenbank wider. In unserem Fall sind
+das drei Menüpunkte
+
+- Personen
+- Tiere
+- Gebäude
+
+
+## uuu
+Der Header enthält die Schaltleiste
+
+
