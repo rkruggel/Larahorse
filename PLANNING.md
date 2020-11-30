@@ -273,7 +273,23 @@ das drei Menüpunkte
 - Gebäude
 
 
-Der Header enthält die [Schaltleiste](#dieschaltleiste).
+Der Header enthält die [Schaltleiste](#dieschaltleiste). Hier kann man neue Tabellen 
+erzeugen. Die Eintragung in das Menü erfolgt dann automatisch.
+
+Beim Erzeugen einer neuen Tabelle werden folgende Aktionen ausgeführt:
+
+**Die Tabelle**   
+Es wird die Tabelle mit dem angegebenen Namen erzeugt. Sie enthält die 
+Felder  ID(int), NAME(string), TYPE(string), DEPENDENCY(string), 
+FIELDS(json) und FIELDSMETA(string).
+
+**Eintrag in Tablesmenu**   
+Der Name der Tabelle wird hier eingetragen. Aus dieser Tabelle wird dann das 
+Menu erzeugt und angezeigt.
+
+**Die Page wird erzeugt**   
+Eine Seite wird für diese Tabelle erzeugt. Auch sie bekommt eine 
+[Schaltleiste](#dieschaltleiste).
 
 
 <a name="dieschaltleiste"/>
@@ -281,6 +297,8 @@ Der Header enthält die [Schaltleiste](#dieschaltleiste).
 ### Die Schaltleiste
 
 Die Schaltleiste ist eine kleine Menüleiste und befindet sich in der Regel im Header
-eines jeden Fenster. In ihr sind Schaltflächen untergebracht die für die Steuerung 
-des entsprechenden Fensters zuständig sind. Es ist immer ein Button <...> vorhanden 
+eines jeden Fenster. In ihr sind Schaltflächen untergebracht, die für die Steuerung 
+des entsprechenden Fensters zuständig sind und es ist immer ein Button <...> vorhanden 
 mit einem Aufklappmenu. Hier gibt es Menüpunkte, die zu diesem Fenser aktuell sind.
+
+
