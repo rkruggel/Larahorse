@@ -14,8 +14,9 @@ Inhalt
   - [Das Json in FIELDS](#dasjsoninfields)
 - [Menüs](#menues)
   - [Allgemein](#menuesallgemein)
-
-
+  - [Die Schaltleiste](#dieschaltleiste)
+  
+ 
 
 <a name=""/>
 
@@ -262,7 +263,7 @@ So werden die Daten gespeichert.
 
 <a name="menuesallgemein"/>
 
-#### Allgemein
+### Allgemein
 
 Das Menü spiegelt die Daten-Tabellen der Datenbank wider. In unserem Fall sind
 das drei Menüpunkte
@@ -272,7 +273,14 @@ das drei Menüpunkte
 - Gebäude
 
 
+Der Header enthält die [Schaltleiste](#dieschaltleiste).
 
-Der Header enthält die Schaltleiste
 
+<a name="dieschaltleiste"/>
 
+### Die Schaltleiste
+
+Die Schaltleiste ist eine kleine Menüleiste und befindet sich in der Regel im Header
+eines jeden Fenster. In ihr sind Schaltflächen untergebracht die für die Steuerung 
+des entsprechenden Fensters zuständig sind. Es ist immer ein Button <...> vorhanden 
+mit einem Aufklappmenu. Hier gibt es Menüpunkte, die zu diesem Fenser aktuell sind.
