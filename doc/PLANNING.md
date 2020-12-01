@@ -3,22 +3,21 @@
 Inhalt
 
 - [Allgemeines](#allgemeines)
-- [Die vier Hauptgruppen](#dievierhauptgruppen)
+- [Die vier Hauptgruppen](#die-vier-hauptgruppen)
   - [Personen](#personen)
   - [Tiere](#tiere)
-  - [Gebäude](#gebaeude)
-  - [Geräte](#geraete)
+  - [Gebäude](#gebäude)
+  - [Geräte](#geräte)
 - [Menüs](#menüs)
   - [Allgemein](#menuesallgemein)
-  - [Die Schaltleiste](#dieschaltleiste)
-- [Der technische Aufbau](#dertechnischeaufbau)
-  - [Die Datenbank](#diedatenbank)
-  - [Die Datenbank Alternative](#diedatenbankalternative)
-  - [Das Json in FIELDS](#dasjsoninfields)
+  - [Die Schaltleiste](#die-schaltleiste)
+- [Der technische Aufbau](#der-technische-aufbau)
+  - [Die Datenbank](#die-datenbank)
+  - [Die Datenbank Alternative](#die-datenbank-alternative)
+  - [Das Json in FIELDS](#das-json-in-fields)
   
  
 
-<a name=""/>
 
 
 
@@ -41,7 +40,6 @@ Inhalt
 
 
 
-<a name="allgemeines"/>
 
 ## Allgemeines
 
@@ -61,11 +59,8 @@ Es werden folgende Teile verwaltet:
 
 
 
-<a name="dievierhauptgruppen"/>
 
 ## Die vier Hauptgruppen 
-
-<a name="personen"/>
 
 ### Die Personen
 
@@ -94,7 +89,6 @@ ist verbunden mit:
   - Ein Einsteller hat eine mehrere Freunde
 
 
-<a name="tiere"/>
 
 ### Die Tiere
 
@@ -119,7 +113,6 @@ ist verbunden mit:
 - einem Bewegungsplan
 
 
-<a name="gebaeude"/>
 
 ### Die Gebäude
 
@@ -129,7 +122,7 @@ Reiterstübchen.
 
 Die Plätze sind verknüpft mit Pferden und Personen.
 
-<a name="geraete"/>
+
 
 ### Die Geräte
 
@@ -153,11 +146,10 @@ abziehen und die Firmenfahrzeuge wie die Heckenschere und der Rasenmäher.
 
 
 
-<a hname="mhhenhhues"/>
 
 ## Menüs
 
-<a name="menuesallgemein"/>
+
 
 ### Allgemein
 
@@ -188,7 +180,6 @@ Eine Seite wird für diese Tabelle erzeugt. Auch sie bekommt eine
 [Schaltleiste](#dieschaltleiste).
 
 
-<a name="dieschaltleiste"/>
 
 ### Die Schaltleiste
 
@@ -223,11 +214,8 @@ mit einem Aufklappmenu. Hier gibt es Menüpunkte, die zu diesem Fenser aktuell s
 
 
 
-<a name="dertechnischeaufbau"/>
 
 ## Der technische Aufbau
-
-<a name="diedatenbank"/>
 
 ### Die Datenbank
 
@@ -264,14 +252,12 @@ eine gewisse Einheitlichkeit erzeugt werden kann.
 
 
 
-<a name="diedatenbankalternative"/>
 
 ### Die Datenbank Alternative
 
 Der gesamte Part *Datenbank* kann auch mit einer MongoDB abgedeckt werden. Muss noch geprüft werden.
 
 
-<a name="dasjsoninfields"/>
 
 ### Das Json in FIELDS
 
