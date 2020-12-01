@@ -10,6 +10,10 @@ Alle Rechte vorbehalten
 
 
 
-- [Allgemeines]([[_allgemeines]] _allgemeines.md)
-- [Der Rest]([[_planning]] _planning.md)
-- 
+- [Allgemeines](_allgemeines.md)
+
+
+- [Der Rest](_planning.md)
+- [Technik](_technik.md)
+
+
