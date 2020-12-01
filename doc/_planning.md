@@ -22,32 +22,8 @@ Inhalt
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Allgemeines
 
-Larahorse ist ein Programm zur Verwaltung von Pferdeställem und 
-Pferdestallbetrieben.
-
-Copyright Roland Kruggel, August 2020
-Alle Rechte Vorbehalten
 
 Es werden folgende Teile verwaltet:
 
