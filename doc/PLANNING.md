@@ -8,7 +8,7 @@ Inhalt
   - [Tiere](#tiere)
   - [Gebäude](#gebaeude)
   - [Geräte](#geraete)
-- [Menüs](#menues)
+- [Menüs](#menüs)
   - [Allgemein](#menuesallgemein)
   - [Die Schaltleiste](#dieschaltleiste)
 - [Der technische Aufbau](#dertechnischeaufbau)
