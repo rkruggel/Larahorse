@@ -1,7 +1,7 @@
 ## Allgemeines
 
 Larahorse ist ein Programm zur Verwaltung von Pferdeställe und 
-Pferdestallbetrieben.
+Pferdestallbetrieben. .
 
 Larahorse ist ein vom User erweiterbares System. Es können verschiedene Tabellen und die dazugehörigen Webseiten erstellt werden. Alle Attribute der Tabellen und Seiten sind frei definierbar. Abhängigkeiten von verschiedenen Tabellen können definiert werden.
 
