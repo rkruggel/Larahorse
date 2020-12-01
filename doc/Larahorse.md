@@ -11,9 +11,13 @@ Alle Rechte vorbehalten
 
 
 - [Allgemeines](_allgemeines.md)
-
-
-- [Der Rest](_planning.md)
 - [Technik](_technik.md)
+- [technischer Aufbau](technischeraufbau.md)
+
+
+muss noch umgestellt werden. 
+
+- [Der Rest](_planning.md) (old: planning)
+ 
 
 
