@@ -8,13 +8,13 @@ Inhalt
   - [Tiere](#tiere)
   - [Gebäude](#gebaeude)
   - [Geräte](#geraete)
+- [Menüs](#menues)
+  - [Allgemein](#menuesallgemein)
+  - [Die Schaltleiste](#dieschaltleiste)
 - [Der technische Aufbau](#dertechnischeaufbau)
   - [Die Datenbank](#diedatenbank)
   - [Die Datenbank Alternative](#diedatenbankalternative)
   - [Das Json in FIELDS](#dasjsoninfields)
-- [Menüs](#menues)
-  - [Allgemein](#menuesallgemein)
-  - [Die Schaltleiste](#dieschaltleiste)
   
  
 
@@ -137,6 +137,92 @@ Geräte sind der Springparcurs, Stangen, Pilonen, etc. sowie Gerten,
 Stricke, Sättel (die nicht privat sind) ebenso der Trecker zum Platz 
 abziehen und die Firmenfahrzeuge wie die Heckenschere und der Rasenmäher. 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a name="menues"/>
+
+## Menüs
+
+<a name="menuesallgemein"/>
+
+### Allgemein
+
+Das Menü spiegelt die Daten-Tabellen der Datenbank wider. In unserem Fall sind
+das drei Menüpunkte
+
+- Personen
+- Tiere
+- Gebäude
+
+
+Der Header enthält die [Schaltleiste](#dieschaltleiste). Hier kann man neue Tabellen 
+erzeugen. Die Eintragung in das Menü erfolgt dann automatisch.
+
+Beim Erzeugen einer neuen Tabelle werden folgende Aktionen ausgeführt:
+
+**Die Tabelle**   
+Es wird die Tabelle mit dem angegebenen Namen erzeugt. Sie enthält die 
+Felder  ID(int), NAME(string), TYPE(string), DEPENDENCY(string), 
+FIELDS(json) und FIELDSMETA(string).
+
+**Eintrag in Tablesmenu**   
+Der Name der Tabelle wird hier eingetragen. Aus dieser Tabelle wird dann das 
+Menu erzeugt und angezeigt.
+
+**Die Page wird erzeugt**   
+Eine Seite wird für diese Tabelle erzeugt. Auch sie bekommt eine 
+[Schaltleiste](#dieschaltleiste).
+
+
+<a name="dieschaltleiste"/>
+
+### Die Schaltleiste
+
+Die Schaltleiste ist eine kleine Menüleiste und befindet sich in der Regel im Header
+eines jeden Fenster. In ihr sind Schaltflächen untergebracht, die für die Steuerung 
+des entsprechenden Fensters zuständig sind und es ist immer ein Button <...> vorhanden 
+mit einem Aufklappmenu. Hier gibt es Menüpunkte, die zu diesem Fenser aktuell sind.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <a name="dertechnischeaufbau"/>
 
 ## Der technische Aufbau
@@ -255,50 +341,4 @@ So werden die Daten gespeichert.
   }
 }
 </pre>
-
-
-<a name="menues"/>
-
-## Menüs
-
-<a name="menuesallgemein"/>
-
-### Allgemein
-
-Das Menü spiegelt die Daten-Tabellen der Datenbank wider. In unserem Fall sind
-das drei Menüpunkte
-
-- Personen
-- Tiere
-- Gebäude
-
-
-Der Header enthält die [Schaltleiste](#dieschaltleiste). Hier kann man neue Tabellen 
-erzeugen. Die Eintragung in das Menü erfolgt dann automatisch.
-
-Beim Erzeugen einer neuen Tabelle werden folgende Aktionen ausgeführt:
-
-**Die Tabelle**   
-Es wird die Tabelle mit dem angegebenen Namen erzeugt. Sie enthält die 
-Felder  ID(int), NAME(string), TYPE(string), DEPENDENCY(string), 
-FIELDS(json) und FIELDSMETA(string).
-
-**Eintrag in Tablesmenu**   
-Der Name der Tabelle wird hier eingetragen. Aus dieser Tabelle wird dann das 
-Menu erzeugt und angezeigt.
-
-**Die Page wird erzeugt**   
-Eine Seite wird für diese Tabelle erzeugt. Auch sie bekommt eine 
-[Schaltleiste](#dieschaltleiste).
-
-
-<a name="dieschaltleiste"/>
-
-### Die Schaltleiste
-
-Die Schaltleiste ist eine kleine Menüleiste und befindet sich in der Regel im Header
-eines jeden Fenster. In ihr sind Schaltflächen untergebracht, die für die Steuerung 
-des entsprechenden Fensters zuständig sind und es ist immer ein Button <...> vorhanden 
-mit einem Aufklappmenu. Hier gibt es Menüpunkte, die zu diesem Fenser aktuell sind.
-
 
