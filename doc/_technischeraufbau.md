@@ -20,27 +20,41 @@ Wir müssen also zuerst mal eine Tabelle erstellen. In der Schaltleiste befindet
 Klicken sie im Seitenmenü auf *Einsteller*. Im Bereich Main-Screen öffnet sich der Bildschirm für die Tabelle, die wir gerade erzeugt haben. Sie besteht im Moment nur aus dem Namen und der Schaltleiste.
 
 #### Die Schaltleiste
-Die Schaltleiste befindet sich im Seitenmenu, im Main-Screen und in jedem Detail-Screen. Sie dient zur Steuerung der eintelnen Aktionen die in diesem Fenster möglich sind. Manche Elemente sind gleich, viele Elemente sind jedoch speziell für das entsprechende Fenster.
+Die Schaltleiste befindet sich im Seitenmenu, im Main-Screen und in jedem Detail-Screen. Sie dient zur Steuerung der einzelnen Aktionen, die in diesem Fenster möglich sind. Manche Elemente sind gleich, viele Elemente sind jedoch speziell für das entsprechende Fenster.
 
 #### Das Schema
-Um jetzt in einer Tabelle Daten speichern zu können müssen wir Felder definieren. Die Felder haben Namen und können bestimmte Daten aufnehmen die wiederum von einem definiertem Typ sind. Diese Festlegung nennt man Schema.
+Um jetzt in einer Tabelle Daten speichern zu können müssen sie Felder definieren. Die Felder haben Namen und können bestimmte Daten aufnehmen die wiederum von einem definiertem Typ sind. Diese Festlegung nennt man Schema.
 
-Wenn wir in der Schaltleiste auf *Schema* klicken, geht ein Dialogfenster auf. Hier werden die vohandenen Felder angezeigt. In unserem Fall ist das Fenster noch leer. Wir können nun die ersten Felder eintragen. Da es sich um Personenbezogene Daten handelt geben wir folgende Felder ein
+Wenn sie in der Schaltleiste auf *Schema* klicken, geht ein Dialogfenster auf. Hier werden die vohandenen Felder angezeigt. In unserem Fall ist das Fenster noch leer. Sie können nun die ersten Felder eintragen. Da es sich um Personenbezogene Daten handelt geben wir folgende Felder ein:
 
     Name text 80
     Adresse text 250
     Email text 100
     Datum date
     
-Unser Schema besteht nun aus vier Feldern. Name, Adresse, Email und Datum. Sie sind alle vom Typ text ausser Datum, das ist ein Datumsfeld.
+Ihr Schema besteht nun aus vier Feldern. Name, Adresse, Email und Datum. Sie sind alle vom Typ *text* ausser Datum, das ist ein Datumsfeld und somit vom Typ *date*.
 
 Sie können jetzt die Dialogfenster schließen. Die erste Tabelle mit den entsprechenden Feldern ist erstellt.
 
-#### Daten
-Wenn wir die Dialogfelder geschlossen haben, sehen wir wieder den Main-Screen. Jetzt hat er jedoch vier Felder. Jedoch alle ohne Daten.
+#### Daten erfassen
+Wenn sie die Dialogfelder geschlossen haben, sehen sie wieder den Main-Screen. Jetzt hat er jedoch vier Felder. Jedoch alle ohne Daten.
 
-Das müssen wir ändren. Im der Schltleiste gibt ein '+'-Zeichen. Klicken Sie darauf und sie können den ersten Datensatz erfassen. Ein weiters klicken auf das '+'-Zeichen erfasst den zweiten Datensatz, und so weiter. Die Anzahl der Datensätze ist überigens nicht beschränkt. 
+Das müssen sie ändern. In der Schaltleiste gibt ein '+'-Zeichen. Klicken Sie darauf und sie können den ersten Datensatz erfassen. Ein weiters klicken auf das '+'-Zeichen erfasst den zweiten Datensatz und so weiter. Die Anzahl der Datensätze ist überigens nicht beschränkt. 
 
+#### Daten suchen
 Die Daten werden nun in einer Tabellenform angezeigt. Das ist die einfachste und übersichtlichste Form große Mengen von Daten anzuzeigen.
 
+Um Daten zu suchen haben sie jetzt mehrere Möglichkeiten
 
+1. Sie sortieren die Liste. In der Schaltleiste befindet sich die eintsprechende Schaltfläche. Sie können nach verschiedenen Feldern sortieren, aufsteigend oder absteigend.
+2. Sie filtern die Liste. In der Schaltleiste befindet sich die entsprechende Schaltfläche. Sie können verschiedene Felder nach unterschiedlichen Kriterien filtern. Das aufpoppende Dialogfenster zeigt ihnen verschiedene Möglichkeiten an.
+3. Sie suchen einen ganz bestimmten Datensatz. Sie müssen hier die ID des Datensatzes eingeben. Alles anderen suchen sind nicht eindeutig.
+
+Die Ausgabe aller Suchergebnisse erfolgt in Tabellenform im Main-Screen.
+
+#### Daten anzeigen
+Die Anzeige der Daten, egal ob sortiert und/oder gefiltert, erfolgt in einer Tabellarischen form. In jeder Zeile steht somit ein Datensatz. Dieses ist die ünersichtlichste und am einfachsten zu überschauende form der Datendarstellung. 
+
+Allerdings nur bei wenigen Feldern. Wenn sie eine Tabelle mit fünf Feldern haben in denen jeweils nur 10 Zeichen stehen, ist die Darstellung in einer Zeile sehr übersichtlich. Bei 50 Feldern sieht das schon ganz anders aus. Der Main-Screen wird dann zwar einen horizontalen Slider darstellen, aber das kann auch lästig werden.
+
+Ein 
