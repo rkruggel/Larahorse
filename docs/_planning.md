@@ -39,9 +39,6 @@ Es werden folgende Teile verwaltet:
 ## Die vier Hauptgruppen 
 
 ### Die Personen
-
-#### Allgemein
-
 Personen sind Einsteller, Reitbeteiligungen, Pflegepersonen, aber 
 auch Reitlerer, Trainer, Putz- und Mistpersonal. Des Weiteren gehören
 Tierärzte, Physio- und Osteopathen etc., Hufschmiede und -pfleger dazu. 
@@ -67,7 +64,6 @@ ist verbunden mit:
 
 
 ### Die Tiere
-
 Die meisten Tiere, die sich in einem Pferdestall befinden, werden wohl 
 Pferde sein. Aber es könne auch Esel, Lamas oder auch Hunde sein. Die 
 Verwaltung ist immer die gleiche.
@@ -91,7 +87,6 @@ ist verbunden mit:
 
 
 ### Die Gebäude
-
 Zu den Gebäuden gehören neben Pferdeställen auch Reithallen, Reitplätze, 
 Longierhallen auch Waschplätze, Putzplätze etc. und auch so etwas wie das 
 Reiterstübchen. 
@@ -99,35 +94,14 @@ Reiterstübchen.
 Die Plätze sind verknüpft mit Pferden und Personen.
 
 
-
 ### Die Geräte
-
 Geräte sind der Springparcurs, Stangen, Pilonen, etc. sowie Gerten, 
 Stricke, Sättel (die nicht privat sind) ebenso der Trecker zum Platz 
 abziehen und die Firmenfahrzeuge wie die Heckenschere und der Rasenmäher. 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Menüs
-
-
-
-### Allgemein
 
 Das Menü spiegelt die Daten-Tabellen der Datenbank wider. In unserem Fall sind
 das drei Menüpunkte
@@ -158,36 +132,10 @@ Eine Seite wird für diese Tabelle erzeugt. Auch sie bekommt eine
 
 
 ### Die Schaltleiste
-
 Die Schaltleiste ist eine kleine Menüleiste und befindet sich in der Regel im Header
 eines jeden Fenster. In ihr sind Schaltflächen untergebracht, die für die Steuerung 
 des entsprechenden Fensters zuständig sind und es ist immer ein Button <...> vorhanden 
 mit einem Aufklappmenu. Hier gibt es Menüpunkte, die zu diesem Fenser aktuell sind.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -229,9 +177,7 @@ eine gewisse Einheitlichkeit erzeugt werden kann.
 
 
 
-### Die Datenbank Alternative
 
-Der gesamte Part *Datenbank* kann auch mit einer MongoDB abgedeckt werden. Muss noch geprüft werden.
 
 
 

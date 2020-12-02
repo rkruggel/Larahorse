@@ -8,7 +8,7 @@ Nach dem Start der Webapplikation suchen sie eine Applikation aus. In diesem Fal
 Der Hauptscreen besteht aus 3 Teilen.
 
 - Das Hauptmenu. Es ist an dem oberen Rand des Bildschirmes. Hier befindet sich ein Login, der Startknopf für App *Stall* und einige wenig Adminmenüs.
-- Das Seitenmenü. Ee befindet sich auf der linken Seite. Hier sind die einzelnen Tabellen aufgelistet. Dieser Bereich wird vom Benutzer erstellt. Wenn eine neue Tabelle erzeugt wird, wird sie hier eingetragen und angezeigt.
+- Das Seitenmenü. Es befindet sich auf der linken Seite. Hier sind die einzelnen Tabellen aufgelistet. Dieser Bereich wird vom Benutzer erstellt. Wenn eine neue Tabelle erzeugt wird, wird sie hier eingetragen und angezeigt.
 - Der Mainscreen. Der restliche Screen wird von dem Anzeigebereich der Tabellenseiten eingenommen. Hier werden die einzelnen Seiten mit ihren Attribunten und Such- und Änderungemenüs angezeigt.
 
 Da *Larahorse* eine Datengetriebene App ist, dreht sich alles um Daten. Bei der Installation von *Stall* ist schon eine Datenbank erstellt worden. Jetzt mussen sie nur noch mit vernünftigen Daten gefüttert werden.
@@ -70,9 +70,9 @@ Die Anzeige der Daten erfolgt über eine View. Die View setzt folgende Attribute
 - Eine mögliche Sortierung
 - Ein möglicher Filter
 - Felder weiterer Tabellen. Siehe [hier](#tabellen-verlinken)
-- Felder die programmatischen Ursprung haben. Siehe [hier](#programme)
+- Felder die programmatischen Ursprung haben. Siehe [hier](#customizing)
 
-Zum erstellen einer View lassen sie sich die Daten anzeigen, wie unten beschrieben, mit sortier- und filtereinstellungen und und speichern sie dann als View unter einem beliebigen Namen ab. 
+Zum erstellen einer View lassen sie sich die Daten anzeigen, wie unten beschrieben, mit sortier- und filtereinstellungen und und speichern sie dann als View unter einem beliebigen Namen ab. So können sie aus einer oder einigen wenigen Tabellen viele verschiedene Anzeigen erstellen.
 
 #### Daten anzeigen
 Die Anzeige der Daten, egal ob sortiert und/oder gefiltert, erfolgt in einer Tabellarischen form. In jeder Zeile steht somit ein Datensatz. Dieses ist die übersichtlichste und am einfachsten zu überschauende Form der Datendarstellung. 
@@ -92,7 +92,11 @@ Wie so oft gibt es auch hier mehrere Möglichkeiten:
 
 
 ## Tabellen verlinken
-Hier handelt es sich um verlinkte Tabellen. Sie sind mit einem Join verbunden. Ist optional. Kommt später.
+Hier handelt es sich um verlinkte Tabellen. Sie sind mit einem Join verbunden. 
 
-## Programme
+– Ist optional. Kommt später. – 
+
+## Customizing
 Hier wird die Möglichkeit beschrieben in Larahorse zu programmieren. Oftmals müssen Aktionen erstellt werden die über ein einfaches Anzeigen von Daten hinaus gehen. Da muss programmiert werden. Als Programmiersprache haben wir Lua vorgesehen. Sie ist einfach und kann eingebettet werden.
+
+– Ist optional. Kommt später. – 

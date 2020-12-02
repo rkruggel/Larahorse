@@ -1,10 +1,22 @@
 ## Larahorse - Technik
 
-Programmiersprache ist PHP v8.0
-Framework: Laravel, Livewire
-Datenbank: Postgresql. Hier wurde viel der Json-Type verwendet.
+**Hauptprogrammiersprache**
+Die gesamte App ist in PHP v8.0 geschrieben. Das schließt Html, Css und Javascript natürlich ein.
 
-Als IDE verwende ich PHPStorm
-Dokusystem ist Zettlr
+**Frameworks**
+Das Haupt-Framework ist Laravel und Livewire.
+
+**Datenbank**
+Die Haupt-Datenbank ist Postgresql. Sie wurde gewählt weil sie den Datentyp Json enthält.
+
+*Datenbank Alternative*
+
+Als Alternative zur Postgrsql Datenbank kann auch ein MongoDB genommen werden. Muss noch geprüft werden.
+
+**Customizing**
+Für das Customizing wird ein Porgrammierpart mit einer Api angeboten. Als Programmiersprache wird Lua v 5.4.0 verwendet. Es ist eine Scriptsprache und sie lässt sich perfekt in PHP einbetten. Die Scripte können als Text in die DB gelegt werden.
+
+Als IDE verwende ich PHPStorm.
+Das Dokusystem ist Zettlr
 
 
