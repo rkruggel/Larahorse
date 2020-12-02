@@ -63,6 +63,13 @@ Jedem löschen geht ein Suchen voraus. Den Datensatz anklicken dann in der Schal
 
 
 ## Die View
+Die Anzeige der Daten erfolgt über eine View. Die View setzt folgende Attribute:
+
+- Definieren der Felder die angezeigt werden sollen.
+- Die Reihenfolge der Felder
+- Eine mögliche Sortierung
+- Ein möglicher Filter
+- Felder weiterer Tabellen. Siehe [hier](tabellen-verlinken)
 
 #### Daten anzeigen
 Die Anzeige der Daten, egal ob sortiert und/oder gefiltert, erfolgt in einer Tabellarischen form. In jeder Zeile steht somit ein Datensatz. Dieses ist die ünersichtlichste und am einfachsten zu überschauende form der Datendarstellung. 
@@ -74,3 +81,7 @@ Wie so oft gibt es auch hier mehrere Möglichkeiten:
 1. Sie lassen sortieren sich die Spalten. Sie klicken auf den Kopf der Spalte und ziehen in an eine Position wo sie sie besser sehen. So können sie die wichtigen Daten ganz am anfang stellen und die weniger wichtigen dahinter. Aber es ist noch alles, mit hilfe des Sliders, zu sehen.
 2. Sie blenden Spalten aus. Ein rechtsklick auf den Kopf der Spalte ermöglicht das Ausblenden. Punkt 1 kann natürlich zusätzlich angewandt werden.
 3. Wenn sie den horizontal angezeigt Datensatz komplett sehen wollen können sie den Datensatz doppelt klicken. Dann geht ein Dialogfenster auf und zeigt diesen einen Datensatz komplett an. Die Darstellung ist nun vertikal.
+
+
+
+## Tabellen verlinken
