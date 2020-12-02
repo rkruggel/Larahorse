@@ -70,11 +70,14 @@ Die Anzeige der Daten erfolgt über eine View. Die View setzt folgende Attribute
 - Eine mögliche Sortierung
 - Ein möglicher Filter
 - Felder weiterer Tabellen. Siehe [hier](#tabellen-verlinken)
+- Felder die programmatischen Ursprung haben. Siehe [hier](#programme)
+
+Zum erstellen einer View lassen sie sich die Daten anzeigen, wie unten beschrieben, mit sortier- und filtereinstellungen und und speichern sie dann als View unter einem beliebigen Namen ab. 
 
 #### Daten anzeigen
-Die Anzeige der Daten, egal ob sortiert und/oder gefiltert, erfolgt in einer Tabellarischen form. In jeder Zeile steht somit ein Datensatz. Dieses ist die ünersichtlichste und am einfachsten zu überschauende form der Datendarstellung. 
+Die Anzeige der Daten, egal ob sortiert und/oder gefiltert, erfolgt in einer Tabellarischen form. In jeder Zeile steht somit ein Datensatz. Dieses ist die übersichtlichste und am einfachsten zu überschauende Form der Datendarstellung. 
 
-Allerdings nur bei wenigen Feldern. Wenn sie eine Tabelle mit fünf Feldern haben in denen jeweils nur 10 Zeichen stehen, ist die Darstellung in einer Zeile sehr übersichtlich. Bei 50 Feldern sieht das schon ganz anders aus. Der Mainscreen wird dann zwar einen horizontalen Slider darstellen, aber das kann auch lästig werden.
+Allerdings nur bei wenigen Feldern. Wenn sie eine Tabelle mit fünf Feldern haben in denen jeweils nur 10 Zeichen stehen, ist die Darstellung in einer Zeile sehr übersichtlich. Bei 50 Feldern sieht das schon ganz anders aus. Der Mainscreen wird dann zwar einen horizontalen Slider darstellen, aber das hin- und herscrollen kann auch lästig werden.
 
 Wie so oft gibt es auch hier mehrere Möglichkeiten:
 
@@ -84,4 +87,12 @@ Wie so oft gibt es auch hier mehrere Möglichkeiten:
 
 
 
+--------------------------------------------------—
+
+
+
 ## Tabellen verlinken
+Hier handelt es sich um verlinkte Tabellen. Sie sind mit einem Join verbunden. Ist optional. Kommt später.
+
+## Programme
+Hier wird die Möglichkeit beschrieben in Larahorse zu programmieren. Oftmals müssen Aktionen erstellt werden die über ein einfaches Anzeigen von Daten hinaus gehen. Da muss programmiert werden. Als Programmiersprache haben wir Lua vorgesehen. Sie ist einfach und kann eingebettet werden.
