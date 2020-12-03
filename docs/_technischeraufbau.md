@@ -146,9 +146,9 @@ eine gewisse Einheitlichkeit erzeugt werden kann.
 
 ### Das Json in FIELDS
 
-`
-{
-  "meta" : {
+<pre>
+{   
+  "meta" : {    
     "fieldtype" : [ "string", "text", "number", 
                                        "integer", "combo", "date" ]  
   },
@@ -184,12 +184,12 @@ eine gewisse Einheitlichkeit erzeugt werden kann.
     ...
   }
 }
-`
+</pre>
 
 
 So werden die Daten gespeichert.
 
-`
+<pre>
 {
   "data" : {
     "landsmann" : { "gruppe":"test", "value":null },
@@ -199,5 +199,5 @@ So werden die Daten gespeichert.
     ...
   }
 }
-`
+</pre>
 
