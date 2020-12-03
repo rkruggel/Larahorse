@@ -85,18 +85,119 @@ Wie so oft gibt es auch hier mehrere Möglichkeiten:
 2. Sie blenden Spalten aus. Ein rechtsklick auf den Kopf der Spalte ermöglicht das Ausblenden. Punkt 1 kann natürlich zusätzlich angewandt werden.
 3. Wenn sie den horizontal angezeigt Datensatz komplett sehen wollen können sie den Datensatz doppelt klicken. Dann geht ein Dialogfenster auf und zeigt diesen einen Datensatz komplett an. Die Darstellung ist nun vertikal.
 
+Diese Darstellung ist Standart. Ob in einer weiteren Version noch andere Darstellungen implementiert werden, bleibt noch offen.
 
-
---------------------------------------------------—
 
 
 
 ## Tabellen verlinken
 Hier handelt es sich um verlinkte Tabellen. Sie sind mit einem Join verbunden. 
 
-– Ist optional. Kommt später. – 
+    – Ist optional. Kommt später. – 
 
 ## Customizing
 Hier wird die Möglichkeit beschrieben in Larahorse zu programmieren. Oftmals müssen Aktionen erstellt werden die über ein einfaches Anzeigen von Daten hinaus gehen. Da muss programmiert werden. Als Programmiersprache haben wir Lua vorgesehen. Sie ist einfach und kann eingebettet werden.
 
-– Ist optional. Kommt später. – 
+    – Ist optional. Kommt später. – 
+
+
+## Tabellen technisch
+
+
+### Die Datenbank
+
+Bei der Datenbank gehe ich andere Wege, wie es üblich ist. Alle Tabellen 
+haben nur vier Felder. Es gibt die Felder ID, NAME, TYPE, DEPENDENCY, FIELDS und FIELDSMETA
+
+**Feld: ID**  
+Das Feld ID enthält für eden Datensatz einen eindeutige ID. Die ID wird 
+vom DB-System automatisch erstellt. 
+
+**Feld: NAME**  
+Ein Sortierfeld und ein Feld auf dem ein Index liegt. Hiernach kann 
+schnell gesucht werden.
+
+**Feld: TYPE**  
+Eine Typisierung des Feldes. Bspl.: Bei Tabelle Personen kann das Feld 
+Einsteller, Tierarzt, Reitbeteiligung, Gärtner, etc. enthalten, bei 
+Tabelle Tiere kann das Feld Pferde, Esel, Hunde etc. enthalten. Wie 
+granular das aufgebaut wird bleibt jedem selbst überlassen. 
+
+**Feld: DEPENDENCY**  
+Hier werden Abhängikkeiten definiert. Z.B. Eine Person hat eine 
+Abhängigkeit zu Tieren. Ein Tier hat also immer einen Besitzer.
+
+**Feld: FIELDS**  
+Dieses ist das eigentliche Datenfeld. Es enthält ein Datenpart im Jsonformat.
+Damit besteht die Möglichkeit, dass die Daten für verschiedene Typen unterschiedlich sind.
+Z.B. in der Tabelle Personen sind die Daten für einen Einsteller andere wie für einen Tierarzt
+und in der Tabelle Tiere gibt es für ein Pferd eine Lebensnummer, für einen Hund jedoch nicht.
+
+**Feld: FIELDSMETA**  
+Da es viele verschiedene Fields-Formate gibt, werden diese hier aufgelistet. Das hat den Vorteil, dass 
+eine gewisse Einheitlichkeit erzeugt werden kann.
+
+
+
+
+
+
+
+
+### Das Json in FIELDS
+
+`
+{
+  "meta" : {
+    "fieldtype" : [ "string", "text", "number", 
+                                       "integer", "combo", "date" ]  
+  },
+  "config" : {
+    "landsmann" : {
+      "order"   : 2,
+      "anzeige" : "Landsm.",
+      "type"    : "string",
+      "format"  : "",
+      "default" : "deutscher"
+    },
+    "gehalt" : {
+      "order"   : 8,
+      "anzeige" : "Verdienst",
+      "type"    : "number",
+      "format"  : "",
+      "default" : 122000.00
+    },
+    "anrede" : {
+      "order"   : 4,
+      "anzeige" : "Anrede",
+      "type"    : "combo",
+      "format"  : "Herr, Frau",
+      "default" : "Herr"
+    },
+    "titel" : {
+      "order"   : 6,
+      "anzeige" : "Titel",
+      "type"    : "combo",
+      "format"  : "Dr., Prof., Prof. Dr., Prof. Dr. Dr.",
+      "default" : ""
+    },
+    ...
+  }
+}
+`
+
+
+So werden die Daten gespeichert.
+
+`
+{
+  "data" : {
+    "landsmann" : { "gruppe":"test", "value":null },
+    "gehalt" : { "gruppe":"test", "value":null },
+    "anrede" : { "gruppe":"test", "value":null },
+    "titel" : { "gruppe":"test", "value":null },
+    ...
+  }
+}
+`
+
