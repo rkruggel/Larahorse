@@ -150,7 +150,7 @@ eine gewisse Einheitlichkeit erzeugt werden kann.
 {   
   "meta" : {    
     "fieldtype" : [ "string", "text", "number", 
-                                       "integer", "combo", "date" ]  
+                    "integer", "combo", "date" ]  
   },
   "config" : {
     "landsmann" : {
