@@ -9,7 +9,7 @@
  * @author		Roland Kruggel, rkruggel@bbf7.de
  * @file		app.js
  * @path		/home/roland/Develop/Larahorse/public/js/app.js
- * @lastChange	20.11.20, 10:22 by roland
+ * @lastChange	05.12.20, 10:48 by roland
  */
 
 /******/ (function(modules) { // webpackBootstrap
@@ -19345,7 +19345,7 @@ module.exports = function(module) {
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
- * Projekt  mix
+ * Projekt  Larahorse
  * ----------------------------------------------------
  *
  * Copyright (c) 2020-2020,  Roland Kruggel
@@ -19354,8 +19354,8 @@ module.exports = function(module) {
  *
  * @author		Roland Kruggel, rkruggel@bbf7.de
  * @file		app.js
- * @path		/home/roland/Develop/mix/resources/js/app.js
- * @lastChange	19.11.20, 20:35 by roland
+ * @path		/home/roland/Develop/Larahorse/resources/js/app.js
+ * @lastChange	20.11.20, 10:22 by roland
  */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
@@ -19369,7 +19369,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
- * Projekt  mix
+ * Projekt  Larahorse
  * ----------------------------------------------------
  *
  * Copyright (c) 2020-2020,  Roland Kruggel
@@ -19378,8 +19378,8 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
  *
  * @author		Roland Kruggel, rkruggel@bbf7.de
  * @file		bootstrap.js
- * @path		/home/roland/Develop/mix/resources/js/bootstrap.js
- * @lastChange	19.11.20, 20:35 by roland
+ * @path		/home/roland/Develop/Larahorse/resources/js/bootstrap.js
+ * @lastChange	20.11.20, 10:22 by roland
  */
 window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 /**
@@ -19424,8 +19424,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/roland/Develop/mix/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/roland/Develop/mix/resources/sass/app.sass */"./resources/sass/app.sass");
+__webpack_require__(/*! /home/roland/Develop/Larahorse/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/roland/Develop/Larahorse/resources/sass/app.sass */"./resources/sass/app.sass");
 
 
 /***/ })

@@ -1,8 +1,8 @@
-# technischer Aufbau
+# So tut man es
 
 Ich will versuchen hier in kurzen knappen Worten die grundsätzliche Verfahrensweise von *Larahorse* zu beschreiben.
 
-Nach dem Start der Webapplikation suchen sie eine Applikation aus. In diesem Fall *Stall*
+Nach dem Start der Webapplikation suchen sie eine Applikation aus. In diesem Fall *Stall*[[sotutmanes]] sotutmanes.md
 
 #### Der Screen
 Der Hauptscreen besteht aus 3 Teilen.
@@ -142,8 +142,6 @@ eine gewisse Einheitlichkeit erzeugt werden kann.
 
 
 
-
-
 ### Das Json in FIELDS
 
 <pre>
@@ -154,32 +152,32 @@ eine gewisse Einheitlichkeit erzeugt werden kann.
   },
   "config" : {
     "landsmann" : {
-      "order"   : 2,
-      "anzeige" : "Landsm.",
-      "type"    : "string",
-      "format"  : "",
-      "default" : "deutscher"
+      "order"     : 2,
+      "anzeige"   : "Landsm.",
+      "type"      : "string",
+      "format"    : "",
+      "default"   : "deutscher"
     },
     "gehalt" : {
       "order"   : 8,
-      "anzeige" : "Verdienst",
-      "type"    : "number",
-      "format"  : "",
-      "default" : 122000.00
+      "anzeige"   : "Verdienst",
+      "type"      : "number",
+      "format"    : "",
+      "default"   : 122000.00
     },
     "anrede" : {
       "order"   : 4,
-      "anzeige" : "Anrede",
-      "type"    : "combo",
-      "format"  : "Herr, Frau",
-      "default" : "Herr"
+      "anzeige"   : "Anrede",
+      "type"      : "combo",
+      "format"    : "Herr, Frau",
+      "default"   : "Herr"
     },
     "titel" : {
       "order"   : 6,
-      "anzeige" : "Titel",
-      "type"    : "combo",
-      "format"  : "Dr., Prof., Prof. Dr., Prof. Dr. Dr.",
-      "default" : ""
+      "anzeige"   : "Titel",
+      "type"      : "combo",
+      "format"    : "Dr., Prof., Prof. Dr., Prof. Dr. Dr.",
+      "default"   : ""
     },
     ...
   }

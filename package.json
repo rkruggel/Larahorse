@@ -1,6 +1,7 @@
 {
     "private": true,
     "scripts": {
+        "mkdoc serve": "cd ~/Develop/Larahorse/docs; mkdocs-carroarmato0.mkdocs serve",
         "dev": "npm run development",
         "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
         "watch": "npm run development -- --watch",

@@ -1,0 +1,13 @@
+site_name: Larahorse
+nav:
+  - Home: index.md
+  - Larahorse: larahorse.md
+  - So tut man es: sotutmanes.md
+  - technischer Aufbau: technischeraufbau.md
+
+  - ---------------------------------: dummy.md
+
+  - Planing: _planning.md
+
+theme: readthedocs
+
