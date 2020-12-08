@@ -1,17 +1,4 @@
 <?php
-/*
- * Projekt  Larahorse
- * ----------------------------------------------------
- *
- * Copyright (c) 2020-2020,  Roland Kruggel
- * All Rights Reserved.
- * License: MIT
- *
- * @author		Roland Kruggel, rkruggel@bbf7.de
- * @file		livewire.php
- * @path		/home/roland/Develop/Larahorse/config/livewire.php
- * @lastChange	20.11.20, 10:19 by roland
- */
 
 return [
 

@@ -1,17 +1,3 @@
-/*
- * Projekt  Larahorse
- * ----------------------------------------------------
- *
- * Copyright (c) 2020-2020,  Roland Kruggel
- * All Rights Reserved.
- * License: MIT
- *
- * @author		Roland Kruggel, rkruggel@bbf7.de
- * @file		app.js
- * @path		/home/roland/Develop/Larahorse/public/js/app.js
- * @lastChange	05.12.20, 10:48 by roland
- */
-
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};

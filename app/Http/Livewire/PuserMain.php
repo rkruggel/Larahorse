@@ -254,6 +254,7 @@ class PuserMain extends Component
 //        $rr = JsonDbDaten::getConfig('pusers');
 
         // hier geht es weiter
+
         $this->reset();
     }
 
@@ -264,7 +265,7 @@ class PuserMain extends Component
      */
     public function reset(...$properties)
     {
-        $this->query = '';
+        $this->query = 'a';
         $this->contacts = [];
         $this->highlightIndex = 0;
 

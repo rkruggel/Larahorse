@@ -1,16 +1,16 @@
-/*
- * Projekt  Larahorse
- * ----------------------------------------------------
- *
- * Copyright (c) 2020-2020,  Roland Kruggel
- * All Rights Reserved.
- * License: MIT
- *
- * @author		Roland Kruggel, rkruggel@bbf7.de
- * @file		app.css
- * @path		/home/roland/Develop/Larahorse/public/css/app.css
- * @lastChange	05.12.20, 10:48 by roland
- */
+/*!
+ * / Projekt  Larahorse
+ * / ----------------------------------------------------
+ * /
+ * / Copyright (c) 2020-2020,  Roland Kruggel
+ * / All Rights Reserved.
+ * / License: MIT
+ * /
+ * / @author		Roland Kruggel, rkruggel@bbf7.de
+ * / @file		app.sass
+ * / @path		/home/roland/Develop/Larahorse/resources/sass/app.sass
+ * / @lastChange	20.11.20, 10:22 by roland
+ * / */
 
 .maincontainer {
   margin-top: 0.1em;
@@ -52,6 +52,20 @@
 #message .inner {
   margin: 0 auto;
 }
+
+/*!
+ * / Projekt  Larahorse
+ * / ----------------------------------------------------
+ * /
+ * / Copyright (c) 2020-2020,  Roland Kruggel
+ * / All Rights Reserved.
+ * / License: MIT
+ * /
+ * / @author		Roland Kruggel, rkruggel@bbf7.de
+ * / @file		triva.sass
+ * / @path		/home/roland/Develop/Larahorse/resources/sass/triva.sass
+ * / @lastChange	20.11.20, 10:22 by roland
+ * / */
 
 h2 {
   color: red;

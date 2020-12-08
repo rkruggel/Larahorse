@@ -1,28 +1,29 @@
+---
+title: So tut man es
+summary: Der User wird durch die einzelnen Aktionen anhand von Beispielen geführt.
+authors:
+    - Roland Kruggel
+date: 2020-12-05
+some_url: 
+---
+
 # So tut man es
 
 Ich will versuchen hier in kurzen knappen Worten die grundsätzliche Verfahrensweise von *Larahorse* zu beschreiben.
 
 Nach dem Start der Webapplikation suchen sie eine Applikation aus. In diesem Fall *Stall*[[sotutmanes]] sotutmanes.md
 
-#### Der Screen
-Der Hauptscreen besteht aus 3 Teilen.
 
-- Das Hauptmenu. Es ist an dem oberen Rand des Bildschirmes. Hier befindet sich ein Login, der Startknopf für App *Stall* und einige wenig Adminmenüs.
-- Das Seitenmenü. Es befindet sich auf der linken Seite. Hier sind die einzelnen Tabellen aufgelistet. Dieser Bereich wird vom Benutzer erstellt. Wenn eine neue Tabelle erzeugt wird, wird sie hier eingetragen und angezeigt.
-- Der Mainscreen. Der restliche Screen wird von dem Anzeigebereich der Tabellenseiten eingenommen. Hier werden die einzelnen Seiten mit ihren Attribunten und Such- und Änderungemenüs angezeigt.
 
-Da *Larahorse* eine Datengetriebene App ist, dreht sich alles um Daten. Bei der Installation von *Stall* ist schon eine Datenbank erstellt worden. Jetzt mussen sie nur noch mit vernünftigen Daten gefüttert werden.
-
-#### Tabelle erstellen
+## Tabelle erstellen
 Sie müssen also zuerst mal eine Tabelle erstellen. In der Schaltleiste befindet sich ein '+'-Zeichen. Klicken sie darauf und geben sie in dem angezeigten Fenster den Tabellennamen ein. Hier in der Demo soll es *Einsteller* sein. Dieser Name ist auch der, der in dem Menü angezeigt wird. Die Tabelle, der Menüeintrag und die Seite werden nun erstellt und können sofort verwendet werden.
 
-#### Den Screen aufrufen
+## Den Screen aufrufen
 Klicken sie im Seitenmenü auf *Einsteller*. Im Bereich Mainscreen öffnet sich der Bildschirm für die Tabelle, die sie gerade erzeugt haben. Sie besteht im Moment nur aus dem Namen und der Schaltleiste.
 
-#### Die Schaltleiste
-Die Schaltleiste befindet sich im Seitenmenu, im Mainscreen und in jedem Detail-Screen. Sie dient zur Steuerung der einzelnen Aktionen, die in diesem Fenster möglich sind. Manche Elemente sind gleich, viele Elemente sind jedoch speziell für das entsprechende Fenster.
 
-#### Das Schema
+
+## Das Schema
 Um jetzt in einer Tabelle Daten speichern zu können müssen sie Felder definieren. Die Felder haben Namen und können bestimmte Daten aufnehmen die wiederum von einem definiertem Typ sind. Diese Festlegung nennt man Schema.
 
 Wenn sie in der Schaltleiste auf *Schema* klicken, geht ein Dialogfenster auf. Hier werden die vohandenen Felder angezeigt. In unserem Fall ist das Fenster noch leer. Sie können nun die ersten Felder eintragen. Da es sich um Personenbezogene Daten handelt geben sie folgende Felder ein:
@@ -100,102 +101,4 @@ Hier wird die Möglichkeit beschrieben in Larahorse zu programmieren. Oftmals m�
 
     – Ist optional. Kommt später. – 
 
-
-## Tabellen technisch
-
-
-### Die Datenbank
-
-Bei der Datenbank gehe ich andere Wege, wie es üblich ist. Alle Tabellen 
-haben nur vier Felder. Es gibt die Felder ID, NAME, TYPE, DEPENDENCY, FIELDS und FIELDSMETA
-
-**Feld: ID**  
-Das Feld ID enthält für eden Datensatz einen eindeutige ID. Die ID wird 
-vom DB-System automatisch erstellt. 
-
-**Feld: NAME**  
-Ein Sortierfeld und ein Feld auf dem ein Index liegt. Hiernach kann 
-schnell gesucht werden.
-
-**Feld: TYPE**  
-Eine Typisierung des Feldes. Bspl.: Bei Tabelle Personen kann das Feld 
-Einsteller, Tierarzt, Reitbeteiligung, Gärtner, etc. enthalten, bei 
-Tabelle Tiere kann das Feld Pferde, Esel, Hunde etc. enthalten. Wie 
-granular das aufgebaut wird bleibt jedem selbst überlassen. 
-
-**Feld: DEPENDENCY**  
-Hier werden Abhängikkeiten definiert. Z.B. Eine Person hat eine 
-Abhängigkeit zu Tieren. Ein Tier hat also immer einen Besitzer.
-
-**Feld: FIELDS**  
-Dieses ist das eigentliche Datenfeld. Es enthält ein Datenpart im Jsonformat.
-Damit besteht die Möglichkeit, dass die Daten für verschiedene Typen unterschiedlich sind.
-Z.B. in der Tabelle Personen sind die Daten für einen Einsteller andere wie für einen Tierarzt
-und in der Tabelle Tiere gibt es für ein Pferd eine Lebensnummer, für einen Hund jedoch nicht.
-
-**Feld: FIELDSMETA**  
-Da es viele verschiedene Fields-Formate gibt, werden diese hier aufgelistet. Das hat den Vorteil, dass 
-eine gewisse Einheitlichkeit erzeugt werden kann.
-
-
-
-
-
-
-### Das Json in FIELDS
-
-<pre>
-{   
-  "meta" : {    
-    "fieldtype" : [ "string", "text", "number", 
-                    "integer", "combo", "date" ]  
-  },
-  "config" : {
-    "landsmann" : {
-      "order"     : 2,
-      "anzeige"   : "Landsm.",
-      "type"      : "string",
-      "format"    : "",
-      "default"   : "deutscher"
-    },
-    "gehalt" : {
-      "order"   : 8,
-      "anzeige"   : "Verdienst",
-      "type"      : "number",
-      "format"    : "",
-      "default"   : 122000.00
-    },
-    "anrede" : {
-      "order"   : 4,
-      "anzeige"   : "Anrede",
-      "type"      : "combo",
-      "format"    : "Herr, Frau",
-      "default"   : "Herr"
-    },
-    "titel" : {
-      "order"   : 6,
-      "anzeige"   : "Titel",
-      "type"      : "combo",
-      "format"    : "Dr., Prof., Prof. Dr., Prof. Dr. Dr.",
-      "default"   : ""
-    },
-    ...
-  }
-}
-</pre>
-
-
-So werden die Daten gespeichert.
-
-<pre>
-{
-  "data" : {
-    "landsmann" : { "gruppe":"test", "value":null },
-    "gehalt" : { "gruppe":"test", "value":null },
-    "anrede" : { "gruppe":"test", "value":null },
-    "titel" : { "gruppe":"test", "value":null },
-    ...
-  }
-}
-</pre>
 

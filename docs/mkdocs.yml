@@ -2,8 +2,8 @@ site_name: Larahorse
 nav:
   - Home: index.md
   - Larahorse: larahorse.md
+  - Technischer Aufbau: technischeraufbau.md
   - So tut man es: sotutmanes.md
-  - technischer Aufbau: technischeraufbau.md
 
   - ---------------------------------: dummy.md
 
