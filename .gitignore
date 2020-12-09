@@ -1,11 +1,14 @@
 vendor/
 node_modules/
-#npm-debug.log
-#yarn-error.log
-#
-# Laravel 5 & Lumen specific
+
 public/storage
 public/hot
+public/css/tmpcompile
+public/ace/
+public/jqwidgets/
+
+
+
 storage/*.key
 .env
 Homestead.yaml
@@ -15,6 +18,3 @@ Homestead.json
 .ztr-directory
 *.log
 
-public/css/tmpcompile
-public/ace/
-public/jqwidgets/

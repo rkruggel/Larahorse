@@ -116,6 +116,12 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/webmozart/assert" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/mongodb/mongodb" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/jean85/pretty-package-versions" />
+      <excludeFolder url="file://$MODULE_DIR$/public/ace" />
+      <excludeFolder url="file://$MODULE_DIR$/public/jqwidgets" />
+      <excludeFolder url="file://$MODULE_DIR$/resources/views/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/5f" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/d9" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

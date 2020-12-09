@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-2 shadow-lg">
+        <div class="col-md-2 shadow-lg">
 
             <input type="text" class="form-input" placeholder="Search Contacts..."
                    wire:model="query"

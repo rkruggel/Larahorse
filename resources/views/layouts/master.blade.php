@@ -51,7 +51,7 @@
             <a class="my-0 mr-md-auto font-weight-normal text-dark" href="{{ url('/') }}">{{ config('app.name') }}</a>
             <nav class="my-2 my-md-0 mr-md-3">
                 <a class="p-2 text-dark btn-link" href="{{ url('/puser/index') }}"
-                data-toggle="tooltip" data-html="true" title="Alles von den Usern" >Puser</a>
+                   data-toggle="tooltip" data-html="true" title="Alles von den Usern" >Puser</a>
                 <a class="p-2 text-dark btn-link" href="#">Enterprise</a>
                 <a class="p-2 text-dark btn-link" href="#">Support</a>
                 <a class="p-2 text-dark btn-link" href="#">Pricing</a>
