@@ -1,18 +1,23 @@
 {
-    "name": "laravel/laravel",
+    "name": "rkruggel/larahorse",
+    "description": "Ein Programm zur Selbsterstellung von Dantenverwaltung.",
+    "version": "0.0.1-dev",
     "type": "project",
-    "description": "The Laravel Framework.",
     "keywords": [
-        "framework",
-        "laravel"
+        "pferdestall", "pferd", "verwaltung", "pferdestallverwaltung"
     ],
     "license": "MIT",
-    "authors": [{
-        "name": "Roland Kruggel",
-        "email": "rkruggel@bbf7.de",
-        "homepage": "http://www.bbf7.de",
-        "role": "Developer"
-    }],
+    "authors": [
+        {
+            "name": "Roland Kruggel",
+            "email": "rkruggel@bbf7.de",
+            "homepage": "http://www.bbf7.de",
+            "role": "Developer"
+        }
+    ],
+    "support" : {
+        "email": "rkruggel@bbf7.de"
+    },
     "require": {
         "php": "^7.4",
         "ext-json": "*",
