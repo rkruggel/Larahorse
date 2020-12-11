@@ -29,7 +29,8 @@
         "laravelcollective/html": "^6.2",
         "livewire/livewire": "^2.3",
         "mongodb/mongodb": "^1.8",
-        "php-kit/ext-pdo": "^1.1"
+        "php-kit/ext-pdo": "^1.1",
+        "ext-mongodb": "*"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

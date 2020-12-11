@@ -28,10 +28,13 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             PusersSeeder::class,
-            PferdeSeeder::class,
             StallSeeder::class,
             UserPferdSeeder::class,
-            EinstellerSeeder::class
+            EinstellerSeeder::class,
+
+            MongoProgSeeder::class,
+            MongoPuserSeeder::class,
+            MongoPferdeSeeder::class
         ]);
     }
 }
