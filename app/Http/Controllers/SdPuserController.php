@@ -15,7 +15,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Pusers;
+use App\Models\pusers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -37,13 +37,13 @@ class SdPuserController extends Controller
 
 
 
-        $user2 = Pusers::where('id','>=',0)
+        $user2 = pusers::where('id','>=',0)
             -> orderBy('nachname')
             -> get();
         $j1 = $user2[7];
         $j2 = $j1->jtelefon;
 
-        $user2 = Pusers::all();
+        $user2 = pusers::all();
 
 
         $user3 = DB::table('pusers')
@@ -57,7 +57,7 @@ class SdPuserController extends Controller
 
     public function useredit()
     {
-        $usere = Pusers::class;
+        $usere = pusers::class;
     }
 
 
@@ -85,10 +85,10 @@ class SdPuserController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Pusers  $puser
+     * @param  \App\Models\pusers  $puser
      * @return \Illuminate\Http\Response
      */
-    public function show(Pusers $puser)
+    public function show(pusers $puser)
     {
         //
     }
@@ -96,10 +96,10 @@ class SdPuserController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Pusers  $puser
+     * @param  \App\Models\pusers  $puser
      * @return \Illuminate\Http\Response
      */
-    public function edit(Pusers $puser)
+    public function edit(pusers $puser)
     {
         //
     }
@@ -108,10 +108,10 @@ class SdPuserController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Pusers  $puser
+     * @param  \App\Models\pusers  $puser
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Pusers $puser)
+    public function update(Request $request, pusers $puser)
     {
         //
     }
@@ -119,10 +119,10 @@ class SdPuserController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Pusers  $puser
+     * @param  \App\Models\pusers  $puser
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Pusers $puser)
+    public function destroy(pusers $puser)
     {
         //
     }

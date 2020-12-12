@@ -21,7 +21,7 @@ namespace App\Http\Livewire;
 
 use App\Library\Helpers;
 use App\Library\JsonDbDaten;
-use App\Models\Pusers;
+use App\Models\pusers;
 use Database\Seeders\PusersSeeder;
 use Illuminate\Database\Seeder;
 use Livewire\Component;
@@ -37,8 +37,8 @@ class PuserMain extends Component
     /** @var array $contacts */
     public array $contacts;
 
-    /** @var Pusers $selectvar */
-    public Pusers $selectvar;
+    /** @var pusers $selectvar */
+    public pusers $selectvar;
 
     /** @var int $highlightIndex */
     public int $highlightIndex;
@@ -48,14 +48,14 @@ class PuserMain extends Component
     public $updatemode = false;
 
 
-    public Pusers $screen_puser;
+    public pusers $screen_puser;
     public array $screen_config;
 
     //** privats */
 
     public function wndScreenShow($id)
     {
-        $screen_puser = Pusers::find($id);
+        $screen_puser = pusers::find($id);
         $screen_config = JsonDbDaten::getConfig('pusers');
 
 
@@ -125,7 +125,7 @@ class PuserMain extends Component
      */
     public function wndTelefonShow($id)
     {
-        $puser = Pusers::where('id', $id)->first();
+        $puser = pusers::where('id', $id)->first();
         $this->telefons = $puser->jtelefon;
     }
 
@@ -199,7 +199,7 @@ class PuserMain extends Component
      */
     public function showDetails(int $id)
     {
-        $_puser = Pusers::find($id);
+        $_puser = pusers::find($id);
         $this->selectvar = $_puser;
     }
 
@@ -221,7 +221,7 @@ class PuserMain extends Component
      */
     public function updatedQuery()
     {
-        $this->contacts = Pusers::where('nachname', 'ilike', '%' . $this->query . '%')
+        $this->contacts = pusers::where('nachname', 'ilike', '%' . $this->query . '%')
             ->orderBy('nachname')
             ->orderBy('vorname')
             ->get()

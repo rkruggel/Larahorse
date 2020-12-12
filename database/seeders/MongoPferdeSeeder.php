@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
 use MongoDB;
 use App\Library;
@@ -16,16 +17,14 @@ class MongoPferdeSeeder extends Seeder
      */
     public function run()
     {
-        $client = new MongoDB\Client("mongodb://localhost:27017");
-//        $db = $client->Larahorse;
+        DB::connection('mongodb')->collection('pferde')->delete();
 
-        // daten einstellen
-        $collection = $client->Larahorse->Pferde;
+        DB::connection('mongodb')->collection('pferde')->insert([
 
         // es gibt drei 'type'
         //   screen => Anweisungen für die Screenerstellung
         //   data   => Die eigentlichen Daten
-        $collection->insertMany([
+
 //                'name' => ['anzeige'=>'', 'source'=>'', 'type'=>'', 'list'=>['combo1', 'combo2', 'combo3']
 //                           'len'=>'', 'default'=>'', 'notnull'=>false],
             [
@@ -35,7 +34,7 @@ class MongoPferdeSeeder extends Seeder
                 'rufname'   => [ 'anzeige'=>'Rufname', 'source'=>'Pferde.rufname', 'type'=>'string',
                                  'len'=>'1:25:100', 'default'=>'', 'notnull'=>false],
                 'geboren'   => [ 'anzeige'=>'geboren', 'source'=>'Pferde.geboren', 'type'=>'date',
-                                 'len'=>'1:30', 'default'=>Library\MongoDate::dateJetztAry('2020-01-01'), 'notnull'=>false],
+                                 'len'=>'1:30', 'default'=>Carbon::now()->toDateTimeString(), 'notnull'=>false],
                 'rasse'     => [ 'anzeige'=>'Rasse', 'source'=>'Pferde.rasse', 'type'=>'combo', 'list'=>['Hannoveraner', 'Westphale', 'Haflinger'],
                                  'len'=>'1:30', 'default'=>'', 'notnull'=>false],
                 'sex'       => [ 'anzeige'=>'Geschlecht', 'source'=>'Pferde.sex', 'type'=>'combo', 'list'=>['Stute', 'Hengst', 'Wallach'],
@@ -52,7 +51,7 @@ class MongoPferdeSeeder extends Seeder
             [ 'itype' => 'data',
                 'name' => 'Ladina',
                 'rufname' => 'Ladina',
-                'geboren' => Library\MongoDate::dateJetztAry('1999-02-24' ),
+                'geboren' => Carbon::create(1995, 2, 24)->toDateTimeString(),
                 'rasse' => 'Hannoveraner',
                 'sex' => 'Stute',
                 'type' => 'Warmblut',
@@ -63,7 +62,7 @@ class MongoPferdeSeeder extends Seeder
             [ 'itype' => 'data',
                 'name' => 'Donnerlüttchen',
                 'rufname' => 'Lütte',
-                'geboren' => Library\MongoDate::dateJetztAry('1985-03-24' ),
+                'geboren' => Carbon::create(1985, 3, 24)->toDateTimeString(),
                 'rasse' => 'Westphale',
                 'sex' => 'Stute',
                 'type' => 'Warmblut',
@@ -74,7 +73,7 @@ class MongoPferdeSeeder extends Seeder
             [ 'itype' => 'data',
                 'name' => 'Skyrose',
                 'rufname' => 'Skyrose',
-                'geboren' => Library\MongoDate::dateJetztAry('2015-03-24' ),
+                'geboren' => Carbon::create(2015, 3, 24)->toDateTimeString(),
                 'rasse' => 'Grosspferd',
                 'sex' => 'Stute',
                 'type' => 'Warmblut',
@@ -85,7 +84,7 @@ class MongoPferdeSeeder extends Seeder
             [ 'itype' => 'data',
                 'name' => 'Shakira',
                 'rufname' => 'Shakira',
-                'geboren' => Library\MongoDate::dateJetztAry('2014-04-20' ),
+                'geboren' => Carbon::create(2014, 4, 20)->toDateTimeString(),
                 'rasse' => 'Haflinger',
                 'sex' => 'Stute',
                 'type' => 'Pony',
@@ -96,7 +95,7 @@ class MongoPferdeSeeder extends Seeder
             [ 'itype' => 'data',
                 'name' => 'Charlie',
                 'rufname' => 'Charlie',
-                'geboren' => Library\MongoDate::dateJetztAry('2009-01-21' ),
+                'geboren' => Carbon::create(2009, 1, 21)->toDateTimeString(),
                 'rasse' => 'Haflinger',
                 'sex' => 'Wallach',
                 'type' => 'Pony',

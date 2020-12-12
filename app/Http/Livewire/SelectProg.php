@@ -3,9 +3,10 @@
 namespace App\Http\Livewire;
 
 
+use App\Models\progs;
 use DateTime;
 use Livewire\Component;
-use MongoDB;
+
 
 class SelectProg extends Component
 {
@@ -19,17 +20,41 @@ class SelectProg extends Component
         // -- ein Test
         $this->testvar = "testvar inhalt";
 
-        // -- daten aus der DB holen
-        $client = new MongoDB\Client("mongodb://localhost:27017");
-        $db =  $client->Larahorse;
 
-        $collection = $db->progs;
-        $er = $collection->find(['active' => true]);
+//        $users = User::whereRaw('age > ? and votes = 100', [25])->get();
 
-        $atti = [];
-        foreach ($er as $dbb) {
-            array_push($atti, $dbb);
-        }
+
+        $tza = progs::all();
+        $tzb = progs::where('type', 'data')->get();
+        $tzc = progs::where('type', 'screen')->get();
+        $tzd = progs::where([
+            ['type', '=', 'data'],
+            ['active', '=', true]
+        ])
+            ->orderBy('name', 'asc')
+            ->get();
+        $tze = progs::where('type', '=', 'data')
+            ->where('active', '=', true)
+            ->orderBy('name', 'asc')
+            ->get();
+
+        $tcounta = $tza->count();
+        $tcountb = $tzb->count();
+        $tcountc = $tzc->count();
+        $tcountd = $tzd->count();
+        $tcounte = $tze->count();
+
+        $tg = Date('Y-m-d', mktime(0,0,0, 1,2,2020));
+
+        $tzf = new progs();
+        $tzf['type'] = 'data';
+        $tzf['name'] = 'Pilze';
+        $tzf['date'] = $tg;
+        $tzf['active'] = false;
+        $tzf['user'] = 'diana';
+        $tzf['desc'] = 'keine Bemerkung';
+        //$tzf->save();
+
 
 
         $a = 0;

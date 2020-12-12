@@ -15,16 +15,14 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 
-class Pusers extends Model
+class pusers extends Eloquent
 {
-    use HasFactory;
+    protected $connection = 'mongodb';
 
-    protected $casts = [
-        'id' => 'int',
-        'jtelefon' => 'array',
-        'jfields' => 'array'
-    ];
+//    protected $casts = [
+//        'jtelefon' => 'array',
+//        'jfields' => 'array'
+//    ];
 }

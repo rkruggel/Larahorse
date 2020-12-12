@@ -39,7 +39,7 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\Pusers;
+use App\Models\pusers;
 use Livewire\Component;
 
 class ShowPosts extends Component
@@ -47,7 +47,7 @@ class ShowPosts extends Component
     public $puser;
 
     public function mount($id) {
-        $this->puser = Pusers::find($id);
+        $this->puser = pusers::find($id);
     }
 
     public function render()

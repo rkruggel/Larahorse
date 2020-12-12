@@ -13,12 +13,7 @@ class MongoProg extends Migration
      */
     public function up()
     {
-        // -- daten aus der DB holen
-        $client = new MongoDB\Client("mongodb://localhost:27017");
-        $collection = $client->Larahorse->Progs;
-
-        // collection löschen wenn vorhanden
-        $response = $collection->drop();
+        //
     }
 
     /**

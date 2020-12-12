@@ -16,7 +16,7 @@
 namespace App\Library;
 
 
-use App\Models\Pusers;
+use App\Models\pusers;
 use Database\Seeders\PusersSeeder;
 use Illuminate\Support\Facades\DB;
 

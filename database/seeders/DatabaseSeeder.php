@@ -27,11 +27,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-            PusersSeeder::class,
-            StallSeeder::class,
-            UserPferdSeeder::class,
-            EinstellerSeeder::class,
-
+            MongoStallSeeder::class,
             MongoProgSeeder::class,
             MongoPuserSeeder::class,
             MongoPferdeSeeder::class

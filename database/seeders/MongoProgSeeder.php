@@ -3,8 +3,12 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use MongoDB;
-use App\Library;
+use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\DB;
+
+
+use App\Models\progs;
+
 
 class MongoProgSeeder extends Seeder
 {
@@ -18,22 +22,16 @@ class MongoProgSeeder extends Seeder
      */
     public function run()
     {
+        DB::connection('mongodb')->collection('progs')->delete();
 
-        $client = new MongoDB\Client("mongodb://localhost:27017");
+        DB::connection('mongodb')->collection('progs')->insert([
 
-        // daten einstellen
-        $collection = $client->Larahorse->Progs;
-
-//                'name' => [ 'anzeige'=>'', 'source'=>'', 'type'=>'', 'list'=>['combo1', 'combo2', 'combo3'],
-//                           'len'=>'', 'default'=>'', 'notnull'=>false ],
-
-        $collection->insertMany([
-            [ 'type' => 'screen',
+        [ 'itype' => 'screen',
                 'name'   => [ 'anzeige'=>'Progname', 'source'=>'Progs.name', 'type'=>'string',
                               'len'=>'1:30:50', 'default'=>'', 'notnull'=>false],
 
                 'date' => [ 'anzeige'=>'Datum', 'source'=>'Progs.date', 'type'=>'date',
-                            'len'=>'1:30', 'default'=>Library\MongoDate::dateJetztAry(), 'notnull'=>false ],
+                            'len'=>'1:30', 'default'=>Carbon::now()->toDateTimeString(), 'notnull'=>false ],
 
                 'active' => [ 'anzeige'=>'Aktiv', 'source'=>'Progs.active', 'type'=>'checkbox',
                               'len'=>'', 'default'=>true, 'notnull'=>false ],
@@ -44,44 +42,49 @@ class MongoProgSeeder extends Seeder
                 'desc'   => [ 'anzeige'=>'Beschreibung', 'source'=>'Progs.desc', 'type'=>'string',
                             'len'=>'4:100:-1', 'default'=>'', 'notnull'=>false ],
             ],
-
-            [ 'type' => 'data',
+            [ 'itype' => 'data',
                 'name' => 'Stall',
-                'date' => Library\MongoDate::dateJetztAry('2020-08-21'),
+                'date' => Carbon::create(2020, 8, 21)->toDateTimeString(),
                 'active' => true,
                 'user' => 'roland',
                 'desc' => 'Die Stallverwaltung'
             ],
-            [ 'type' => 'data',
+            [ 'itype' => 'data',
                 'name' => 'Angeln',
-                'date' => Library\MongoDate::dateJetztAry('2020-12-01'),
+                'date' => Carbon::create(2020, 12, 1, 0,0,0)->toDateTimeString(),
                 'active' => true,
                 'user' => 'roland',
                 'desc' => 'Verwaltung für Angelvereine'
             ],
-            [ 'type' => 'data',
+            [ 'itype' => 'data',
                 'name' => 'Knitting',
-                'date' => Library\MongoDate::dateJetztAry(),
+                'date' => Carbon::now()->toDateTimeString(),
                 'active' => true,
                 'user' => 'petra',
                 'desc' => 'Stricktreffen und Projekte'
             ],
-            [ 'type' => 'data',
+            [ 'itype' => 'data',
                 'name' => 'Unding',
-                'date' => Library\MongoDate::dateJetztAry(),
+                'date' => Carbon::now('CET')->toDateTimeString(),
                 'active' => false,
                 'user' => 'erich',
                 'desc' => 'Lagerverwaltung für Strassenbau'
             ],
-            [ 'type' => 'data',
+            [ 'itype' => 'data',
                 'name' => 'Umbau',
-                'date' => Library\MongoDate::dateJetztAry(2020-02-01),
+                'date' => Carbon::create(2020, 1, 2, 0,0,0)->toDateTimeString(),
                 'active' => true,
                 'user' => 'roland',
                 'desc' => 'Verwaltung für Umbauten und Renovierungen'
             ]
-        ]);
-        $a = 0;
 
+        ]);
+
+//        $tt = new progs();
+//        $tt->name = 'ich';
+//        $tt->date = Carbon::now()->toDateTimeString();
+//        $tt->save();
+
+        $a = 0;
     }
 }
