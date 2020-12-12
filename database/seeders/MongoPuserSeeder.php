@@ -13,150 +13,8 @@ class MongoPuserSeeder extends Seeder
 {
 
 
-    /**
-     * @return string
-     */
-    private static function __xjsonstring_config(): string
-    {
-        return '
-{
-  "meta" : {
-    "fieldtype"  : ["string", "text", "number", "integer", "combo", "date"]
-  },
-  "config" : {
-    "landsmann" : {
-      "order"   : 2,
-      "anzeige" : "Landsm.",
-      "type"    : "string",
-      "format"  : "",
-      "default" : "deutscher"
-    },
-    "gehalt" : {
-      "order"   : 8,
-      "anzeige" : "Verdienst",
-      "type"    : "number",
-      "format"  : "",
-      "default" : 122000.00
-    },
-    "anrede" : {
-      "order"   : 4,
-      "anzeige" : "Anrede",
-      "type"    : "combo",
-      "format"  : "Herr, Frau",
-      "default" : "Herr"
-    },
-    "titel" : {
-      "order"   : 6,
-      "anzeige" : "Titel",
-      "type"    : "combo",
-      "format"  : "Dr., Prof., Prof. Dr., Prof. Dr. Dr., Dr. Dr.",
-      "default" : ""
-    },
-    "startdate" : {
-      "order"   : 10,
-      "anzeige" : "Startdatum",
-      "type"    : "date",
-      "format"  : "dd.MM.yyyy",
-      "default" : "22.01.2020"
-    },
-    "bem" : {
-      "order"   : 12,
-      "anzeige" : "Bemerkung",
-      "type"    : "text",
-      "format"  : "",
-      "default" : "keine Bmerkung"
-    }
-  }
-}
-';
-    }
-
-
-    /**
-     * @return string
-     */
-    private static function __xjsonstring_daten(): string
-    {
-        //todo muss aufgesplittet werden. Config und Meta müssen in ID 1 gespeichert werden. Nicht mehr in jeder Row
-        return '
-{
-  "data" : {
-    "landsmann" : {
-      "gruppe" : "test",
-      "value"   : null
-    },
-    "gehalt" : {
-      "gruppe" : "test",
-      "value"   : null
-    },
-    "anrede" : {
-      "gruppe" : "test",
-      "value"   : null
-    },
-    "titel" : {
-      "gruppe" : "test",
-      "value"   : null
-    },
-    "startdate" : {
-      "gruppe" : "test",
-      "value"   : null
-    },
-    "bem" : {
-      "gruppe" : "test",
-      "value"   : null
-    }
-  }
-}
-';
-    }
-
-    /**
-     * @return array
-     */
-    public static function __getjson_config(): array {
-        return Helpers::string2json(self::__xjsonstring_config());
-    }
-
-
-    /**
-     * @return array
-     */
-    public static function __getjson_daten(): array {
-        return Helpers::string2json(self::__xjsonstring_daten());
-    }
-
-
-    /**
-     * @param mixed $dta
-     * @param array $params
-     */
-    private static function __updateData($dta, array $params)
-    {
-        $data = $dta['data'];
-
-        foreach (array_keys($data) as $item) {
-            $data[$item]['value'] = $params[$item];
-        }
-        return $data;
-    }
-
-
-    /**
-     * @param $params
-     * @return string
-     */
-    public static function __xjsondata($params)
-    {
-        $dta = self::__getjson_daten();
-
-        $dta = self::__updateData($dta, $params);
-
-        $a = 0;
-
-        // umwandeln zum string
-        return Helpers::json2string($dta);
-    }
-
+//  "meta" : {
+//    "fieldtype"  : ["string", "text", "number", "integer", "combo", "date"]
 
     private function __xdata($vari, $pos = 0)
     {
@@ -207,7 +65,7 @@ class MongoPuserSeeder extends Seeder
             //   data     => Die eigentlichen Daten
             [ 'itype' => 'screen',
                 'anrede'    => [ 'anzeige'=>'Anrede', 'source'=>'puser.anrede', 'type'=>'combo', 'list'=>'combolisten.anrede',
-                                 'len'=>'1:25:100', 'default'=>'', 'notnull'=>true ],
+                                 'len'=>'1:25:100', 'default'=>'Frau', 'notnull'=>true ],
                 'vorname'   => [ 'anzeige'=>'Vorname', 'source'=>'puser.vorname', 'type'=>'string',
                                  'len'=>'1:25:100', 'default'=>'', 'notnull'=>true ],
                 'nachname'  => [ 'anzeige'=>'Nachname', 'source'=>'puser.nachname', 'type'=>'string',
@@ -224,73 +82,31 @@ class MongoPuserSeeder extends Seeder
                                  'len'=>'1:25:100', 'default'=>'', 'notnull'=>true ],
                 'anschrift' => [ 'anzeige'=>'Anschrift', 'source'=>'puser.anschrift', 'type'=>'string',
                                  'len'=>'1:25:100', 'default'=>'', 'notnull'=>true ],
-                'geb'       => [ 'anzeige'=>'Geb', 'source'=>'puser.geb', 'type'=>'string',
+                'geb'       => [ 'anzeige'=>'Geb', 'source'=>'puser.geb', 'type'=>'date',
                                  'len'=>'1:25:100', 'default'=>'', 'notnull'=>true ],
                 'landsmann' => [ 'anzeige'=>'Landsmann', 'source'=>'puser.landsmann', 'type'=>'string',
                                  'len'=>'1:25:100', 'default'=>'', 'notnull'=>true ],
-                'telefon' => [
-                    [ "Privat" => "02353 6699940" ],
-                    [ "Geschäft" => "02353 7096271" ],
-                    [ "Mobil" => "0174 2170044" ],
-                    [ "Auto"  =>  $this->__xdata('telefon') ],
-                ],
-                'gehalt'     => [ 'anzeige'=>'Gehalt', 'source'=>'puser.gehalt', 'type'=>'string',
+                'telefon' => [ 'anzeige'=>'telefon', 'source'=>'puser.telefon', 'type'=>'string',
+                                    'len'=>'1:25:100', 'default'=>'', 'notnull'=>true ],
+                'gehalt'     => [ 'anzeige'=>'Gehalt', 'source'=>'puser.gehalt', 'type'=>'number',
                                   'len'=>'1:25:100', 'default'=>'', 'notnull'=>true ],
-                'startdate'  => [ 'anzeige'=>'Startdate', 'source'=>'puser.startdate', 'type'=>'string',
+                'startdate'  => [ 'anzeige'=>'Startdate', 'source'=>'puser.startdate', 'type'=>'date',
                                   'len'=>'1:25:100', 'default'=>'', 'notnull'=>true ],
-                'aufgabe'    => [ 'anzeige'=>'Aufgabe', 'source'=>'puser.aufgabe', 'type'=>'string',
+                'aufgabe'    => [ 'anzeige'=>'Aufgabe', 'source'=>'puser.aufgabe', 'type'=>'combo', 'list'=>['Reitbeteiligung', 'Eigentümer', 'Pferdebesitzer', 'Ausbilder Pferd', ],
+                                  'len'=>'1:25:100', 'default'=>'', 'notnull'=>true ],
+                'beruf'    => [ 'anzeige'=>'beruf', 'source'=>'puser.beruf', 'type'=>'combo', 'list'=>['Einsteller', 'Tierarzt', 'Osteopath', 'Schmied', 'Einsteller', 'Einsteller', 'Einsteller', 'Einsteller', 'Einsteller',],
                                   'len'=>'1:25:100', 'default'=>'', 'notnull'=>true ],
                 'bemerkung'  => [ 'anzeige'=>'Bemerkung', 'source'=>'puser.bemerkung', 'type'=>'string',
                                   'len'=>'1:25:100', 'default'=>'', 'notnull'=>true ],
+                'active' => [
+                    'active' => [ 'anzeige'=>'active', 'source'=>'puser.bemerkung', 'type'=>'checkbox',
+                                  'len'=>'1:25:100', 'default'=>'1', 'notnull'=>true ],
+                    'startdate' => [ 'anzeige'=>'startdate', 'source'=>'puser.bemerkung', 'type'=>'date',
+                                     'len'=>'1:25:100', 'default'=>Carbon::now()->toDateTimeString(), 'notnull'=>true ],
+                ],
                 'updated_at' => Carbon::now()->toDateTimeString(),
                 'created_at' => Carbon::now()->toDateTimeString(),
             ],
-
-            [ 'itype' => 'lists',
-                'anrede' => ['Herr', 'Frau', 'Firma',],
-                'title' => ['Dr.', 'Prof.', 'Prof. Dr.', 'Prof. Dr. Dr.',],
-                'zusatz' => ['med.', 'med. vet.'],
-                'bundesland' => [
-                    'BB' => 'Brandenburg',
-                    'BE' => 'Berlin',
-                    'BW' => 'Baden-Württemberg',
-                    'BY' => 'Bayern',
-                    'HB' => 'Bremen',
-                    'HE' => 'Hessen',
-                    'HH' => 'Hamburg',
-                    'MV' => 'Mecklenburg-Vorpommern',
-                    'NI' => 'Niedersachsen',
-                    'NW' => 'Nordrhein-Westfalen',
-                    'RP' => 'Rheinland-Pfalz',
-                    'SH' => 'Schleswig-Holstein',
-                    'SL' => 'Saarland',
-                    'SN' => 'Sachsen',
-                    'ST' => 'Sachsen-Anhalt',
-                    'TH' => 'Thüringen',
-                    ],
-                'land' => [
-                    'de' => 'Deutschland',
-                    'gb' => 'Vereinigtes Königreich',
-                    ],
-                'aufgabe' => [
-                    'Reitbeteiligung', 'Eigentümer', 'Pferdebesitzer', 'Ausbilder Pferd',
-                    ],
-            ],
-
-
-            [ 'itype' => 'defaults',
-                'anrede' => 'Frau',
-                'anschrift' => [
-                    'bundesland' => 'NW',
-                    'land' => 'de'
-                ],
-                'landsmann' => 'deutsch',
-                'active' => [
-                    'active' => true,
-                    'startdate' => Carbon::now()->toDateTimeString(),
-                ],
-            ],
-
 
             [ 'itype' => 'screen',
                 //'name' => Str::random(10),
@@ -303,7 +119,7 @@ class MongoPuserSeeder extends Seeder
                 'zusatz' => 'Kümmert sich um alles. Ist immer der doofe.',
                 'email' => 'rkruggel@bbf7.de',
                 'www' => 'www.bbf7.de',
-                'anschrift' => 'Beverstr. 12, 58553 Halver',
+                'anschrift' => 'Beverstr. 12, 58553 Halver, NW, Deuschland',
                 'geb' => date("Y-m-d", strtotime('19590102')),
                 'landsmann' => 'deutsch',
                 'telefon' => [
@@ -315,7 +131,12 @@ class MongoPuserSeeder extends Seeder
                 'gehalt' => 65000,
                 'startdate' => Carbon::create(2020, 11,12),
                 'aufgabe' => 'Reitbeteiligung',
+                'beruf' => '',
                 'bemerkung' => 'keine',
+                'active' => [
+                    'active' => true,
+                    'startdate' => Carbon::now()->toDateTimeString(),
+                ],
                 'updated_at' => Carbon::now()->toDateTimeString(),
                 'created_at' => Carbon::now()->toDateTimeString(),
             ],
@@ -338,7 +159,12 @@ class MongoPuserSeeder extends Seeder
                 ],
                 'gehalt' => 65000, 'startdate' => Carbon::create(2020, 11,12),
                 'aufgabe' => 'Zuschauer',
+                'beruf' => '',
                 'bemerkung' => 'keine',
+                'active' => [
+                    'active' => true,
+                    'startdate' => Carbon::now()->toDateTimeString(),
+                ],
                 'updated_at' => Carbon::now()->toDateTimeString(),
                 'created_at' => Carbon::now()->toDateTimeString(),
             ],
@@ -361,7 +187,12 @@ class MongoPuserSeeder extends Seeder
                     [ "Auto"  =>  $this->__xdata('telefon') ],
                 ],
                 'aufgabe' => 'Pferd',
+                'beruf' => '',
                 'bemerkung' => 'dummy adresse',
+                'active' => [
+                    'active' => true,
+                    'startdate' => Carbon::now()->toDateTimeString(),
+                ],
                 'updated_at' => Carbon::now()->toDateTimeString(),
                 'created_at' => Carbon::now()->toDateTimeString(),
             ],
@@ -381,7 +212,12 @@ class MongoPuserSeeder extends Seeder
                     [ 'Handy' => $this->__xdata('telefon') ],
                 ],
                 'aufgabe' => 'Pferd, Trainer',
+                'beruf' => '',
                 'bemerkung' => 'dummy adresse',
+                'active' => [
+                    'active' => true,
+                    'startdate' => Carbon::now()->toDateTimeString(),
+                ],
                 'updated_at' => Carbon::now()->toDateTimeString(),
                 'created_at' => Carbon::now()->toDateTimeString(),
             ],
@@ -401,7 +237,12 @@ class MongoPuserSeeder extends Seeder
                     [ 'Handy' => $this->__xdata('telefon') ],
                 ],
                 'aufgabe' => $this->__xdata('aufgabe'),
+                'beruf' => '',
                 'bemerkung' => 'keine Bemerkung',
+                'active' => [
+                    'active' => true,
+                    'startdate' => Carbon::now()->toDateTimeString(),
+                ],
                 'updated_at' => Carbon::now()->toDateTimeString(),
                 'created_at' => Carbon::now()->toDateTimeString(),
             ],
@@ -421,7 +262,12 @@ class MongoPuserSeeder extends Seeder
                     [ 'Handy' => $this->__xdata('telefon') ],
                 ],
                 'aufgabe' => 'Pferd',
+                'beruf' => '',
                 'bemerkung' => 'keine Bemerkung',
+                'active' => [
+                    'active' => true,
+                    'startdate' => Carbon::now()->toDateTimeString(),
+                ],
                 'updated_at' => Carbon::now()->toDateTimeString(),
                 'created_at' => Carbon::now()->toDateTimeString(),
             ],
@@ -441,7 +287,12 @@ class MongoPuserSeeder extends Seeder
                     [ 'Handy' => $this->__xdata('telefon') ],
                 ],
                 'aufgabe' => $this->__xdata('aufgabe'),
+                'beruf' => '',
                 'bemerkung' => 'keine Bemerkung',
+                'active' => [
+                    'active' => true,
+                    'startdate' => Carbon::now()->toDateTimeString(),
+                ],
                 'updated_at' => Carbon::now()->toDateTimeString(),
                 'created_at' => Carbon::now()->toDateTimeString(),
             ],
@@ -461,7 +312,12 @@ class MongoPuserSeeder extends Seeder
                     [ 'Handy' => $this->__xdata('telefon') ],
                 ],
                 'aufgabe' => '',
+                'beruf' => '',
                 'bemerkung' => 'keine Bemerkung',
+                'active' => [
+                    'active' => true,
+                    'startdate' => Carbon::now()->toDateTimeString(),
+                ],
                 'updated_at' => Carbon::now()->toDateTimeString(),
                 'created_at' => Carbon::now()->toDateTimeString(),
             ],
@@ -481,7 +337,12 @@ class MongoPuserSeeder extends Seeder
                     [ 'Handy' => $this->__xdata('telefon') ],
                 ],
                 'aufgabe' => 'Pferd, Trainer',
+                'beruf' => '',
                 'bemerkung' => 'keine Bemerkung',
+                'active' => [
+                    'active' => true,
+                    'startdate' => Carbon::now()->toDateTimeString(),
+                ],
                 'updated_at' => Carbon::now()->toDateTimeString(),
                 'created_at' => Carbon::now()->toDateTimeString(),
             ],
@@ -501,7 +362,12 @@ class MongoPuserSeeder extends Seeder
                     [ 'Handy' => $this->__xdata('telefon') ],
                 ],
                 'aufgabe' => $this->__xdata('aufgabe'),
+                'beruf' => '',
                 'bemerkung' => 'keine Bemerkung',
+                'active' => [
+                    'active' => true,
+                    'startdate' => Carbon::now()->toDateTimeString(),
+                ],
                 'updated_at' => Carbon::now()->toDateTimeString(),
                 'created_at' => Carbon::now()->toDateTimeString(),
             ]]);
@@ -527,7 +393,12 @@ class MongoPuserSeeder extends Seeder
                         [ 'Handy' => $this->__xdata('telefon') ],
                     ],
                     'aufgabe' => $this->__xdata('aufgabe'),
+                    'beruf' => '',
                     'bemerkung' => file_get_contents('http://loripsum.net/api/1/medium/plaintext'),
+                    'active' => [
+                        'active' => true,
+                        'startdate' => Carbon::now()->toDateTimeString(),
+                    ],
                     'updated_at' => Carbon::now()->toDateTimeString(),
                     'created_at' => Carbon::now()->toDateTimeString(),
                 ]);

@@ -28,10 +28,10 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             MongoComboListenSeeder::class,
-            MongoStallSeeder::class,
+            MongoPferdeSeeder::class,
             MongoProgSeeder::class,
-            MongoPuserSeeder::class,
-            MongoPferdeSeeder::class
+            MongoStallSeeder::class,
+            MongoPuserSeeder::class
         ]);
     }
 }

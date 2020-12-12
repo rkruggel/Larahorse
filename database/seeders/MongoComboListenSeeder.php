@@ -18,21 +18,46 @@ class MongoComboListenSeeder extends Seeder
         DB::connection('mongodb')->collection('combolisten')->delete();
 
         DB::connection('mongodb')->collection('combolisten')->insert([
+            [
+                'anrede' => [ 'Herr', 'Frau', 'Firma' ],
+            ],
 
-            ['itype' => 'screen',],
+            [
+                'title' => [ 'Dr.', 'Dr.Dr.', 'Prof.', 'Prof.Dr.', 'Dr.med.', 'Dr.med.vet', ],
+            ],
+            [
+                'zusatz' => [ 'med.', 'med. vet.' ],
+            ],
 
-            ['itype' => 'data',
-                'name' => 'anrede',
-                'items' => ['Herr', 'Frau', 'Firma'],
+            [
+                'bundesland' => [
+                    'BB' => 'Brandenburg',
+                    'BE' => 'Berlin',
+                    'BW' => 'Baden-Württemberg',
+                    'BY' => 'Bayern',
+                    'HB' => 'Bremen',
+                    'HE' => 'Hessen',
+                    'HH' => 'Hamburg',
+                    'MV' => 'Mecklenburg-Vorpommern',
+                    'NI' => 'Niedersachsen',
+                    'NW' => 'Nordrhein-Westfalen',
+                    'RP' => 'Rheinland-Pfalz',
+                    'SH' => 'Schleswig-Holstein',
+                    'SL' => 'Saarland',
+                    'SN' => 'Sachsen',
+                    'ST' => 'Sachsen-Anhalt',
+                    'TH' => 'Thüringen',
+                ],
             ],
-            ['itype' => 'data',
-                'name' => 'title',
-                'items' => ['Dr.', 'Dr.Dr.', 'Prof.', 'Prof.Dr.', 'Dr.med.', 'Dr.med.vet',],
+
+            [
+                'land' => [
+                    'de' => 'Deutschland',
+                    'gb' => 'Vereinigtes Königreich',
+                ],
             ],
-            ['itype' => 'data',
-                'name' => 'zusatz',
-                'items' => ['Dr.', 'Dr.Dr.', 'Prof.', 'Prof.Dr.', 'Dr.med.', 'Dr.med.vet',],
-            ],
+
+
         ]);
     }
 }
