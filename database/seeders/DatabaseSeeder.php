@@ -27,6 +27,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
+            MongoComboListenSeeder::class,
             MongoStallSeeder::class,
             MongoProgSeeder::class,
             MongoPuserSeeder::class,

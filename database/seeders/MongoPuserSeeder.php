@@ -7,8 +7,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
-use MongoDB;
-use App\Library;
+
 
 class MongoPuserSeeder extends Seeder
 {
@@ -206,7 +205,46 @@ class MongoPuserSeeder extends Seeder
             //   lists    => Auflistungen für komboboxen
             //   defaults => Defaultwerte die beim neueintrag vorbesetzt weden.
             //   data     => Die eigentlichen Daten
-            [ 'itype' => 'screen'],
+            [ 'itype' => 'screen',
+                'anrede'    => [ 'anzeige'=>'Anrede', 'source'=>'puser.anrede', 'type'=>'combo', 'list'=>'combolisten.anrede',
+                                 'len'=>'1:25:100', 'default'=>'', 'notnull'=>true ],
+                'vorname'   => [ 'anzeige'=>'Vorname', 'source'=>'puser.vorname', 'type'=>'string',
+                                 'len'=>'1:25:100', 'default'=>'', 'notnull'=>true ],
+                'nachname'  => [ 'anzeige'=>'Nachname', 'source'=>'puser.nachname', 'type'=>'string',
+                                 'len'=>'1:25:100', 'default'=>'', 'notnull'=>true ],
+                'title'     => [ 'anzeige'=>'Title', 'source'=>'puser.title', 'type'=>'combo', 'list'=>'combolisten.title',
+                                 'len'=>'1:25:100', 'default'=>'', 'notnull'=>true ],
+                'rufname'   => [ 'anzeige'=>'Rufname', 'source'=>'puser.rufname', 'type'=>'string',
+                                 'len'=>'1:25:100', 'default'=>'', 'notnull'=>true ],
+                'zusatz'    => [ 'anzeige'=>'Zusatz', 'source'=>'puser.zusatz', 'type'=>'combo',  'list'=>'combolisten.zusatz',
+                                 'len'=>'1:25:100', 'default'=>'', 'notnull'=>true ],
+                'email'     => [ 'anzeige'=>'Email', 'source'=>'puser.email', 'type'=>'string',
+                                 'len'=>'1:25:100', 'default'=>'', 'notnull'=>true ],
+                'www'       => [ 'anzeige'=>'www', 'source'=>'puser.www', 'type'=>'string',
+                                 'len'=>'1:25:100', 'default'=>'', 'notnull'=>true ],
+                'anschrift' => [ 'anzeige'=>'Anschrift', 'source'=>'puser.anschrift', 'type'=>'string',
+                                 'len'=>'1:25:100', 'default'=>'', 'notnull'=>true ],
+                'geb'       => [ 'anzeige'=>'Geb', 'source'=>'puser.geb', 'type'=>'string',
+                                 'len'=>'1:25:100', 'default'=>'', 'notnull'=>true ],
+                'landsmann' => [ 'anzeige'=>'Landsmann', 'source'=>'puser.landsmann', 'type'=>'string',
+                                 'len'=>'1:25:100', 'default'=>'', 'notnull'=>true ],
+                'telefon' => [
+                    [ "Privat" => "02353 6699940" ],
+                    [ "Geschäft" => "02353 7096271" ],
+                    [ "Mobil" => "0174 2170044" ],
+                    [ "Auto"  =>  $this->__xdata('telefon') ],
+                ],
+                'gehalt'     => [ 'anzeige'=>'Gehalt', 'source'=>'puser.gehalt', 'type'=>'string',
+                                  'len'=>'1:25:100', 'default'=>'', 'notnull'=>true ],
+                'startdate'  => [ 'anzeige'=>'Startdate', 'source'=>'puser.startdate', 'type'=>'string',
+                                  'len'=>'1:25:100', 'default'=>'', 'notnull'=>true ],
+                'aufgabe'    => [ 'anzeige'=>'Aufgabe', 'source'=>'puser.aufgabe', 'type'=>'string',
+                                  'len'=>'1:25:100', 'default'=>'', 'notnull'=>true ],
+                'bemerkung'  => [ 'anzeige'=>'Bemerkung', 'source'=>'puser.bemerkung', 'type'=>'string',
+                                  'len'=>'1:25:100', 'default'=>'', 'notnull'=>true ],
+                'updated_at' => Carbon::now()->toDateTimeString(),
+                'created_at' => Carbon::now()->toDateTimeString(),
+            ],
 
             [ 'itype' => 'lists',
                 'anrede' => ['Herr', 'Frau', 'Firma',],
@@ -268,17 +306,17 @@ class MongoPuserSeeder extends Seeder
                 'anschrift' => 'Beverstr. 12, 58553 Halver',
                 'geb' => date("Y-m-d", strtotime('19590102')),
                 'landsmann' => 'deutsch',
-                'jtelefon' => '[
-                    {"key": "Privat", "value": "02353 6699940"},
-                    {"key": "Geschäft", "value": "02353 7096271"},
-                    {"key": "Mobil", "value": "0174 2170044"},
-                    {"key": "Auto", "value": "' . $this->__xdata('telefon') . '"}
-                ]',
-                'jfield' => self::__xjsondata(
-                    ['landsmann' => 'deutsch', 'gehalt' => 65000, 'anrede' => 'Herr', 'titel' => 'TITEL1', 'startdate' => '12.11.2020', 'bem' => 'keine Bemerkung']
-                ),
+                'telefon' => [
+                    [ "Privat" => "02353 6699940" ],
+                    [ "Geschäft" => "02353 7096271" ],
+                    [ "Mobil" => "0174 2170044" ],
+                    [ "Auto"  =>  $this->__xdata('telefon') ],
+                ],
+                'gehalt' => 65000,
+                'startdate' => Carbon::create(2020, 11,12),
                 'aufgabe' => 'Reitbeteiligung',
                 'bemerkung' => 'keine',
+                'updated_at' => Carbon::now()->toDateTimeString(),
                 'created_at' => Carbon::now()->toDateTimeString(),
             ],
             [ 'itype' => 'data',
@@ -291,19 +329,18 @@ class MongoPuserSeeder extends Seeder
                 'email' => Str::random(10) . '@gmail.com',
                 'www' => 'www.' . Str::random(5) . '.com',
                 'anschrift' => 'Beverstr. 12, 58553 Halver',
-                'geb' => date("Y-m-d", strtotime('19540203')),
+                'geb' => Carbon::create(1954, 2,3),
                 'landsmann' => 'deutsch',
-                'jtelefon' => '[
-                    {"key": "Privat", "value": "02353 6699940"},
-                    {"key": "Mobil", "value": "0174 2170044"},
-                    {"key": "Auto", "value": "' . $this->__xdata('telefon') . '"}
-                ]',
-                'jfield' => self::__xjsondata(
-                    ['landsmann' => 'deutsch', 'gehalt' => 65000, 'anrede' => 'Herr', 'titel' => 'TITEL1', 'startdate' => '12.11.2020', 'bem' => 'keine Bemerkung']
-                ),
+                'telefon' => [
+                    [ "Privat" => "02353 6699940" ],
+                    [ "Mobil" => "0174 2170044" ],
+                    [ "Auto"  =>  $this->__xdata('telefon') ],
+                ],
+                'gehalt' => 65000, 'startdate' => Carbon::create(2020, 11,12),
                 'aufgabe' => 'Zuschauer',
                 'bemerkung' => 'keine',
-                'created_at' => Carbon::now()->toDateTimeString()
+                'updated_at' => Carbon::now()->toDateTimeString(),
+                'created_at' => Carbon::now()->toDateTimeString(),
             ],
             [ 'itype' => 'data',
                 'anrede' => 'Herr',
@@ -315,18 +352,18 @@ class MongoPuserSeeder extends Seeder
                 'email' => Str::random(10) . '@gmail.com',
                 'www' => 'www.' . Str::random(5) . '.com',
                 'anschrift' => 'Hauptstr. 10, 58511 Lüdenscheid',
-                'geb' => date("Y-m-d", strtotime('19850724')),
+                'geb' => Carbon::create(1985, 7,24),
                 'landsmann' => 'deutsch',
-                'jtelefon' => '[
-                    {"key": "Privat", "value": "069 521411"},
-                    {"key": "Mobil", "value": "0177 63225142"},
-                    {"key": "Mobil", "value": "0177 422541225"},
-                    {"key": "Auto", "value": "' . $this->__xdata('telefon') . '"}
-                ]',
-                'jfield' => Helpers::json2string([]),
+                'telefon' => [
+                    [ "Privat" => "069 521411" ],
+                    [ "Mobil" => "0177 63225142" ],
+                    [ "Mobil" => "0177 422541225" ],
+                    [ "Auto"  =>  $this->__xdata('telefon') ],
+                ],
                 'aufgabe' => 'Pferd',
                 'bemerkung' => 'dummy adresse',
-                'created_at' => Carbon::now()->toDateTimeString()
+                'updated_at' => Carbon::now()->toDateTimeString(),
+                'created_at' => Carbon::now()->toDateTimeString(),
             ],
             [ 'itype' => 'data',
                 'anrede' => 'Herr',
@@ -338,15 +375,15 @@ class MongoPuserSeeder extends Seeder
                 'email' => Str::random(10) . '@gmail.com',
                 'www' => 'www.' . Str::random(5) . '.com',
                 'anschrift' => 'Hauptstr. 12, 58511 Lüdenscheid',
-                'geb' => date("Y-m-d", strtotime('19850724')),
+                'geb' => Carbon::create(1985, 7,24),
                 'landsmann' => 'deutsch',
-                'jtelefon' => '[
-                    {"key": "Auto", "value": "' . $this->__xdata('telefon') . '"}
-                ]',
-                'jfield' => Helpers::json2string([]),
+                'telefon' => [
+                    [ 'Handy' => $this->__xdata('telefon') ],
+                ],
                 'aufgabe' => 'Pferd, Trainer',
                 'bemerkung' => 'dummy adresse',
-                'created_at' => Carbon::now()->toDateTimeString()
+                'updated_at' => Carbon::now()->toDateTimeString(),
+                'created_at' => Carbon::now()->toDateTimeString(),
             ],
             [ 'itype' => 'data',
                 'anrede' => 'Frau',
@@ -358,15 +395,15 @@ class MongoPuserSeeder extends Seeder
                 'email' => Str::random(10) . '@gmail.com',
                 'www' => 'www.' . Str::random(5) . '.com',
                 'anschrift' => '',
-                //'geb' => date("Y-m-d", strtotime('19850724' ) ) ,
+                'geb' => Carbon::create(1985, 7,24),
                 'landsmann' => 'deutsch',
-                'jtelefon' => '[
-                    {"key": "Auto", "value": "' . $this->__xdata('telefon') . '"}
-                ]',
-                'jfield' => Helpers::json2string([]),
+                'telefon' => [
+                    [ 'Handy' => $this->__xdata('telefon') ],
+                ],
                 'aufgabe' => $this->__xdata('aufgabe'),
-                //'bemerkung' => 'dummy adresse',
-                'created_at' => Carbon::now()->toDateTimeString()
+                'bemerkung' => 'keine Bemerkung',
+                'updated_at' => Carbon::now()->toDateTimeString(),
+                'created_at' => Carbon::now()->toDateTimeString(),
             ],
             [ 'itype' => 'data',
                 'anrede' => 'Frau',
@@ -378,15 +415,15 @@ class MongoPuserSeeder extends Seeder
                 'email' => Str::random(10) . '@gmail.com',
                 'www' => 'www.' . Str::random(5) . '.com',
                 'anschrift' => 'Grüne 1, Breckerfeld',
-                //'geb' => date("Y-m-d", strtotime('19850724' ) ) ,
+                'geb' => Carbon::create(1985, 4,30),
                 'landsmann' => 'deutsch',
-                'jtelefon' => '[
-                    {"key": "Auto", "value": "' . $this->__xdata('telefon') . '"}
-                ]',
-                'jfield' => Helpers::json2string([]),
+                'telefon' => [
+                    [ 'Handy' => $this->__xdata('telefon') ],
+                ],
                 'aufgabe' => 'Pferd',
-                //'bemerkung' => 'dummy adresse',
-                'created_at' => Carbon::now()->toDateTimeString()
+                'bemerkung' => 'keine Bemerkung',
+                'updated_at' => Carbon::now()->toDateTimeString(),
+                'created_at' => Carbon::now()->toDateTimeString(),
             ],
             [ 'itype' => 'data',
                 'anrede' => 'Herr',
@@ -398,15 +435,15 @@ class MongoPuserSeeder extends Seeder
                 'email' => Str::random(10) . '@gmail.com',
                 'www' => 'www.' . Str::random(5) . '.com',
                 'anschrift' => 'Grüne 1, Breckerfeld',
-                //'geb' => date("Y-m-d", strtotime('19850724' ) ) ,
+                'geb' => Carbon::create(1985, 4,30),
                 'landsmann' => 'deutsch',
-                'jtelefon' => '[
-                    {"key": "Auto", "value": "' . $this->__xdata('telefon') . '"}
-                ]',
-                'jfield' => Helpers::json2string([]),
+                'telefon' => [
+                    [ 'Handy' => $this->__xdata('telefon') ],
+                ],
                 'aufgabe' => $this->__xdata('aufgabe'),
-                //'bemerkung' => 'dummy adresse',
-                'created_at' => Carbon::now()->toDateTimeString()
+                'bemerkung' => 'keine Bemerkung',
+                'updated_at' => Carbon::now()->toDateTimeString(),
+                'created_at' => Carbon::now()->toDateTimeString(),
             ],
             [ 'itype' => 'data',
                 'anrede' => 'Firma',
@@ -418,15 +455,15 @@ class MongoPuserSeeder extends Seeder
                 'email' => Str::random(10) . '@gmail.com',
                 'www' => 'www.' . Str::random(5) . '.com',
                 'anschrift' => 'Grüne 1, Breckerfeld',
-                //'geb' => date("Y-m-d", strtotime('19850724' ) ) ,
+                'geb' => Carbon::create(1985, 4,30),
                 'landsmann' => 'deutsch',
-                'jtelefon' => '[
-                    {"key": "Auto", "value": "' . $this->__xdata('telefon') . '"}
-                ]',
-                'jfield' => Helpers::json2string([]),
+                'telefon' => [
+                    [ 'Handy' => $this->__xdata('telefon') ],
+                ],
                 'aufgabe' => '',
-                //'bemerkung' => 'dummy adresse',
-                'created_at' => Carbon::now()->toDateTimeString()
+                'bemerkung' => 'keine Bemerkung',
+                'updated_at' => Carbon::now()->toDateTimeString(),
+                'created_at' => Carbon::now()->toDateTimeString(),
             ],
             [ 'itype' => 'data',
                 'anrede' => 'Frau',
@@ -440,13 +477,13 @@ class MongoPuserSeeder extends Seeder
                 'anschrift' => 'Osemundstr. 12a, 58091 Hagen',
                 'geb' => date("Y-m-d", strtotime('19790101')),
                 'landsmann' => 'deutsch',
-                'jtelefon' => '[
-                    {"key": "Auto", "value": "' . $this->__xdata('telefon') . '"}
-                ]',
-                'jfield' => Helpers::json2string([]),
+                'telefon' => [
+                    [ 'Handy' => $this->__xdata('telefon') ],
+                ],
                 'aufgabe' => 'Pferd, Trainer',
-                //'bemerkung' => 'dummy adresse',
-                'created_at' => Carbon::now()->toDateTimeString()
+                'bemerkung' => 'keine Bemerkung',
+                'updated_at' => Carbon::now()->toDateTimeString(),
+                'created_at' => Carbon::now()->toDateTimeString(),
             ],
             [ 'itype' => 'data',
                 'anrede' => 'Frau',
@@ -460,13 +497,13 @@ class MongoPuserSeeder extends Seeder
                 'anschrift' => 'Halver',
                 'geb' => date("Y-m-d", strtotime('19610101')),
                 'landsmann' => 'deutsch',
-                'jtelefon' => '[
-                    {"key": "Auto", "value": "' . $this->__xdata('telefon') . '"}
-                ]',
-                'jfield' => Helpers::json2string([]),
+                'telefon' => [
+                    [ 'Handy' => $this->__xdata('telefon') ],
+                ],
                 'aufgabe' => $this->__xdata('aufgabe'),
-                //'bemerkung' => 'dummy adresse',
-                'created_at' => Carbon::now()->toDateTimeString()
+                'bemerkung' => 'keine Bemerkung',
+                'updated_at' => Carbon::now()->toDateTimeString(),
+                'created_at' => Carbon::now()->toDateTimeString(),
             ]]);
 
             for ($i = 0; $i < 15; $i++) {
@@ -486,13 +523,13 @@ class MongoPuserSeeder extends Seeder
                     'anschrift' => $this->__xdata('anschrift'),
                     'geb' => date("Y-m-d", strtotime('19610101')),
                     'landsmann' => 'deutsch',
-                    'jtelefon' => '[
-                        {"key": "Auto", "value": "' . $this->__xdata('telefon') . '"}
-                    ]',
-                    'jfield' => Helpers::json2string([]),
+                    'telefon' => [
+                        [ 'Handy' => $this->__xdata('telefon') ],
+                    ],
                     'aufgabe' => $this->__xdata('aufgabe'),
                     'bemerkung' => file_get_contents('http://loripsum.net/api/1/medium/plaintext'),
-                    'created_at' => Carbon::now()->toDateTimeString()
+                    'updated_at' => Carbon::now()->toDateTimeString(),
+                    'created_at' => Carbon::now()->toDateTimeString(),
                 ]);
             }   // ende for
 

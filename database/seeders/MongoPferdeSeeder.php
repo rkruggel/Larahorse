@@ -20,13 +20,6 @@ class MongoPferdeSeeder extends Seeder
         DB::connection('mongodb')->collection('pferde')->delete();
 
         DB::connection('mongodb')->collection('pferde')->insert([
-
-        // es gibt drei 'type'
-        //   screen => Anweisungen für die Screenerstellung
-        //   data   => Die eigentlichen Daten
-
-//                'name' => ['anzeige'=>'', 'source'=>'', 'type'=>'', 'list'=>['combo1', 'combo2', 'combo3']
-//                           'len'=>'', 'default'=>'', 'notnull'=>false],
             [
               'itype' => 'screen',
                 'name'      => [ 'anzeige'=>'Pferdename', 'source'=>'Pferde.name', 'type'=>'string',
@@ -45,7 +38,11 @@ class MongoPferdeSeeder extends Seeder
                                  'len'=>'', 'default'=>'0', 'notnull'=>false],
                 'bemerkung' => [ 'anzeige'=>'Bemerkung', 'source'=>'Pferde.bemerkung', 'type'=>'string',
                                  'len'=>'4:100:-1', 'default'=>'', 'notnull'=>false],
+                'updated_at' => Carbon::now()->toDateTimeString(),
+                'created_at' => Carbon::now()->toDateTimeString(),
             ],
+            // 'name' => ['anzeige'=>'', 'source'=>'', 'type'=>'', 'list'=>['combo1', 'combo2', 'combo3']
+            //            'len'=>'', 'default'=>'', 'notnull'=>false],
 
 
             [ 'itype' => 'data',
@@ -56,7 +53,9 @@ class MongoPferdeSeeder extends Seeder
                 'sex' => 'Stute',
                 'type' => 'Warmblut',
                 'zuechter_id' => 0,
-                'bemerkung' => 'Das Pferd von Roland'
+                'bemerkung' => 'Das Pferd von Roland',
+                'updated_at' => Carbon::now()->toDateTimeString(),
+                'created_at' => Carbon::now()->toDateTimeString(),
             ],
 
             [ 'itype' => 'data',
@@ -67,7 +66,9 @@ class MongoPferdeSeeder extends Seeder
                 'sex' => 'Stute',
                 'type' => 'Warmblut',
                 'zuechter_id' => 0,
-                'bemerkung' => 'Das Pferd von Claudia'
+                'bemerkung' => 'Das Pferd von Claudia',
+                'updated_at' => Carbon::now()->toDateTimeString(),
+                'created_at' => Carbon::now()->toDateTimeString(),
             ],
 
             [ 'itype' => 'data',
@@ -78,7 +79,9 @@ class MongoPferdeSeeder extends Seeder
                 'sex' => 'Stute',
                 'type' => 'Warmblut',
                 'zuechter_id' => 0,
-                'bemerkung' => 'Das Pferd von Arno'
+                'bemerkung' => 'Das Pferd von Arno',
+                'updated_at' => Carbon::now()->toDateTimeString(),
+                'created_at' => Carbon::now()->toDateTimeString(),
             ],
 
             [ 'itype' => 'data',
@@ -89,7 +92,9 @@ class MongoPferdeSeeder extends Seeder
                 'sex' => 'Stute',
                 'type' => 'Pony',
                 'zuechter_id' => 0,
-                'bemerkung' => 'Meine Reitbeteiligung'
+                'bemerkung' => 'Meine Reitbeteiligung',
+                'updated_at' => Carbon::now()->toDateTimeString(),
+                'created_at' => Carbon::now()->toDateTimeString(),
             ],
 
             [ 'itype' => 'data',
@@ -100,7 +105,9 @@ class MongoPferdeSeeder extends Seeder
                 'sex' => 'Wallach',
                 'type' => 'Pony',
                 'zuechter_id' => 0,
-                'bemerkung' => 'Meine Reitbeteiligung'
+                'bemerkung' => 'Meine Reitbeteiligung',
+                'updated_at' => Carbon::now()->toDateTimeString(),
+                'created_at' => Carbon::now()->toDateTimeString(),
             ],
 
 

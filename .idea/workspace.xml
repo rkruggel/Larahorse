@@ -2,37 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b06b2b6-a6f1-4cec-a9b7-f28d19cd28cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Models/progs.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/stall.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeders/MongoStallSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeders/MongoComboListenSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SdPuserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SdPuserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/PuserMain.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/PuserMain.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/SelectProg.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/SelectProg.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/ShowPosts.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/ShowPosts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Library/JsonDbDaten.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Library/JsonDbDaten.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Pferde.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/pferde.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Pusers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/pusers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_10_155012_create_pusers_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_11_190051_create_einsteller_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_11_191007_create_stall_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_16_121159_create_userpferd_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_10_185239_mongo_prog.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_10_185239_mongo_prog.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_10_190013_mongo_puser.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_10_190013_mongo_puser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_10_205021_mongo_pferde.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_10_205021_mongo_pferde.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/EinstellerSeeder.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeders/MongoPferdeSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/MongoPferdeSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeders/MongoProgSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/MongoProgSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeders/MongoPuserSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/MongoPuserSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/PusersSeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/StallSeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/UserPferdSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/MongoStallSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/MongoStallSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -283,7 +259,7 @@
       <workItem from="1607421317117" duration="6412000" />
       <workItem from="1607432721494" duration="2993000" />
       <workItem from="1607515483172" duration="12285000" />
-      <workItem from="1607539312032" duration="77049000" />
+      <workItem from="1607539312032" duration="86070000" />
     </task>
     <task id="LOCAL-00001" summary="Debug Konfiguration">
       <created>1607435268406</created>
@@ -334,7 +310,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607687119014</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Die Seeder zu Mongo umgebaut">
+      <created>1607779541725</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1607779541725</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -360,7 +343,8 @@
     <MESSAGE value="composer.json erweitert und bereinigt" />
     <MESSAGE value="Prog-Auswahl im Startscreen.&#10;Die Schaltleiste" />
     <MESSAGE value="Die ersten MongoSeeder erstellt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Die ersten MongoSeeder erstellt" />
+    <MESSAGE value="Die Seeder zu Mongo umgebaut" />
+    <option name="LAST_COMMIT_MESSAGE" value="Die Seeder zu Mongo umgebaut" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

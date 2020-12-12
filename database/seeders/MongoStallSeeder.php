@@ -19,19 +19,28 @@ class MongoStallSeeder extends Seeder
 
         DB::connection('mongodb')->collection('stall')->insert([
 
-            [ 'itype' => 'screen'],
+            [ 'itype' => 'screen',
+                'stallname' => [ 'anzeige'=>'Stallname', 'source'=>'stall.stallname', 'type'=>'string', 'len'=>'1:25:100', 'default'=>'', 'notnull'=>true ],
+                'stalladresse' => [ 'anzeige'=>'Stalladresse', 'source'=>'stall.stalladresse', 'type'=>'string', 'len'=>'1:25:100', 'default'=>'', 'notnull'=>true],
+                'gruendung' => [ 'anzeige'=>'Gründung', 'source'=>'stall.gruendung', 'type'=>'string', 'len'=>'1:25:100', 'default'=>'', 'notnull'=>true],
+                'bemerkung' => [ 'anzeige'=>'Bemerkung', 'source'=>'stall.bemerkung', 'type'=>'string', 'len'=>'1:25:100', 'default'=>'', 'notnull'=>true],
+            ],
 
             [ 'itype' => 'data',
                 'stallname' => 'Stall Claudia',
                 'stalladresse' => '',
                 'gruendung' => Carbon::create(1988, 7, 1)->toDateTimeString(),
-                'bemerkung' => ''
+                'bemerkung' => '',
+                'updated_at' => Carbon::now()->toDateTimeString(),
+                'created_at' => Carbon::now()->toDateTimeString(),
             ],
             [ 'itype' => 'data',
                 'stallname' => 'Allefeld',
                 'stalladresse' => '',
                 'gruendung' => Carbon::create(1960, 1, 1)->toDateTimeString(),
-                'bemerkung' => ''
+                'bemerkung' => '',
+                'updated_at' => Carbon::now()->toDateTimeString(),
+                'created_at' => Carbon::now()->toDateTimeString(),
             ],
         ]);
     }

@@ -25,8 +25,7 @@ class MongoProgSeeder extends Seeder
         DB::connection('mongodb')->collection('progs')->delete();
 
         DB::connection('mongodb')->collection('progs')->insert([
-
-        [ 'itype' => 'screen',
+            [ 'itype' => 'screen',
                 'name'   => [ 'anzeige'=>'Progname', 'source'=>'Progs.name', 'type'=>'string',
                               'len'=>'1:30:50', 'default'=>'', 'notnull'=>false],
 
@@ -41,49 +40,66 @@ class MongoProgSeeder extends Seeder
 
                 'desc'   => [ 'anzeige'=>'Beschreibung', 'source'=>'Progs.desc', 'type'=>'string',
                             'len'=>'4:100:-1', 'default'=>'', 'notnull'=>false ],
+                'updated_at' => Carbon::now()->toDateTimeString(),
+                'created_at' => Carbon::now()->toDateTimeString(),
             ],
             [ 'itype' => 'data',
                 'name' => 'Stall',
                 'date' => Carbon::create(2020, 8, 21)->toDateTimeString(),
                 'active' => true,
                 'user' => 'roland',
-                'desc' => 'Die Stallverwaltung'
+                'desc' => 'Die Stallverwaltung',
+                'updated_at' => Carbon::now()->toDateTimeString(),
+                'created_at' => Carbon::now()->toDateTimeString(),
             ],
             [ 'itype' => 'data',
                 'name' => 'Angeln',
-                'date' => Carbon::create(2020, 12, 1, 0,0,0)->toDateTimeString(),
+                'date' => Carbon::create(2020, 12, 1)->toDateTimeString(),
                 'active' => true,
                 'user' => 'roland',
-                'desc' => 'Verwaltung für Angelvereine'
+                'desc' => 'Verwaltung für Angelvereine',
+                'updated_at' => Carbon::now()->toDateTimeString(),
+                'created_at' => Carbon::now()->toDateTimeString(),
             ],
             [ 'itype' => 'data',
                 'name' => 'Knitting',
                 'date' => Carbon::now()->toDateTimeString(),
                 'active' => true,
                 'user' => 'petra',
-                'desc' => 'Stricktreffen und Projekte'
+                'desc' => 'Stricktreffen und Projekte',
+                'updated_at' => Carbon::now()->toDateTimeString(),
+                'created_at' => Carbon::now()->toDateTimeString(),
             ],
             [ 'itype' => 'data',
                 'name' => 'Unding',
                 'date' => Carbon::now('CET')->toDateTimeString(),
                 'active' => false,
                 'user' => 'erich',
-                'desc' => 'Lagerverwaltung für Strassenbau'
+                'desc' => 'Lagerverwaltung für Strassenbau',
+                'updated_at' => Carbon::now()->toDateTimeString(),
+                'created_at' => Carbon::now()->toDateTimeString(),
             ],
             [ 'itype' => 'data',
                 'name' => 'Umbau',
-                'date' => Carbon::create(2020, 1, 2, 0,0,0)->toDateTimeString(),
+                'date' => Carbon::create(2020, 1, 2)->toDateTimeString(),
                 'active' => true,
                 'user' => 'roland',
-                'desc' => 'Verwaltung für Umbauten und Renovierungen'
+                'desc' => 'Verwaltung für Umbauten und Renovierungen',
+                'updated_at' => Carbon::now()->toDateTimeString(),
+                'created_at' => Carbon::now()->toDateTimeString(),
             ]
 
         ]);
 
-//        $tt = new progs();
-//        $tt->name = 'ich';
-//        $tt->date = Carbon::now()->toDateTimeString();
-//        $tt->save();
+
+        $tt = new progs();
+        $tt->itype = 'data';
+        $tt->name = 'ich';
+        $tt->date = Carbon::now()->toDateTimeString();
+        $tt->active = true;
+        $tt->user = 'roland';
+        $tt->desc = 'Verwaltung für Umbauten und Renovierungen';
+        $tt->save();
 
         $a = 0;
     }
