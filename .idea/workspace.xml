@@ -255,11 +255,11 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="PHPUnit.phpunit.xml" />
+      <item itemvalue="npm.watch" />
+      <item itemvalue="npm.mkdoc serve" />
       <item itemvalue="PHP Script.index.php" />
       <item itemvalue="PHP Web Page.Web Page" />
-      <item itemvalue="npm.mkdoc serve" />
-      <item itemvalue="npm.watch" />
+      <item itemvalue="PHPUnit.phpunit.xml" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
