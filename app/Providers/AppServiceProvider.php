@@ -16,6 +16,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -28,6 +29,8 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         //
+
+
     }
 
     /**
@@ -38,5 +41,15 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
 //        Blade::component('layouts.components.test-component', 'tc');
+//        $value = session('progname');
+//        $value = config('rk_progname');
+//
+//        view()->composer('layouts.master', function ($view) use ($value) {
+//            $view->with('value', $value);
+//        });
+
+//        $t = Config::get('lara.progname');
+//        view()->share('value', $t);
+
     }
 }

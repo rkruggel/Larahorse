@@ -28,6 +28,8 @@ use Livewire\Component;
 
 class PuserMain extends Component
 {
+
+
     /* wird als Variable übergeben. */
     public string $post;
 
@@ -50,6 +52,9 @@ class PuserMain extends Component
 
     public pusers $screen_puser;
     public array $screen_config;
+
+
+    //protected $listeners = [ 'showDetails' => 'showDetails' ];
 
     //** privats */
 
@@ -195,12 +200,16 @@ class PuserMain extends Component
      * Wenn die ID in der linken Seite (Auflistung) angeklickt wird, wird
      * diese Funktion aufgerufen und erzeugt die rechte Seite mit den Details.
      *
-     * @param int $id
+     * @ param int $id
+     * @param string $id
      */
-    public function showDetails(int $id)
+    public function showDetails(string $id)
     {
-        $_puser = pusers::find($id);
+        //dd($id);
+        $_puser = pusers::find(json_decode($id));
         $this->selectvar = $_puser;
+
+        $a=0;
     }
 
 
@@ -221,11 +230,13 @@ class PuserMain extends Component
      */
     public function updatedQuery()
     {
-        $this->contacts = pusers::where('nachname', 'ilike', '%' . $this->query . '%')
+        $this->contacts = pusers::where('nachname', 'like', '%' . $this->query . '%')
             ->orderBy('nachname')
             ->orderBy('vorname')
             ->get()
             ->toArray();
+
+        //$aa = $this->listeners;
         $a = 0;
     }
 

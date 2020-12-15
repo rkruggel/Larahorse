@@ -24,14 +24,7 @@ class StartController extends Controller
 {
 
     public function __invoke() {
-
-//        Test
-//        $vafe = Config::get('database');
-//        $vaff = Config::get('database.connections.pgsql');
-//        $vafg = Config::get('database.connections.pgsql.password');
-//
-//        $vagg = DB::connection();
-//        $a=0;
+        session('progname', '-.-');
         return view('start');
     }
 }

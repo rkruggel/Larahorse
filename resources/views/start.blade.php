@@ -6,17 +6,11 @@
 @section('content')
     @parent
 
-    <?php
-//    echo "<pre>";
-//        print_r(PDO::getAvailableDrivers());
-//    echo "<pre>";
-    ?>
-
-    <?php //echo phpInfo(); ?>
+<!--    --><?php //echo phpInfo(); die(); ?>
 
     <p>branch_01</p>
 
-    <div id="startscreen" ">
+    <div id="startscreen">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-4 p-md-5">

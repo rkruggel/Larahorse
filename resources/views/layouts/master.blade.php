@@ -24,7 +24,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+{{--    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>--}}
 
     <!-- Master css -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet" >
@@ -48,7 +48,12 @@
             Menue  (master.blade.php)
         -->
         <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-            <a class="my-0 mr-md-auto font-weight-normal text-dark" href="{{ url('/') }}">{{ config('app.name') }}</a>
+            <a class="my-0 mr-md-auto font-weight-normal text-dark" href="{{ url('/') }}">
+                {{ config('app.name') }}
+{{--                {{ Config::get('lara.progname') }}--}}
+{{--                {{ $value }}--}}
+            </a>
+
             <nav class="my-2 my-md-0 mr-md-3">
                 <a class="p-2 text-dark btn-link" href="{{ url('/puser/index') }}"
                    data-toggle="tooltip" data-html="true" title="Alles von den Usern" >Puser</a>
@@ -87,37 +92,5 @@
     @livewireScripts
 
 </body>
-
-{{--<body>--}}
-{{--    <div id="app">--}}
-{{--        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">--}}
-{{--            <div class="container">--}}
-{{--                <a class="navbar-brand" href="{{ url('/') }}">--}}
-{{--                    {{ config('app.name', 'Laravel') }}--}}
-{{--                </a>--}}
-{{--                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">--}}
-{{--                    <span class="navbar-toggler-icon"></span>--}}
-{{--                </button>--}}
-
-{{--                <div class="collapse navbar-collapse" id="navbarSupportedContent">--}}
-{{--                    <!-- Left Side Of Navbar -->--}}
-{{--                    <ul class="navbar-nav mr-auto">--}}
-
-{{--                    </ul>--}}
-
-{{--                    <!-- Right Side Of Navbar -->--}}
-{{--                    <ul class="navbar-nav ml-auto">--}}
-
-{{--                    </ul>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </nav>--}}
-
-{{--        <main class="py-4">--}}
-{{--            @yield('content')--}}
-{{--        </main>--}}
-{{--    </div>--}}
-{{--    @livewireScripts--}}
-{{--</body>--}}
 
 </html>
