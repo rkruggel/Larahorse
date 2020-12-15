@@ -15,12 +15,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 
-class Pferde extends Model
+class pferde extends Eloquent
 {
-    use HasFactory;
-
-    protected $table = 'pferde';
+    protected $connection = 'mongodb';
 }

@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>FILEINFOS.md</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #a9b7c6;}
+.s3 { color: #808080;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+FILEINFOS.md</font>
+</center></td></tr></table>
+<pre><span class="s0"># </span><span class="s2">Anzeige der Files</span>
+
+<span class="s0">### </span><span class="s2">Die ersten index.php</span>
+<span class="s3">```</span>
+<span class="s3">public/index.php</span>
+<span class="s3">```</span>
+
+<span class="s0">### </span><span class="s2">Die erste Seite darstellen</span>
+<span class="s3">```</span>
+<span class="s3">routes/web.php</span>
+<span class="s3">Route::get('/', StartController::class);</span>
+        <span class="s3">|</span>
+        <span class="s3">V</span>
+<span class="s3">app/Http/Controllers/StartController.php</span>
+<span class="s3">return view('start');</span>
+        <span class="s3">|</span>
+        <span class="s3">V</span>
+<span class="s3">resources/views/start.blade.php  &lt;-+</span>
+        <span class="s3">|                          | </span>
+        <span class="s3">|          resources/views/layouts/master.blade.php</span>
+        <span class="s3">V</span>
+  <span class="s3">+ ----------------- +</span>
+  <span class="s3">| Anzeige der Seite |</span>
+  <span class="s3">+ ----------------- +</span>
+<span class="s3">```</span>
+
+
+<span class="s0">### </span><span class="s2">Lifewire anzeigen</span>
+<span class="s3">```</span>
+<span class="s3">resources/views/layouts/master.blade.php</span>
+<span class="s3">&lt;a class=&quot;...&quot; href=&quot;{{ url('/puser/index') }}&quot;</span>
+        <span class="s3">|</span>
+        <span class="s3">V</span>
+<span class="s3">resources/views/puser/index.blade.php  </span>
+<span class="s3">&lt;livewire:puser-main /&gt;        </span>
+          
+<span class="s3">resources/views/livewire/puser-main.blade.php  &lt;-+        </span>
+<span class="s3">die Site die angezeigt werden soll                                         |</span>
+        <span class="s3">|                                        |</span>
+        <span class="s3">|                    app/Http/Livewire/PuserMain.php</span>
+        <span class="s3">|                    der Controller</span>
+        <span class="s3">V</span>
+  <span class="s3">+ ----------------- +</span>
+  <span class="s3">|   Alle Aktionen   |</span>
+  <span class="s3">+ ----------------- +</span>
+
+
+
+
+
+
+
+
+<span class="s3">```</span>
+
+
+
+
+
+</pre>
+</body>
+</html>

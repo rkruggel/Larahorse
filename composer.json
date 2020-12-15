@@ -1,35 +1,40 @@
 {
-    "name": "laravel/laravel",
+    "name": "rkruggel/larahorse",
+    "description": "Ein Programm zur Selbsterstellung von Dantenverwaltung.",
+    "version": "0.0.1-dev",
     "type": "project",
-    "description": "The Laravel Framework.",
     "keywords": [
-        "framework",
-        "laravel"
+        "pferdestall", "pferd", "verwaltung", "pferdestallverwaltung"
     ],
     "license": "MIT",
-    "authors": [{
-        "name": "Roland Kruggel",
-        "email": "rkruggel@bbf7.de",
-        "homepage": "http://www.bbf7.de",
-        "role": "Developer"
-    }
+    "authors": [
+        {
+            "name": "Roland Kruggel",
+            "email": "rkruggel@bbf7.de",
+            "homepage": "http://www.bbf7.de",
+            "role": "Developer"
+        }
     ],
+    "support" : {
+        "email": "rkruggel@bbf7.de"
+    },
     "require": {
         "php": "^7.4",
         "ext-json": "*",
+        "ext-mongodb": "*",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.2",
+        "jenssegers/mongodb": "^3.8",
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",
-        "livewire/livewire": "^2.3",
-        "php-kit/ext-pdo": "^1.1",
         "laravelcollective/html": "^6.2",
-        "mongodb/mongodb": "*"
+        "livewire/livewire": "^2.3",
+        "mongodb/mongodb": "^1.8",
+        "php-kit/ext-pdo": "^1.1"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
-        "fzaninotto/faker": "^1.9",
         "mockery/mockery": "^1.4",
         "nunomaduro/collision": "^5.1",
         "phpunit/phpunit": "^9.4"

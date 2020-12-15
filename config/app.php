@@ -80,7 +80,9 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+//    'timezone' => 'UTC',
+//    'timezone' => 'Europe/Berlin',
+    'timezone' => 'CET',
 
     /*
     |--------------------------------------------------------------------------
@@ -174,6 +176,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Jenssegers\Mongodb\MongodbServiceProvider::class,
 
         /*
          * Package Service Providers...

@@ -21,13 +21,15 @@ namespace App\Http\Livewire;
 
 use App\Library\Helpers;
 use App\Library\JsonDbDaten;
-use App\Models\Pusers;
+use App\Models\pusers;
 use Database\Seeders\PusersSeeder;
 use Illuminate\Database\Seeder;
 use Livewire\Component;
 
 class PuserMain extends Component
 {
+
+
     /* wird als Variable übergeben. */
     public string $post;
 
@@ -37,8 +39,8 @@ class PuserMain extends Component
     /** @var array $contacts */
     public array $contacts;
 
-    /** @var Pusers $selectvar */
-    public Pusers $selectvar;
+    /** @var pusers $selectvar */
+    public pusers $selectvar;
 
     /** @var int $highlightIndex */
     public int $highlightIndex;
@@ -48,14 +50,17 @@ class PuserMain extends Component
     public $updatemode = false;
 
 
-    public Pusers $screen_puser;
+    public pusers $screen_puser;
     public array $screen_config;
+
+
+    //protected $listeners = [ 'showDetails' => 'showDetails' ];
 
     //** privats */
 
     public function wndScreenShow($id)
     {
-        $screen_puser = Pusers::find($id);
+        $screen_puser = pusers::find($id);
         $screen_config = JsonDbDaten::getConfig('pusers');
 
 
@@ -125,7 +130,7 @@ class PuserMain extends Component
      */
     public function wndTelefonShow($id)
     {
-        $puser = Pusers::where('id', $id)->first();
+        $puser = pusers::where('id', $id)->first();
         $this->telefons = $puser->jtelefon;
     }
 
@@ -195,12 +200,16 @@ class PuserMain extends Component
      * Wenn die ID in der linken Seite (Auflistung) angeklickt wird, wird
      * diese Funktion aufgerufen und erzeugt die rechte Seite mit den Details.
      *
-     * @param int $id
+     * @ param int $id
+     * @param string $id
      */
-    public function showDetails(int $id)
+    public function showDetails(string $id)
     {
-        $_puser = Pusers::find($id);
+        //dd($id);
+        $_puser = pusers::find(json_decode($id));
         $this->selectvar = $_puser;
+
+        $a=0;
     }
 
 
@@ -221,11 +230,13 @@ class PuserMain extends Component
      */
     public function updatedQuery()
     {
-        $this->contacts = Pusers::where('nachname', 'ilike', '%' . $this->query . '%')
+        $this->contacts = pusers::where('nachname', 'like', '%' . $this->query . '%')
             ->orderBy('nachname')
             ->orderBy('vorname')
             ->get()
             ->toArray();
+
+        //$aa = $this->listeners;
         $a = 0;
     }
 

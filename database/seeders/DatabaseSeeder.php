@@ -27,11 +27,11 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-            PusersSeeder::class,
-            PferdeSeeder::class,
-            StallSeeder::class,
-            UserPferdSeeder::class,
-            EinstellerSeeder::class
+            MongoComboListenSeeder::class,
+            MongoPferdeSeeder::class,
+            MongoProgSeeder::class,
+            MongoStallSeeder::class,
+            MongoPuserSeeder::class
         ]);
     }
 }

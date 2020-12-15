@@ -6,21 +6,27 @@
 @section('content')
     @parent
 
-    <?php
-//    echo "<pre>";
-//        print_r(PDO::getAvailableDrivers());
-//    echo "<pre>";
-    ?>
+<!--    --><?php //echo phpInfo(); die(); ?>
 
-    <?php //echo phpInfo(); ?>
+    <p>branch_01</p>
 
-    <div id="startscreen" class="jumbotron jumbotron-fluid">
+    <div id="startscreen">
         <div class="container-fluid">
-            <h1 class="display-2">LaraHorse</h1>
-            <p class="lead text-muted">
-                Programm zur Verwaltung von Pferdeställen<br>
-                und alle dazugehörigen Dingen.
-            </p>
+            <div class="row">
+                <div class="col-md-4 p-md-5">
+                    {{--        <livewire:select-prog :post='testpost'/>--}}
+                    <livewire:select-prog />
+                </div>
+                <div class="col-md-8">
+                    <h1 class="display-6">Larahorse</h1>
+                    <p class="text-muted">
+                        Programm zur Verwaltung von Pferdeställen<br>
+                        und alle dazugehörigen Dingen.
+                    </p>
+                </div>
+            </div>
+
+
         </div>
     </div>
 @endsection

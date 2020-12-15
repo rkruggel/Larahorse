@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-2 shadow-lg">
+        <div class="col-md-2 shadow-lg">
 
             <input type="text" class="form-input" placeholder="Search Contacts..."
                    wire:model="query"
@@ -53,13 +53,11 @@
                                         {{--                                    <a href="{{ route('showDetails', $contact['id']) }}">&nbsp;{{$contact['id']}}&nbsp;</a>--}}
                                         {{--                                    <a href="{{ '/livewire.SearchPuser.showDetails' }}">&nbsp;{{$contact['id']}}&nbsp;</a>--}}
                                         {{--                                    wire:click="$emit('showDetails( {{ $contact }}, {{$contact['id']}} )') "--}}
-                                        <button class="btn btn-link btn-sm"
-                                                wire:click="showDetails( {{ $contact['id'] }} )"
-                                                type="button">
-                                            _{{ $contact['id'] }}_
+                                        <button class="btn btn-link btn-sm" type="button"
+                                                wire:click="showDetails( '{{ json_encode( $contact['_id'] ) }}' )" >
+                                            {{ $contact['nachname'] }}
                                         </button>
                                     </td>
-                                    <td>{{$contact['nachname']}}</td>
                                     <td>{{$contact['vorname']}}</td>
                                 </tr>
                             @endforeach
@@ -108,10 +106,10 @@
                         <col style="width: 80%"/>
                     </colgroup>
                     <tbody>
-                    <tr>
-                        <td>Id</td>
-                        <td>{{ $selectvar['id'] }}</td>
-                    </tr>
+{{--                    <tr>--}}
+{{--                        <td>Id</td>--}}
+{{--                        <td>{{ $selectvar['_id'] }}</td>--}}
+{{--                    </tr>--}}
                     <tr>
                         <td>Anrede</td>
                         <td>{{ $selectvar['anrede'] }}</td>
@@ -156,19 +154,16 @@
                         <td>Landsmann</td>
                         <td>{{ $selectvar['landsmann'] }}</td>
                     </tr>
-                    <tr>
-                        <td>
-                            <button class="btn btn-link btn-sm p-0"
-                                    data-toggle="modal" data-target="#wndTelefonShowModal"
-                                    wire:click="wndTelefonShow({{ $selectvar->id }})">
-                                Telefon
-                            </button>
-                        <td>{{ $this->tgg($selectvar['jtelefon']) }}</td>
-                    </tr>
-                    {{--                        <tr>--}}
-                    {{--                            <td>jfield</td>--}}
-                    {{--                            <td>{{ $this->tff($selectvar['jfield']) }}</td>--}}
-                    {{--                        </tr>--}}
+{{--                    <tr>--}}
+{{--                        <td>--}}
+{{--                            <button class="btn btn-link btn-sm p-0"--}}
+{{--                                    data-toggle="modal" data-target="#wndTelefonShowModal"--}}
+{{--                                    wire:click="wndTelefonShow({{ $selectvar->id }})">--}}
+{{--                                Telefon--}}
+{{--                            </button>--}}
+{{--                        <td>{{ $this->tgg($selectvar['telefon']) }}</td>--}}
+{{--                    </tr>--}}
+
                     <tr>
                         <td>Aufgabe</td>
                         <td>{{ $selectvar['aufgabe'] }}</td>
@@ -177,17 +172,7 @@
                         <td>Bemerkung</td>
                         <td>{{ $selectvar['bemerkung'] }}</td>
                     </tr>
-                    {{--                        <tr>--}}
-                    {{--                            <td>Test</td>--}}
-                    {{--                            <td>{{ $this->tgg() }}</td>--}}
-                    {{--                        </tr>--}}
 
-                    @foreach(  \App\Library\Helpers::string2json($this->selectvar['jfield']) as $key => $dt )
-                        <tr>
-                            <td>{{ $this->getJfieldData_Anzeige($key, $dt) }}</td>
-                            <td>{{ $this->getJfieldData_Value($key, $dt ) }}</td>
-                        </tr>
-                    @endforeach
                     <tbody>
                 </table>
 
