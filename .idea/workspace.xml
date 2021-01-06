@@ -4,32 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b06b2b6-a6f1-4cec-a9b7-f28d19cd28cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/ProgCreateForm.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/ProgEdit.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Library/yamlData.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Siteconfig/demo.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Siteconfig/einsteller.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Siteconfig/main.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/livewire/prog-edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="2b06b2b6-a6f1-4cec-a9b7-f28d19cd28cc" name="Default Changelist" comment="kdion4891_01 entfernt&#10;codemirror hinzugefügt&#10;prog-edit neu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StartController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/SelectProg.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/SelectProg.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/progs.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/progs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docs/technischeraufbau.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docs/technischeraufbau.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.sass" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/prog-wnd.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/prog-wnd.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/select-prog.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/select-prog.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/start.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/start.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/ProgEdit.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/ProgEdit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Library/yamlData.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Library/yamlData.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/prog-edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/prog-edit.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,7 +218,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
+    <property name="settings.editor.selected.configurable" value="copyright.profiles" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -319,7 +299,7 @@
       <workItem from="1609190350591" duration="18357000" />
       <workItem from="1609670199494" duration="19070000" />
       <workItem from="1609697500020" duration="26377000" />
-      <workItem from="1609850926851" duration="3903000" />
+      <workItem from="1609850926851" duration="6108000" />
     </task>
     <task id="LOCAL-00001" summary="Debug Konfiguration">
       <created>1607435268406</created>
@@ -426,11 +406,21 @@
       <option name="project" value="LOCAL" />
       <updated>1608034303489</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="kdion4891_01 entfernt&#10;codemirror hinzugefügt&#10;prog-edit neu">
+      <created>1609942455327</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1609942455327</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UpdateCopyrightCheckinHandler">
+    <option name="UPDATE_COPYRIGHT" value="true" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -455,7 +445,8 @@
     <MESSAGE value="Die Seeder zu Mongo umgebaut" />
     <MESSAGE value="merge" />
     <MESSAGE value="Neuer Branch kdion4891_01" />
-    <option name="LAST_COMMIT_MESSAGE" value="Neuer Branch kdion4891_01" />
+    <MESSAGE value="kdion4891_01 entfernt&#10;codemirror hinzugefügt&#10;prog-edit neu" />
+    <option name="LAST_COMMIT_MESSAGE" value="kdion4891_01 entfernt&#10;codemirror hinzugefügt&#10;prog-edit neu" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
