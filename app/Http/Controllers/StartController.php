@@ -19,12 +19,23 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\DB;
+use Symfony\Component\Yaml\Yaml;
+use App\Library\yamlData;
 
 class StartController extends Controller
 {
 
-    public function __invoke() {
-        session('progname', '-.-');
-        return view('start');
+    public function __invoke()
+    {
+        // -- yaml daten lesen
+        $yamlarray = yamlData::Read('main');
+
+        // -- Der seitencontent
+        $body = $yamlarray['page']['body'];
+
+        session('lara.progname', '-.-');
+
+        return view('start')
+            -> with ('body', $body);
     }
 }

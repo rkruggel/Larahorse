@@ -9,32 +9,9 @@
                 </button>
             </div>
             <div class="modal-body">
-{{--                @if(!empty($telefons))--}}
-{{--                    @foreach($telefons as $key => $telefon)--}}
-{{--                        <form>--}}
-{{--                            <table>--}}
-{{--                                <tbody>--}}
-{{--                                <tr>--}}
-{{--                                    <td>--}}
-{{--                                        <div class="form-group">--}}
-{{--                                            --}}{{--                                                <label for="ex1">Key</label>--}}
-{{--                                            <input type="text" class="form-control" wire:model="telefons.{{ $key }}.key" id="ex1">--}}
-{{--                                            @error('name') <span class="text-danger">{{ $message }}</span>@enderror--}}
-{{--                                        </div>--}}
-{{--                                    </td>--}}
-{{--                                    <td>--}}
-{{--                                        <div class="form-group">--}}
-{{--                                            --}}{{--                                                <label for="ex2">Nummer</label>--}}
-{{--                                            <input type="text" class="form-control" wire:model="telefons.{{ $key }}.value" id="ex2">--}}
-{{--                                            @error('email') <span class="text-danger">{{ $message }}</span>@enderror--}}
-{{--                                        </div>--}}
-{{--                                    </td>--}}
-{{--                                </tr>--}}
-{{--                                </tbody>--}}
-{{--                            </table>--}}
-{{--                        </form>--}}
-{{--                    @endforeach--}}
-{{--                @endif--}}
+
+                @livewire('prog-create-form')
+
             </div>
             <div class="modal-footer">
                 <button type="button" wire:click.prevent="cancel()" class="btn btn-secondary" data-dismiss="modal">Close</button>

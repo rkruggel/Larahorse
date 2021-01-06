@@ -4,23 +4,37 @@ namespace App\Http\Livewire;
 
 
 use App\Models\pusers;
-use Illuminate\Database\Eloquent\Collection;
 use App\Models\progs;
+use App\Library\yamlData;
+use Illuminate\Database\Eloquent\Collection;
 use DateTime;
 use Illuminate\Support\Facades\Config;
 use Livewire\Component;
 use MongoDB\BSON\ObjectId;
 use MongoDB\Driver\Session;
+use PhpParser\Node\Expr\Array_;
+use Symfony\Component\Yaml\Yaml;
 
 
 class SelectProg extends Component
 {
-    public array $testvar;
+//    public array $testvar;
 
     /**
-     * @var Collection
+     * Überschrift über dem sidamenu
+     * @var string
      */
-    public Collection $proglists;
+    public string $brand;
+
+//    /**
+//     * @var Collection
+//     */
+//    public Collection $proglists;
+
+    /**
+     * @var array
+     */
+    public array $proglists;
 
     /**
      * @var \MongoDB\BSON\ObjectId
@@ -31,7 +45,6 @@ class SelectProg extends Component
      * @var string
      */
     public string $progname = "";
-
 
 
 
@@ -146,27 +159,43 @@ class SelectProg extends Component
     }
 
 
+    /**
+     * Hier geht es los (old)
+     */
+    public function mount_old()
+    {
+//        // -- ein Test
+//        $this->testvar = ['Prog', 'Liste'];
+//
+//        // Daten suchen
+//
+//        /**
+//         *
+//         */
+//        $this->proglists = progs::where('itype', '=', 'data')
+//            ->where('active', '=', true)
+//            ->orderBy('name', 'asc')
+//            ->get();
+//
+//        $a = 0;
+//        $FF = $this->emit('saveProg');
+    }
+
+
+    /**
+     * Hier geht es los
+     */
     public function mount()
     {
-        // -- ein Test
-        $this->testvar = ['Prog', 'Liste'];
+        // -- yaml daten lesen
+        $yamlarray = yamlData::Read('main');
 
-        // test
-//        $this->test();
+        // -- Menuüberschrift
+        $this->brand = $yamlarray['page']['sidemenu']['brand'];
 
-        // Daten suchen
-
-        /**
-         *
-         */
-        $this->proglists = progs::where('itype', '=', 'data')
-            ->where('active', '=', true)
-            ->orderBy('name', 'asc')
-            ->get();
-
-
-        $a = 0;
-        $FF = $this->emit('saveProg');
+        // -- Programmliste
+        $this->proglists = $yamlarray['page']['sidemenu']['menu'];
+        $rtg = ksort($this->proglists);
 
     }
 
@@ -176,6 +205,11 @@ class SelectProg extends Component
     private function zsakah()
     {
         return $this->proglists->_id;
+    }
+
+    public function update($ii=null, $q=null, $a=null)
+    {
+        $a=0;
     }
 
 

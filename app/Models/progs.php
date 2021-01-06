@@ -17,4 +17,9 @@ class progs extends Eloquent
 //    protected $fillable = [
 //        'type', 'name'
 //    ];
+
+    public function create($formdata)
+    {
+        $a=0;
+    }
 }

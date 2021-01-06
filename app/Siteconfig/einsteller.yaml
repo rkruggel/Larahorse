@@ -1,0 +1,64 @@
+system:
+  author: Roland Kruggel
+  date: Dez. 2020
+  allow: [roland, petra, name3]  # diese User dürfen
+  deny: [august, friedolin]     # dieser User dar nicht
+  callable: [pages]
+
+pages:
+  - @page_voll
+  - @page_win1
+
+
+page_voll:
+  type: vollsite
+  name: Einsteller
+  id: einstellerid
+  header:
+    text: Einsteller
+  fields:
+    columns: 1          # anzahl der spalten
+    label: top          # möglich ist [top, site]
+    link: @fieldsalle
+    button:
+      1: { txt: save, exec: do_save() }
+      2: { txt: ok, exec: do_ok() }
+      3: { txt: Abbruch, exec: do_exit() }
+  footer:
+    default
+
+page_win1:
+  type: window
+  name: Edit_Einsteller
+  id: editeinstellerid
+  fields:
+    link: @fieldsalle
+    exclude: [id, taetigkeit]
+
+fieldsalle:
+  id:
+    type: id
+    label: id
+    visible: true
+    source: db.table.field
+  name:
+    type: string
+    label: Name
+    visible: true
+    source: db.table.field
+  vorname:
+    type: string
+    label: Vorname
+    visible: true
+    source: db.table.field
+  adresse:
+    type: string
+    label: Adresse
+    visible: true
+    source: db.table.field
+  taetigkeit:
+    type: list
+    label: Tätigkeit
+    visible: true
+    source: db.table.field
+

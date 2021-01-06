@@ -1,10 +1,8 @@
 <div>
-    <p>
-        <b>{{ $testvar[0] }}</b>
-        {{ $testvar[1] }}:
-        {{ $progname }}
-{{--        {{ session('progname') }}--}}
-    </p>
+    <p><b>{{ $brand  }}</b></p>
+{{--    <p>--}}
+{{--        {{ $progname }}--}}
+{{--    </p>--}}
 
     <div class="nav-scroller bg-white shadow-sm">
         <ul class="nav justify-content-end">
@@ -34,13 +32,21 @@
                 @foreach ($proglists as $i => $proglist)
                     <tr>
                         <td>
-                            <button class="btn btn-link btn-sm" type="button"
-                                wire:click="saveProg( '{{ $proglist->name }}' )">
-                                {{ $proglist->name }}
-                            </button>
+                            @if (substr($proglist['label'], 0, 2) == '--')
+                                <hr>
+                            @else
+                                <button class="btn btn-link btn-sm" type="button"
+                                    wire:click="saveProg( '{{ $proglist['label'] }}' )">
+                                    {{ $proglist['label'] }}
+                                </button>
+                            @endif
                         </td>
                         <td>
-                            {{ $proglist->desc }}
+                            @if (substr($proglist['desc'], 0, 2) == '--')
+                                <hr>
+                            @else
+                                {{ $proglist['desc'] }}
+                            @endif
                         </td>
                     </tr>
                 @endforeach

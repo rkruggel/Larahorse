@@ -310,3 +310,44 @@ So werden die Daten gespeichert.
 }
 ```
 
+
+###  laravel-livewire-forms
+
+composer require kdion4891/laravel-livewire-forms
+
+Publishing the form view files:
+
+    php artisan vendor:publish --tag=form-views
+
+Publishing the config file:
+
+    php artisan vendor:publish --tag=form-config
+
+<pre>
+roland@roland-desktop:~/Develop/Larahorse$ php artisan vendor:publish --tag=form-views
+Copied Directory [/vendor/kdion4891/laravel-livewire-forms/resources/views] To [/resources/views/vendor/laravel-livewire-forms]
+Publishing complete.
+
+roland@roland-desktop:~/Develop/Larahorse$ php artisan vendor:publish --tag=form-config
+Copied File [/vendor/kdion4891/laravel-livewire-forms/config/laravel-livewire-forms.php] To [/config/laravel-livewire-forms.php]
+Publishing complete.
+</pre>
+
+###  laravel-livewire-tables
+
+Publishing the table view files:
+
+    php artisan vendor:publish --tag=table-views
+
+Publishing the config file:
+
+    php artisan vendor:publish --tag=table-config
+
+<pre>
+roland@roland-desktop:~/Develop/Larahorse$ php artisan vendor:publish --tag=table-views
+Copied Directory [/vendor/kdion4891/laravel-livewire-tables/resources/views] To [/resources/views/vendor/laravel-livewire-tables]
+Publishing complete.
+roland@roland-desktop:~/Develop/Larahorse$ php artisan vendor:publish --tag=table-config
+Copied File [/vendor/kdion4891/laravel-livewire-tables/config/laravel-livewire-tables.php] To [/config/laravel-livewire-tables.php]
+Publishing complete.
+</pre>

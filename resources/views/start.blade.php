@@ -2,13 +2,32 @@
 
 @section('file', 'larahorse/resources/views/start.blade.php')
 
+@push('css')
+    <style>
+        .CodeMirror {border: 1px solid black; font-size:13px}
+    </style>
+@endpush
+
+@once
+    @push('scriptOnBottom')
+        <script>
+            const myCodeMirror = CodeMirror.fromTextArea(document.getElementById("code"), {
+                lineNumbers: true,
+                styleActiveLine: true,
+                matchBrackets: true,
+                mode: 'yaml'
+            });
+        </script>
+
+    @endpush
+@endonce
+
+
 
 @section('content')
-    @parent
-
-<!--    --><?php //echo phpInfo(); die(); ?>
-
-    <p>branch_01</p>
+{{--
+    <?php echo phpInfo(); die(); ?>
+--}}
 
     <div id="startscreen">
         <div class="container-fluid">
@@ -17,17 +36,18 @@
                     {{--        <livewire:select-prog :post='testpost'/>--}}
                     <livewire:select-prog />
                 </div>
+
                 <div class="col-md-8">
-                    <h1 class="display-6">Larahorse</h1>
-                    <p class="text-muted">
-                        Programm zur Verwaltung von Pferdeställen<br>
-                        und alle dazugehörigen Dingen.
-                    </p>
+                    <h1 class="display-6">{{ $body[1]['txt'] }}</h1>
+                    <p class="text-muted">{!! html_entity_decode($body[2]['txt']) !!}</p>
+                    @if(false)
+                        <livewire:prog-edit />
+                    @endif
                 </div>
+
             </div>
-
-
         </div>
     </div>
+
 @endsection
 

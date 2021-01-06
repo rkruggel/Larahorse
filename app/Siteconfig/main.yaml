@@ -1,0 +1,55 @@
+# file:         main.yaml
+# date:         03.02.2021
+# author:       rkruggel
+# last change:  04.01.2021
+
+# Die erste Seite von Larahorse
+
+system:
+  author:   Roland Kruggel
+  date:     Dez. 2020
+  allow:    [roland, petra, name3]  # diese User dürfen
+  deny:     [august, friedolin]     # diese User gar nicht
+  callable: [pages]
+
+
+pages:
+  - "@page"
+
+
+page:
+  main:
+    type:     mainsite
+    id:       mainsiteid
+  header:
+    text:     Einsteller
+
+
+  # Das Topmenu. Das obere Menu
+  topmenu:
+    brand:      Larahorse
+    pos:        top         # [null, top, left, right, bottom]
+    1:  { name: puser, label: Puser, desc: null, exec: load_puser() }
+    2:  { name: enterprise, label: Enterprise, desc: null, exec: load_einsteller() }
+    3:  { name: einsteller, label: Einsteller, desc: null, exec: load_einsteller() }
+    4:  { name: support, label: Support, desc: null, exec: load_einsteller() }
+    5:  { name: pricing, label: Pricing, desc: null, exec: load_einsteller() }
+
+  # das Menu an der Seite
+  sidemenu:
+    brand:      Prog-Menü
+    pos:        left        # [null, top, left, right, bottom]
+    menu:
+      1:  { name: angeln, label: Angeln, exec: load_angeln(), desc: Verwaltung für Angelvereine }
+      2:  { name: knitting, label: Knitting, exec: load_knitting(), desc: Stricktreffen und Projekte }
+      3:  { name: stall, label: Stall, exec: load_stall(), desc: Die Stallverwaltung und deren Dinge }
+      4:  { name: umbau, label: Umbau, exec: load_umbau(), desc: Veraltung für Umbau und Renovierung }
+      5:  { name: null, label: ---, exec: null, desc: ------ }
+      6:  { name: admin, label: Admin, exec: load_umbau(), desc: Aministration der Mainpage }
+
+  body:
+    1: { txt: Larahorse, size: 25, pos: left }
+    2: { txt: <b>P</b>rogramm zur <b>V</b>erwaltung von <b>P</b>ferdeställen <br/>und alle dazugehörigen Dingen., size: 12, pos: left }
+
+  footer:
+    default
