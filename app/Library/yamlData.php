@@ -1,5 +1,18 @@
 <?php
-
+/*
+ * Projekt  Larahorse
+ * ----------------------------------------------------
+ *
+ * Copyright (c) 2020-2021,  Roland Kruggel
+ * All Rights Reserved.
+ * License: MIT
+ *
+ * @author		Roland Kruggel, rkruggel@bbf7.de
+ * @file		yamlData.php
+ * @path		/home/roland/Develop/Larahorse/app/Library/yamlData.php
+ * @lastChange	06.01.21, 15:53 by roland
+ *
+ */
 
 namespace App\Library;
 
@@ -7,6 +20,7 @@ namespace App\Library;
 use SplFileInfo;
 use Symfony\Component\Yaml\Yaml;
 use function PHPUnit\Framework\stringContains;
+
 
 /**
  * Class yamlData
