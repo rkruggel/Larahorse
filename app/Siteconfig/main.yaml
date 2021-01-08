@@ -1,3 +1,4 @@
+
 # file:         main.yaml
 # date:         03.02.2021
 # author:       rkruggel
@@ -40,12 +41,17 @@ page:
     brand:      Prog-Menü
     pos:        left        # [null, top, left, right, bottom]
     menu:
-      1:  { name: angeln, label: Angeln, exec: load_angeln(), desc: Verwaltung für Angelvereine }
-      2:  { name: knitting, label: Knitting, exec: load_knitting(), desc: Stricktreffen und Projekte }
-      3:  { name: stall, label: Stall, exec: load_stall(), desc: Die Stallverwaltung und deren Dinge }
-      4:  { name: umbau, label: Umbau, exec: load_umbau(), desc: Veraltung für Umbau und Renovierung }
+      1:  { name: angeln, label: Angeln, exectyp: wire, exec: load_angeln(), desc: Verwaltung für Angelvereine }
+      2:  { name: knitting, label: Knitting, exectyp: wire, exec: load_knitting(), desc: Stricktreffen und Projekte }
+      3:  { name: stall, label: Stall, exectyp: wire, exec: load_stall(), desc: Die Stallverwaltung und deren Dinge }
+      4:  { name: umbau, label: Umbau, exectyp: wire, exec: load_umbau(), desc: Veraltung für Umbau und Renovierung }
       5:  { name: null, label: ---, exec: null, desc: ------ }
-      6:  { name: admin, label: Admin, exec: load_umbau(), desc: Aministration der Mainpage }
+      6:  { name: admin,        # der name
+            label: Admin,       # das wird angezeigt
+            exectyp: uri,       # uri = aufruf einer url; wire = aufruf eines wire-call
+            exec: /prog/admin,  # das wird aufgerufen
+            desc: Aministration der Mainpage    # eine Beschreibung
+      }
 
   body:
     1: { txt: Larahorse, size: 25, pos: left }

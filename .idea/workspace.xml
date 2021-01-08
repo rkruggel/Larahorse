@@ -5,11 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b06b2b6-a6f1-4cec-a9b7-f28d19cd28cc" name="Default Changelist" comment="kdion4891_01 entfernt&#10;codemirror hinzugefügt&#10;prog-edit neu">
+      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/Progs/ProgEdit.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/Start/Start.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/progs/prog-edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/start/start.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SdEditorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SdEditorController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SdPferdeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SdPferdeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SdPuserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SdPuserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StartController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/ProgEdit.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/ProgEdit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Library/yamlData.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Library/yamlData.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/prog-edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/prog-edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/ProgCreateForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/ProgCreateForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/ProgEdit.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/ProgWnd.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/ProgWnd.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/PuserMain.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/PuserMain.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/PuserWndScreen.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/PuserWndScreen.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/PuserWndTelefon.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/PuserWndTelefon.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/SelectProg.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Start/SelectProg.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/ShowPosts.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/ShowPosts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/WndTest1.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/WndTest1.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/EncryptCookies.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/EncryptCookies.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/PreventRequestsDuringMaintenance.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/PreventRequestsDuringMaintenance.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/TrimStrings.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/TrimStrings.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/TrustHosts.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/TrustHosts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/TrustProxies.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/TrustProxies.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/EinstellerCollection.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/EinstellerCollection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/EinstellerResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/EinstellerResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Siteconfig/main.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app/Siteconfig/main.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/prog-edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/select-prog.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/start/select-prog.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/start.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/start.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,7 +241,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/config" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/layouts" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -218,14 +250,19 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="copyright.profiles" />
+    <property name="settings.editor.selected.configurable" value="template.copyright.formatting" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/layouts" />
       <recent name="$PROJECT_DIR$/config" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/livewire/start" />
+      <recent name="$PROJECT_DIR$/app/Http/Livewire/Start" />
+      <recent name="$PROJECT_DIR$/resources/views/livewire/progs" />
+      <recent name="$PROJECT_DIR$/app/Http/Livewire/Progs" />
       <recent name="$PROJECT_DIR$/docs/docs" />
     </key>
   </component>
@@ -299,7 +336,7 @@
       <workItem from="1609190350591" duration="18357000" />
       <workItem from="1609670199494" duration="19070000" />
       <workItem from="1609697500020" duration="26377000" />
-      <workItem from="1609850926851" duration="6108000" />
+      <workItem from="1609850926851" duration="32516000" />
     </task>
     <task id="LOCAL-00001" summary="Debug Konfiguration">
       <created>1607435268406</created>
@@ -413,7 +450,28 @@
       <option name="project" value="LOCAL" />
       <updated>1609942455327</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="neues copyright für die einzelnen files">
+      <created>1609944581362</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1609944581362</updated>
+    </task>
+    <task id="LOCAL-00018" summary="neues copyright für die einzelnen files">
+      <created>1609944656913</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1609944656913</updated>
+    </task>
+    <task id="LOCAL-00019" summary="copyright in jeder datei einfügen">
+      <created>1609945331145</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1609945331145</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -446,29 +504,31 @@
     <MESSAGE value="merge" />
     <MESSAGE value="Neuer Branch kdion4891_01" />
     <MESSAGE value="kdion4891_01 entfernt&#10;codemirror hinzugefügt&#10;prog-edit neu" />
-    <option name="LAST_COMMIT_MESSAGE" value="kdion4891_01 entfernt&#10;codemirror hinzugefügt&#10;prog-edit neu" />
+    <MESSAGE value="neues copyright für die einzelnen files" />
+    <MESSAGE value="copyright in jeder datei einfügen" />
+    <option name="LAST_COMMIT_MESSAGE" value="copyright in jeder datei einfügen" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/SdPuserController.php</url>
-          <line>39</line>
+          <line>40</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Livewire/ProgCreateForm.php</url>
-          <line>28</line>
+          <line>42</line>
           <option name="timeStamp" value="66" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Livewire/ProgCreateForm.php</url>
-          <line>33</line>
+          <line>47</line>
           <option name="timeStamp" value="67" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Livewire/ProgCreateForm.php</url>
-          <line>38</line>
+          <line>52</line>
           <option name="timeStamp" value="68" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -477,9 +537,23 @@
           <option name="timeStamp" value="69" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Livewire/SelectProg.php</url>
-          <line>211</line>
+          <url>file://$PROJECT_DIR$/app/Http/Livewire/Start/SelectProg.php</url>
+          <line>229</line>
           <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/livewire/start/select-prog.blade.php</url>
+          <line>39</line>
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/app/Http/Livewire/Start/SelectProg.php</url>
+          <line>160</line>
+          <properties>
+            <option name="className" value="\App\Http\Livewire\SelectProg" />
+            <option name="methodName" value="saveProg" />
+          </properties>
+          <option name="timeStamp" value="81" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

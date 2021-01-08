@@ -1,6 +1,20 @@
 <?php
+/*
+ * Projekt  Larahorse
+ * ----------------------------------------------------
+ *
+ * Copyright (c) 2020-2021,  Roland Kruggel
+ * All Rights Reserved.
+ * License: MIT
+ *
+ * @author		Roland Kruggel, rkruggel@bbf7.de
+ * @file		SelectProg.php
+ * @path		/home/roland/Develop/Larahorse/app/Http/Livewire/Start/SelectProg.php
+ * @lastChange	08.01.21, 18:59 by roland
+ *
+ */
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\Start;
 
 
 use App\Models\pusers;
@@ -149,7 +163,9 @@ class SelectProg extends Component
         // den prognamen setzen
         $this->progname = $value;
 
-
+        // fürt ein event aus
+        // der listener ist in ProgEdit.php
+//        $this->emit('saveProgEmit', $value);
         $a=0;
 
         Config::set('lara.progname', $value);
@@ -197,6 +213,8 @@ class SelectProg extends Component
         $this->proglists = $yamlarray['page']['sidemenu']['menu'];
         $rtg = ksort($this->proglists);
 
+        // --
+
     }
 
     /**
@@ -215,6 +233,6 @@ class SelectProg extends Component
 
     public function render()
     {
-        return view('livewire.select-prog');
+        return view('livewire.start.select-prog');
     }
 }

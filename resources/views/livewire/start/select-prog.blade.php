@@ -30,30 +30,37 @@
         <div class="list-item">
             <table class="setable">
                 @foreach ($proglists as $i => $proglist)
-                    <tr>
-                        <td>
-                            @if (substr($proglist['label'], 0, 2) == '--')
-                                <hr>
-                            @else
-                                <button class="btn btn-link btn-sm" type="button"
-                                    wire:click="saveProg( '{{ $proglist['label'] }}' )">
-                                    {{ $proglist['label'] }}
-                                </button>
-                            @endif
-                        </td>
-                        <td>
-                            @if (substr($proglist['desc'], 0, 2) == '--')
-                                <hr>
-                            @else
-                                {{ $proglist['desc'] }}
-                            @endif
-                        </td>
-                    </tr>
+                <tr>
+                    <td>
+                    @if (substr($proglist['label'], 0, 2) == '--')
+                        <hr>
+                    @else
+
+                    @if($proglist['exectyp'] === 'uri')
+                        <a class="p-2 text-dark btn-link btn btn-sm" href="{{ $proglist['exec'] }}">
+                            {{ $proglist['label'] }}
+                        </a>
+                    @else
+                        <a class="p-2 text-dark btn-link btn btn-sm" wire:click="livewire.Start.saveProg( '{{ $proglist['label'] }}' )">
+                            {{ $proglist['label'] }}
+                        </a>
+                    @endif
+
+                    @endif
+                    </td>
+                    <td>
+                        @if (substr($proglist['desc'], 0, 2) == '--')
+                            <hr>
+                        @else
+                            {{ $proglist['desc'] }}
+                        @endif
+                    </td>
+                </tr>
                 @endforeach
             </table>
         </div>
     @endif
 
-    @include('livewire.prog-wnd')
+{{--    @include('livewire.prog-wnd')--}}
 
 </div>
