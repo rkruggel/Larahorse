@@ -3,14 +3,15 @@
  * Projekt  Larahorse
  * ----------------------------------------------------
  *
- * Copyright (c) 2020-2020,  Roland Kruggel
+ * Copyright (c) 2020-2021,  Roland Kruggel
  * All Rights Reserved.
  * License: MIT
  *
  * @author		Roland Kruggel, rkruggel@bbf7.de
  * @file		Authenticate.php
  * @path		/home/roland/Develop/Larahorse/app/Http/Middleware/Authenticate.php
- * @lastChange	20.11.20, 10:19 by roland
+ * @lastChange	06.01.21, 15:57 by roland
+ *
  */
 
 namespace App\Http\Middleware;
