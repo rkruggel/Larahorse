@@ -1,23 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  ~ Projekt  Larahorse
-  ~ ----------------------------------------------------
-  ~
-  ~ Copyright (c) 2020-2020,  Roland Kruggel
-  ~ All Rights Reserved.
-  ~ License: MIT
-  ~
-  ~ @author		Roland Kruggel, rkruggel@bbf7.de
-  ~ @file		phpunit.xml
-  ~ @path		/home/roland/Develop/Larahorse/phpunit.xml
-  ~ @lastChange	22.11.20, 09:47 by roland
-  -->
-
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="./vendor/phpunit/phpunit/phpunit.xsd"
-         bootstrap="vendor/autoload.php"
+         bootstrap="bootstrap/app.php"
          colors="true"
+         backupGlobals="false"
+         backupStaticAttributes="false"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false"
 >
+
+    <!--    bootstrap="vendor/autoload.php"     original -->
+    <!--    bootstrap="bootstrap/app.php"       aus inet -->
+
     <testsuites>
         <testsuite name="Unit">
             <directory suffix="Test.php">./tests/Unit</directory>
@@ -36,10 +33,12 @@
         <server name="BCRYPT_ROUNDS" value="4"/>
         <server name="CACHE_DRIVER" value="array"/>
         <!-- <server name="DB_CONNECTION" value="sqlite"/> -->
-        <!-- <server name="DB_DATABASE" value=":memory:"/> -->
+        <server name="DB_DATABASE" value=":memory:"/>
+        <server name="DB_CONNECTION" value="mongodb"/>
         <server name="MAIL_MAILER" value="array"/>
         <server name="QUEUE_CONNECTION" value="sync"/>
         <server name="SESSION_DRIVER" value="array"/>
         <server name="TELESCOPE_ENABLED" value="false"/>
+        <server name="IS_UNIT_TEST" value="true"/>
     </php>
 </phpunit>

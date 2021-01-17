@@ -6,8 +6,8 @@ system:
   callable: [pages]
 
 pages:
-  - @page_voll
-  - @page_win1
+  - "@page_voll"
+  - "@page_win1"
 
 
 page_voll:
@@ -19,7 +19,7 @@ page_voll:
   fields:
     columns: 1          # anzahl der spalten
     label: top          # möglich ist [top, site]
-    link: @fieldsalle
+    link: "@fieldsalle"
     button:
       1: { txt: save, exec: do_save() }
       2: { txt: ok, exec: do_ok() }
@@ -32,7 +32,7 @@ page_win1:
   name: Edit_Einsteller
   id: editeinstellerid
   fields:
-    link: @fieldsalle
+    link: "@fieldsalle"
     exclude: [id, taetigkeit]
 
 fieldsalle:

@@ -19,7 +19,7 @@ namespace App\Http\Livewire\Start;
 
 use App\Models\pusers;
 use App\Models\progs;
-use App\Library\yamlData;
+use App\Library\YamlData;
 use Illuminate\Database\Eloquent\Collection;
 use DateTime;
 use Illuminate\Support\Facades\Config;
@@ -32,30 +32,22 @@ use Symfony\Component\Yaml\Yaml;
 
 class SelectProg extends Component
 {
-//    public array $testvar;
-
     /**
      * Überschrift über dem sidamenu
      * @var string
      */
     public string $brand;
-
-//    /**
-//     * @var Collection
-//     */
-//    public Collection $proglists;
-
     /**
      * @var array
      */
     public array $proglists;
-
     /**
      * @var \MongoDB\BSON\ObjectId
      */
     public ObjectId $progid;
-
     /**
+     * Der Programmname der angeklickt wurde
+     *
      * @var string
      */
     public string $progname = "";
@@ -109,19 +101,11 @@ class SelectProg extends Component
     }
 
 
-//    protected function getListeners(): array
-//    {
-//        return ['saveProg'];
-//    }
-
-
     /**
      * @param $id
      */
     public function wndProgShow()   //$id)
     {
-//        $puser = pusers::where('id', $id)->first();
-//        $this->telefons = $puser->jtelefon;
         $a=0;
     }
 
@@ -147,7 +131,7 @@ class SelectProg extends Component
 
     public function editall()
     {
-        $a=0;
+        $a = 0;
     }
 
     public function clear()
@@ -156,45 +140,25 @@ class SelectProg extends Component
     }
 
 
-
-
-    public function saveProg($value)
+    /**
+     * Wenn ein menüpunkt auf der linken Seite geklicked wurde.
+     * Der Wert wird hier gespeichert.
+     *
+     * @param string $value
+     */
+    public function saveProg(string $value)
     {
         // den prognamen setzen
         $this->progname = $value;
 
+        // den wert der Prog auswahl in eine Sessionvariable speichern
+        $_SESSION['lara']['progname'] = $value;
+
         // fürt ein event aus
         // der listener ist in ProgEdit.php
-//        $this->emit('saveProgEmit', $value);
-        $a=0;
+        $this->emit('saveProgEmit', $value);
 
-        Config::set('lara.progname', $value);
-        $t = Config::get('lara.progname');
-
-        $a=0;
-    }
-
-
-    /**
-     * Hier geht es los (old)
-     */
-    public function mount_old()
-    {
-//        // -- ein Test
-//        $this->testvar = ['Prog', 'Liste'];
-//
-//        // Daten suchen
-//
-//        /**
-//         *
-//         */
-//        $this->proglists = progs::where('itype', '=', 'data')
-//            ->where('active', '=', true)
-//            ->orderBy('name', 'asc')
-//            ->get();
-//
-//        $a = 0;
-//        $FF = $this->emit('saveProg');
+        $a = 0;
     }
 
 
@@ -204,7 +168,8 @@ class SelectProg extends Component
     public function mount()
     {
         // -- yaml daten lesen
-        $yamlarray = yamlData::Read('main');
+        $ydMain = new YamlData('main');
+        $yamlarray = $ydMain->dataToArray();
 
         // -- Menuüberschrift
         $this->brand = $yamlarray['page']['sidemenu']['brand'];

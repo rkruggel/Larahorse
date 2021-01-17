@@ -4,44 +4,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b06b2b6-a6f1-4cec-a9b7-f28d19cd28cc" name="Default Changelist" comment="kdion4891_01 entfernt&#10;codemirror hinzugefügt&#10;prog-edit neu">
-      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/Progs/ProgEdit.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/Start/Start.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/livewire/progs/prog-edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/livewire/start/start.blade.php" afterDir="false" />
+    <list default="true" id="2b06b2b6-a6f1-4cec-a9b7-f28d19cd28cc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Library/HtmlHelpers.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Library/YamlData.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Library/YamlDataInit.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Library/YamlDataLib.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/siteconfig.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Siteconfig/README" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Siteconfig/main.yaml.bak" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Siteconfig/system.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/SAVE_EXITOR.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Library/YamlDataInitTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Library/YamlDataLibTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Library/YamlDataTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SdEditorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SdEditorController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SdPferdeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SdPferdeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SdPuserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SdPuserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StartController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/ProgCreateForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/ProgCreateForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/ProgEdit.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/ProgWnd.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/ProgWnd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/PuserMain.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/PuserMain.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/PuserWndScreen.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/PuserWndScreen.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/PuserWndTelefon.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/PuserWndTelefon.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/SelectProg.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Start/SelectProg.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/ShowPosts.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/ShowPosts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/WndTest1.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/WndTest1.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/EncryptCookies.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/EncryptCookies.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/PreventRequestsDuringMaintenance.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/PreventRequestsDuringMaintenance.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/TrimStrings.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/TrimStrings.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/TrustHosts.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/TrustHosts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/TrustProxies.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/TrustProxies.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/EinstellerCollection.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/EinstellerCollection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/EinstellerResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/EinstellerResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StartController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Progs/ProgEdit.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Progs/ProgEdit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Start/SelectProg.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Start/SelectProg.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Start/Start.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Start/Start.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Library/yamlData.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Siteconfig/demo.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app/Siteconfig/Tests/demoForTest.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Siteconfig/einsteller.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app/Siteconfig/einsteller.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Siteconfig/main.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app/Siteconfig/main.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/prog-edit.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/select-prog.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/start/select-prog.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/start.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/start.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/livewire.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/livewire.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docs/larahorse.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docs/larahorse.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/livewire/livewire.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/livewire/livewire.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/livewire/livewire.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/livewire/livewire.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/livewire/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/livewire/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/progs/prog-edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/progs/prog-edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/start/select-prog.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/start/select-prog.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/start/start.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/start/start.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/start.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +68,7 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="mongo_01" />
+    <option name="BRANCH" value="kdion4891_01" />
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -77,7 +78,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="mongo_01" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -95,16 +96,13 @@
     <servers>
       <server id="877c98d8-0802-4fb5-8ee0-7ee61b75a062" port="8082" />
       <server id="321ebc21-ec98-4726-877e-d31ae88f2238" port="8082" />
-      <server id="2e16d3fd-3064-4d19-a77c-e733c0c2bc43" port="8082" />
-      <server host="_" id="1b019d0c-a660-44e6-b4e1-a684a2116348" name="_" use_path_mappings="true">
-        <path_mappings>
-          <mapping local-root="$PROJECT_DIR$/vendor/symfony/http-client-contracts/Test/Fixtures/web" remote-root="/var/www/html" />
-        </path_mappings>
-      </server>
-      <server id="6e26b74d-3969-4a33-9c65-47a35075042c" port="8082" />
-      <server id="91a1fde2-8eca-4834-b073-990f520e7525" port="8082" />
       <server host="localhost" id="d9204bfd-01d4-45fb-88ca-901d56b636a5" name="Larahorse Server" port="8082" />
-      <server host="" id="9abb5294-0abc-49e0-8196-1079fea1e734" port="8082" />
+      <server id="2e16d3fd-3064-4d19-a77c-e733c0c2bc43" port="8082" />
+      <server id="88fcd7ca-3f03-4c0d-b230-98a2476dafbd" port="8082" />
+      <server id="b0e897d1-4cd8-4cec-aaa5-d5cf2291dd4c" port="8082" />
+      <server id="fb4da5ea-ee70-4716-af99-a6f0ebbf6b8f" port="8082" />
+      <server id="70eeafe0-2a7a-4960-a929-3017324c9aea" port="8082" />
+      <server host="" id="86a7be70-7746-4113-a978-ec03d2cc2a0c" port="8082" />
     </servers>
   </component>
   <component name="PhpWebServerValidation" path_to_validation_script="$PROJECT_DIR$/public" selected_validation_type="LOCAL" web_path_to_validation_script="http://localhost:8082" />
@@ -241,7 +239,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/layouts" />
+    <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests/Unit" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -250,23 +249,41 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="template.copyright.formatting" />
+    <property name="settings.editor.selected.configurable" value="php.test.frameworks.configurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/views/layouts" />
+      <recent name="$PROJECT_DIR$/app/Siteconfig" />
       <recent name="$PROJECT_DIR$/config" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/views/livewire/start" />
-      <recent name="$PROJECT_DIR$/app/Http/Livewire/Start" />
-      <recent name="$PROJECT_DIR$/resources/views/livewire/progs" />
-      <recent name="$PROJECT_DIR$/app/Http/Livewire/Progs" />
+      <recent name="$PROJECT_DIR$/app/Siteconfig/Tests" />
+      <recent name="$PROJECT_DIR$/tests/Unit" />
       <recent name="$PROJECT_DIR$/docs/docs" />
     </key>
   </component>
-  <component name="RunManager" selected="PHP Web Page.Web Page">
+  <component name="RunManager" selected="PHPUnit.YamlDataTest">
+    <configuration name="YamlDataInitTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Library\YamlDataInitTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Library/YamlDataInitTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="YamlDataInitTest.testReadTextFromYamlfile" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Library\YamlDataInitTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Library/YamlDataInitTest.php" method="testReadTextFromYamlfile" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="YamlDataInitTest.testYamlDirEntrys" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Library\YamlDataInitTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Library/YamlDataInitTest.php" method="testYamlDirEntrys" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="YamlDataTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Library\YamlDataTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Library/YamlDataTest.php" method="testReadYamlDbToText" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="YamlDataTest.testReadYamlDbToText" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Library\YamlDataTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Library/YamlDataTest.php" method="testReadYamlDbToText" scope="Method" />
+      <method v="2" />
+    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
@@ -308,7 +325,21 @@
       <item itemvalue="PHP Script.index.php" />
       <item itemvalue="PHP Web Page.Web Page" />
       <item itemvalue="PHPUnit.phpunit.xml" />
+      <item itemvalue="PHPUnit.YamlDataInitTest.testYamlDirEntrys" />
+      <item itemvalue="PHPUnit.YamlDataInitTest" />
+      <item itemvalue="PHPUnit.YamlDataTest.testReadYamlDbToText" />
+      <item itemvalue="PHPUnit.YamlDataInitTest.testReadTextFromYamlfile" />
+      <item itemvalue="PHPUnit.YamlDataTest" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHPUnit.YamlDataTest" />
+        <item itemvalue="PHPUnit.YamlDataTest.testReadYamlDbToText" />
+        <item itemvalue="PHPUnit.YamlDataInitTest" />
+        <item itemvalue="PHPUnit.YamlDataInitTest.testReadTextFromYamlfile" />
+        <item itemvalue="PHPUnit.YamlDataInitTest.testYamlDirEntrys" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -330,13 +361,10 @@
       <workItem from="1607885173678" duration="4526000" />
       <workItem from="1607891494129" duration="6747000" />
       <workItem from="1607936895701" duration="30059000" />
-      <workItem from="1608149756439" duration="1986000" />
-      <workItem from="1608545820328" duration="22000" />
-      <workItem from="1608727071929" duration="2503000" />
-      <workItem from="1609190350591" duration="18357000" />
-      <workItem from="1609670199494" duration="19070000" />
-      <workItem from="1609697500020" duration="26377000" />
-      <workItem from="1609850926851" duration="32516000" />
+      <workItem from="1610481505055" duration="38242000" />
+      <workItem from="1610621101398" duration="38773000" />
+      <workItem from="1610808628948" duration="15209000" />
+      <workItem from="1610825803979" duration="18964000" />
     </task>
     <task id="LOCAL-00001" summary="Debug Konfiguration">
       <created>1607435268406</created>
@@ -429,56 +457,11 @@
       <option name="project" value="LOCAL" />
       <updated>1608033816790</updated>
     </task>
-    <task id="LOCAL-00014" summary="merge">
-      <created>1608033946730</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1608033946730</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Neuer Branch kdion4891_01">
-      <created>1608034303489</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1608034303489</updated>
-    </task>
-    <task id="LOCAL-00016" summary="kdion4891_01 entfernt&#10;codemirror hinzugefügt&#10;prog-edit neu">
-      <created>1609942455327</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1609942455327</updated>
-    </task>
-    <task id="LOCAL-00017" summary="neues copyright für die einzelnen files">
-      <created>1609944581362</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1609944581362</updated>
-    </task>
-    <task id="LOCAL-00018" summary="neues copyright für die einzelnen files">
-      <created>1609944656913</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1609944656913</updated>
-    </task>
-    <task id="LOCAL-00019" summary="copyright in jeder datei einfügen">
-      <created>1609945331145</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1609945331145</updated>
-    </task>
-    <option name="localTasksCounter" value="20" />
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="UpdateCopyrightCheckinHandler">
-    <option name="UPDATE_COPYRIGHT" value="true" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -502,65 +485,67 @@
     <MESSAGE value="Die ersten MongoSeeder erstellt" />
     <MESSAGE value="Die Seeder zu Mongo umgebaut" />
     <MESSAGE value="merge" />
-    <MESSAGE value="Neuer Branch kdion4891_01" />
-    <MESSAGE value="kdion4891_01 entfernt&#10;codemirror hinzugefügt&#10;prog-edit neu" />
-    <MESSAGE value="neues copyright für die einzelnen files" />
-    <MESSAGE value="copyright in jeder datei einfügen" />
-    <option name="LAST_COMMIT_MESSAGE" value="copyright in jeder datei einfügen" />
+    <option name="LAST_COMMIT_MESSAGE" value="merge" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="php">
+        <line-breakpoint type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/SdPuserController.php</url>
           <line>40</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Livewire/ProgCreateForm.php</url>
-          <line>42</line>
-          <option name="timeStamp" value="66" />
+          <url>file://$PROJECT_DIR$/tests/Library/YamlDataTest.php</url>
+          <line>60</line>
+          <option name="timeStamp" value="174" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Livewire/ProgCreateForm.php</url>
-          <line>47</line>
-          <option name="timeStamp" value="67" />
+          <url>file://$PROJECT_DIR$/tests/Library/YamlDataTest.php</url>
+          <line>54</line>
+          <option name="timeStamp" value="175" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Livewire/ProgCreateForm.php</url>
-          <line>52</line>
-          <option name="timeStamp" value="68" />
+          <url>file://$PROJECT_DIR$/tests/Library/YamlDataTest.php</url>
+          <line>83</line>
+          <option name="timeStamp" value="224" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Models/progs.php</url>
-          <line>22</line>
-          <option name="timeStamp" value="69" />
+          <url>file://$PROJECT_DIR$/tests/Library/YamlDataTest.php</url>
+          <line>91</line>
+          <option name="timeStamp" value="225" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/tests/Library/YamlDataTest.php</url>
+          <line>99</line>
+          <option name="timeStamp" value="226" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Livewire/Start/SelectProg.php</url>
-          <line>229</line>
-          <option name="timeStamp" value="70" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/resources/views/livewire/start/select-prog.blade.php</url>
-          <line>39</line>
-          <option name="timeStamp" value="86" />
+          <line>170</line>
+          <option name="timeStamp" value="244" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php-line-method">
-          <url>file://$PROJECT_DIR$/app/Http/Livewire/Start/SelectProg.php</url>
-          <line>160</line>
+          <url>file://$PROJECT_DIR$/app/Library/YamlData.php</url>
+          <line>138</line>
           <properties>
-            <option name="className" value="\App\Http\Livewire\SelectProg" />
-            <option name="methodName" value="saveProg" />
+            <option name="className" value="\App\Library\YamlData" />
+            <option name="methodName" value="updateYamlDb" />
           </properties>
-          <option name="timeStamp" value="81" />
+          <option name="timeStamp" value="230" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
-      <configuration name="index.php">
-        <watch expression="$tpp[1]-&gt;name" language="PHP" />
-      </configuration>
+      <inline-watch fileUrl="file://$PROJECT_DIR$/app/Library/YamlDataInit.php" line="144">
+        <watch expression="$pp" language="PHP" />
+      </inline-watch>
+      <inline-watch fileUrl="file://$PROJECT_DIR$/app/Library/YamlDataInit.php" line="144">
+        <watch expression="$pp[0]" language="PHP" />
+      </inline-watch>
+      <inline-watch fileUrl="file://$PROJECT_DIR$/app/Library/YamlDataInit.php" line="144">
+        <watch expression="$pp" language="PHP" />
+      </inline-watch>
     </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">

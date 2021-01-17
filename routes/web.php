@@ -19,7 +19,7 @@ use App\Http\Controllers\SdPuserController;
 //use App\Http\Controllers\StartController;
 use App\Http\Controllers\SdEditorController;
 use Illuminate\Support\Facades\Route;
-
+use App\Library\YamlDataInit;
 
 /*
 |--------------------------------------------------------------------------
@@ -62,7 +62,27 @@ Route::get('/', \App\Http\Livewire\Start\Start::class);
 //    return view('livewire.prog-edit');
 //})->name('prog-admin');
 
-Route::get('/prog/admin', \App\Http\Livewire\Progs\ProgEdit::class);
+/**
+ * Der Admin 'prog' Bereich. Hier wird die Auswahl des 'Progs' und
+ *  die administratio der Progs-Liste
+ *
+ * @example https://example.org/?a=1;b=2;c=3
+ * @example https://example.org/a/b/c
+ */
+Route::get('/prog/admin/{yamltype}/{yamlname}', \App\Http\Livewire\Progs\ProgEdit::class);
+
+Route::post('/prog/admin/saveeditor', function ($ikk) {
+    $a = 0;
+});
+Route::get('/init', function () {
+    $co = (new YamlDataInit())->initYamlDb();
+//    return redirect('/');
+    return "init fertig: $co";
+});
+
+//Route::get('/prog/admin', '\App\Http\Livewire\Progs\ProgEdit@show1');
+
+//Route::get('/prog/admin/{type}/{value}', '\App\Http\Livewire\Progs\ProgEdit@show2');
 
 
 /**

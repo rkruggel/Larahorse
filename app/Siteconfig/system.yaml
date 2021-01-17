@@ -1,0 +1,33 @@
+# file:         system.yaml
+# date:         03.02.2021
+# author:       rkruggel
+# last change:  11.01.2021
+
+# Die erste Seite von Larahorse
+
+system:
+  author: Roland M. Kruggel
+  date: Dez. 2020
+  allow: [ roland, petra, name3 ]  # Diese sind normale User. Sie dürfen das Programm ausführen.
+  deny: [ august, friedolin ]     # Diese User sind gesperrt
+  root: [ roland, tom ]            # Der User darf alles
+
+page:
+  main:
+    type: mainsite
+    id: mainsiteid
+  header:
+    text: Einsteller
+
+
+  # Das Topmenu. Das obere Menu
+  topmenu:
+    brand: Larahorse
+    pos: top         # [null, top, left, right, bottom]
+    1: { name: puser, label: Puser, desc: null, exec: load_puser() }
+    2: { name: enterprise, label: Enterprise, desc: null, exec: load_einsteller() }
+    3: { name: einsteller, label: Einsteller, desc: null, exec: load_einsteller() }
+    4: { name: support, label: Support, desc: null, exec: load_einsteller() }
+    5: { name: pricing, label: Pricing, desc: null, exec: load_einsteller() }
+
+

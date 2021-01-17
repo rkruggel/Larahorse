@@ -33,13 +33,13 @@
         "livewire/livewire": "^2.3",
         "mongodb/mongodb": "^1.8",
         "php-kit/ext-pdo": "^1.1",
+        "phpunit/phpunit": "^9.5",
         "symfony/yaml": "^5.2"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
         "mockery/mockery": "^1.4",
-        "nunomaduro/collision": "^5.1",
-        "phpunit/phpunit": "^9.4"
+        "nunomaduro/collision": "^5.1"
     },
     "config": {
         "optimize-autoloader": true,

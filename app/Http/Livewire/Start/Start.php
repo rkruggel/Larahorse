@@ -16,29 +16,47 @@
 
 namespace App\Http\Livewire\Start;
 
-use App\Http\Controllers\Controller;
-use App\Library\yamlData;
+use App\Library\YamlData;
 use Livewire\Component;
+use Symfony\Component\Yaml\Yaml;
+
+session_start();
 
 class Start extends Component
 {
-    public array $body;
+    public array $body;         // plan: entfallen
+
+    public array $yamlsystem;
+    public array $yamlmain;
+    public string $tit;
+    public string $progname;
+
+    protected $listeners = ['saveProgEmit' => 'saveProgEmit'];
 
     public function mount()
     {
-        // -- yaml daten lesen
-        $yamlarray = yamlData::Read('main');
+        $this->tit = 'lara';
+        $ydSystem = new YamlData('main');
+        $ydMain = new YamlData('main');
+        $this->yamlsystem = $ydSystem->dataToArray();
+        $this->yamlmain = $ydMain->dataToArray();
+
 
         // -- Der seitencontent
-        $this->body = $yamlarray['page']['body'];
+        $this->body = $this->yamlmain['page']['body'];
 
-        session('lara.progname', '-.-');
+        $this->progname = '#.##';
+    }
 
+    public function saveProgEmit($value)
+    {
+        $this->progname = $_SESSION['lara']['progname'];
     }
 
     public function render()
     {
-        return view('livewire.start.start');
+        return view('livewire.start.start')
+            ->with('tit', $this->tit);
     }
 }
 

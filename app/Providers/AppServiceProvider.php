@@ -15,6 +15,8 @@
 
 namespace App\Providers;
 
+use App\Library\YamlData;
+use Exception;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\ServiceProvider;
@@ -32,6 +34,7 @@ class AppServiceProvider extends ServiceProvider
 
 
     }
+//    public $yamlsys;
 
     /**
      * Bootstrap any application services.
@@ -40,16 +43,30 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-//        Blade::component('layouts.components.test-component', 'tc');
-//        $value = session('progname');
-//        $value = config('rk_progname');
-//
-//        view()->composer('layouts.master', function ($view) use ($value) {
-//            $view->with('value', $value);
+//        view()->composer('app', function($view) {
+//            $yamlsystem = YamlData::Read('system');
+//            $view->with('topmenu', $yamlsystem['page']['topmenu']);
+//            $a=0;
 //        });
 
-//        $t = Config::get('lara.progname');
-//        view()->share('value', $t);
+        try {
+            $yamldata = new YamlData('main');
+            $fag = $yamldata->dataToArray();
+            $vie = $fag['topmenu'];
+        } catch (Exception $e) {
+            $vie = '--';
+        }
 
+//        view()->composer('app', function($view) {
+//            $yamlsystem = YamlData::Read('system');
+//            $this->yamlsys = $yamlsystem;
+//            $view->with('topmenu', $this->yamlsys['page']['topmenu']);
+//        });
+
+        view()->share([
+            'topmenu' => $vie,
+            'testnr' => 1000
+        ]);
+        $a = 0;
     }
 }

@@ -1,0 +1,20 @@
+YAML - Files
+
+Die Yaml-Files sind Configfiles. Die hier abgelegten Files
+sind Basis Config Files. Sie werden bei einer Neuinstallation verwendet.
+Files in diesem Verzeichnis werden in die Datenbank kopiert.
+
+collection
+    siteconfig:
+        id:    id       #
+        key:   string   # name der yaml-datei ohne die extension (Bspl.: main)
+        data:  string   # die daten der yaml-datei
+
+Init
+----
+Wenn das Programm Larahorse gestartet wird werden zu jedem Dir-Eintrag der
+entsprechende key in der Datenank gesucht. Wenn er nicht gefunden wird, wir
+der Key und die Yaml-Daten eingetragen.
+
+Alle weiteren Aktionen, wie lesen und ändern der Configdaten, erfolgt nur mit
+den Daten der Datenbank.
