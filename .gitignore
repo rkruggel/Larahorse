@@ -7,8 +7,6 @@ public/css/tmpcompile
 public/ace/
 public/jqwidgets/
 
-
-
 storage/*.key
 .env
 Homestead.yaml
@@ -17,4 +15,5 @@ Homestead.json
 .phpunit.result.cache
 .ztr-directory
 *.log
+*.bak
 
