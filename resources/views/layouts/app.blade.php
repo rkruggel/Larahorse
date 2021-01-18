@@ -69,60 +69,70 @@
 
 {{--<body class="d-flex flex-column h-100">--}}
 <body>
-<div id="app">
 
-    <!-- (rk) Menue  (app.blade.php) -->
-    <header>
-        <div
-            class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-            <a class="my-0 mr-md-auto font-weight-normal text-dark" href="{{ url('/') }}">
-                {{ $topmenu['brand'] ?? '' }} &nbsp;&nbsp;
-                ( {{ $_SESSION['lara']['progname'] ?? '' }} )
-            </a>
-            <nav class="my-2 my-md-0 mr-md-3">
-                @foreach($topmenu['menu'] as $tp)
-                    <a class="p-2 text-dark btn-link" href="{{ $tp['url'] }}"
-                       data-toggle="tooltip" data-html="true" title="{{ $tp['desc'] }}">
-                        {{$tp['label']}}
-                    </a>
-                @endforeach
-            </nav>
-            <a class="btn btn-outline-primary btn-sm disabled" href="#">Sign up</a>
-        </div>
-    </header>
+<div class="skippy overflow-hidden">
+    <div class="container-xl">
+        <a class="visually-hidden-focusable d-inline-flex p-2 m-1" href="#content">Skip to main content</a>
+        <a class="visually-hidden-focusable d-none d-md-inline-flex p-2 m-1" href="#bd-docs-nav">Skip to docs
+            navigation</a>
+    </div>
+</div>
 
-{!! $errors->first('email', '<div class="error-block">:message</div>') !!}
+<!-- (rk) Menue  (app.blade.php) -->
+<header>
+    <div class="navbar navbar-expand-md fixed-top bg-white border-bottom shadow-sm p-3 px-md-4 mb-4">
+        <a class="mx-4 mr-md-auto font-weight-bold text-dark" href="{{ url('/') }}">
+            {{ $topmenu['brand'] ?? '' }} &nbsp; &nbsp; ( {{ $_SESSION['lara']['progname'] ?? '' }} )
+        </a>
+        <nav class="my-2 my-md-0 mr-md-3">
+            <div class="collapse navbar-collapse" id="bdNavbar">
+                <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
+                    @foreach($topmenu['menu'] as $tp)
+                        <li class="nav-item col-6 col-md-auto">
+                            <a class="p-2 text-dark btn-link" href="{{ $tp['url'] }}"
+                               data-toggle="tooltip" data-html="true" title="{{ $tp['desc'] }}">
+                                {{$tp['label']}}
+                            </a>
+                        </li>
+                    @endforeach
+                </ul>
+            </div>
+        </nav>
+        <!-- ein button -->
+        <!-- <a class="btn btn-outline-primary btn-sm disabled" href="#">Sign up</a> -->
+    </div>
+</header>
+
 
 <!-- (rk) Begin page content  (master.blade.php) -->
-    <main role="main" class="flex-shrink-0">
-        <div class="container-fluid p-3 p-md-5">
-            {{--                @ yield('content')--}}
-            {{ $slot  }}
-        </div>
-    </main>
-
-    <!-- (rk) beginn footer (master.blade.php) -->
-        <footer class="bd-footer text-muted fixed-bottom">
-            <hr>
-                <div class="container-fluid mx-3">
-                <p>
-                    {{ config('app.name') }} v0.0.1.; Date Okt. 2020; Author Roland Kruggel; Licensed
-                    <a href="https://opensource.org/licenses/MIT" target="_blank" rel="license noopener">MIT</a>
-                </p>
-            </div>
-        </footer>
-
+<main role="main" class="flex-shrink-0">
+    ---
+    <div class="container-fluid p-3 p-md-5">
+        {{--                @ yield('content')--}}
+        {{ $slot  }}
     </div>
+</main>
+
+<!-- (rk) beginn footer (master.blade.php) -->
+<footer class="bd-footer text-muted fixed-bottom">
+    <hr>
+    <div class="container-fluid mx-3">
+        <p>
+            {{ config('app.name') }} v0.0.1.; Date Okt. 2020; Author Roland Kruggel; Licensed
+            <a href="https://opensource.org/licenses/MIT" target="_blank" rel="license noopener">MIT</a>
+        </p>
+    </div>
+</footer>
 
 
-    <!-- (rk) Modal window content (stack('modal'))  (master.blade.php) -->
-    @yield('modal')
+<!-- (rk) Modal window content (stack('modal'))  (master.blade.php) -->
+@yield('modal')
 
-    <!-- (rk) bottom-stack script (stack('scriptOnBottom'))  (master.blade.php) -->
-    @stack('scriptOnBottom')
+<!-- (rk) bottom-stack script (stack('scriptOnBottom'))  (master.blade.php) -->
+@stack('scriptOnBottom')
 
-    <!-- (rk) Das Livewire Script (master.blade.php) -->
-    @livewireScripts
+<!-- (rk) Das Livewire Script (master.blade.php) -->
+@livewireScripts
 
     <!-- (rk) ende -->
 </body>
