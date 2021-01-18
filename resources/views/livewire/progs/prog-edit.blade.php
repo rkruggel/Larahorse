@@ -4,10 +4,15 @@
         .CodeMirror {
             border: 1px solid black;
             font-size: 13px;
-            /*max-width: 1000px;*/
-            max-height: 600px;
-            /*width: 100%;*/
+            /*width: 80%;*/
             /*height: 100%;*/
+            width: auto;
+            height: auto;
+        }
+
+        textarea {
+            background-color: #4a5568;
+            margin: 120px;
         }
     </style>
 @endpush
@@ -18,11 +23,18 @@
             /*
              Erstellt über der <textarea> einen editor
             */
-            var myCodeMirror = CodeMirror.fromTextArea(document.getElementById("code"), {
+            var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
                 lineNumbers: true,
                 styleActiveLine: true,
                 matchBrackets: true,
                 mode: 'yaml'
+            });
+
+            editor.setOption("extraKeys", {
+                Tab: function (cm) {
+                    var spaces = Array(cm.getOption("indentUnit") + 1).join(" ");
+                    cm.replaceSelection(spaces);
+                }
             });
 
             /*
@@ -31,7 +43,7 @@
              */
             function savefiles(opl) {
                 // Editor-Daten holen
-                let edata = myCodeMirror.getValue();
+                let edata = editor.getValue();
                 // Speichert die geänderten Editor-Daten in dem PHP-Filed $yamlback
             @this.yamlback
                 = edata;
@@ -44,6 +56,17 @@
 @endonce
 
 <div>
+
+    @if (session()->has('message'))
+        <div id="alert">
+            <div class="alert alert-danger" role="alert">
+                {{ session('message') }}
+            </div>
+            <button type="button" class="btn btn-primary btn-sm" onclick="document.getElementById('alert').remove();">
+                Close
+            </button>
+        </div>
+    @endif
 
     {{ $_SESSION['lara']['progname'] ??  'nix' }}
 
@@ -72,13 +95,12 @@
         </div>
 
 
-        <textarea id="code" name="code" style="height: 400px; width:800px;">
-            {{ $yamltext->data }}
-        </textarea>
+        <textarea id="code" name="code">{{ $yamltext }}</textarea>
+
         <p style="font-size: 11px; font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace" ;>
-            <b>key:</b> {{ $yamltext->key }} &nbsp;&nbsp;
-            <b>created:</b> {{ $yamltext->created_at }} &nbsp;&nbsp;
-            <b>last modified</b> {{ $yamltext->updated_at }}
+            <b>key:</b> {{ $siteconfig->key }} &nbsp;&nbsp;
+            <b>created:</b> {{ $siteconfig->created_at }} &nbsp;&nbsp;
+            <b>last modified</b> {{ $siteconfig->updated_at }}
         </p>
 
     </form>

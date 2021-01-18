@@ -18,17 +18,28 @@ namespace App\Http\Livewire\Progs;
 
 use App\Library\YamlData;
 use App\Models\siteconfig;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Route;
 use Livewire\Component;
+use Symfony\Component\Yaml\Yaml;
 
 class ProgEdit extends Component
 {
     /**
      * @var string
      */
-//    public ?string $yamltext = '';
-    public siteconfig $yamltext;
+    public ?string $yamltext = '';
+    /**
+     * @var siteconfig|mixed
+     */
+    public $siteconfig;
+    /**
+     * @var YamlData|mixed
+     */
+    protected $yamlData;
+
+
     public string $yamlback = '';
 
     public bool $isfiletype = false;
@@ -56,47 +67,35 @@ class ProgEdit extends Component
      * mitgegeben werden oder es wird eine globale Variable gesetzt.
      *
      * @param $value 'Die geänderen Editordaten'
+     * @throws \Exception
      */
     public function editorSave($value)
     {
-//        $ra = $this->yamltext;
-//        $rb = $this->yamlback;
-//
-//        $ast_org = strlen($this->yamltext);
-//        $ast_neu = strlen($this->yamlback);
-
-//        $this->editorWrite('main', trim($value));
-//        $this->yamlfilename = $_SESSION['lara']['yamlfilename'];
-
-        if ($this->yamltext->data != $value) {
-            $this->yamltext->data = $value;
-            YamlData::updateYamlDb($this->yamltext);
+        // Testen ob die Yaml valide ist
+        try {
+            $aa = Yaml::parse($value);
+        } catch (Exception $e) {
+            session()->flash('message', "Yaml not valide: " . $e->getMessage());
+            return;
         }
+
+        $this->yamlData = new YamlData($this->yamlfilename);
+        $this->yamlData->updateYamlDb($value);
 
         $this->redirect('/');
     }
-
 
     /**
      * Yaml laden
      *
      * @param string $name
+     * @throws \Exception
      */
     public function editorLoad(string $name)
     {
-        $this->yamltext = YamlData::   readYamlDbToText($name); //    ReadText($name);
-    }
-
-    /**
-     * Yaml speichern
-     *
-     * @param string|null $name
-     * @param string $value
-     */
-    public function editorWrite(?string $name, string $value)
-    {
-//        YamlData::WriteText($name, $value);
-        YamlData::updateYamlDb();
+        $this->yamlData = new YamlData($name);
+        $this->siteconfig = $this->yamlData->sitecfg;
+        $this->yamltext = $this->yamlData->dataToString();
     }
 
 

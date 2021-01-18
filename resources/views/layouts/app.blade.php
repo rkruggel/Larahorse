@@ -91,15 +91,17 @@
         </div>
     </header>
 
-    <!-- (rk) Begin page content  (master.blade.php) -->
+{!! $errors->first('email', '<div class="error-block">:message</div>') !!}
+
+<!-- (rk) Begin page content  (master.blade.php) -->
     <main role="main" class="flex-shrink-0">
         <div class="container-fluid p-3 p-md-5">
             {{--                @ yield('content')--}}
             {{ $slot  }}
-            </div>
-        </main>
+        </div>
+    </main>
 
-        <!-- (rk) beginn footer (master.blade.php) -->
+    <!-- (rk) beginn footer (master.blade.php) -->
         <footer class="bd-footer text-muted fixed-bottom">
             <hr>
                 <div class="container-fluid mx-3">

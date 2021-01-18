@@ -59,17 +59,22 @@ class YamlData
     private string $SITE_CONFIG_PFAD;
 
     /**
-     * Die Collection der DB für die Yaml-Daten
+     * Die Instanz des Model
+     *
+     * @var siteconfig
      */
-    private YamlDataLib $yamlDataLib;
-
     public siteconfig $sitecfg;
 
 
+    /**
+     * YamlData constructor.
+     *
+     * @param string $configname
+     * @throws Exception
+     */
     public function __construct(string $configname)
     {
         $this->SITE_CONFIG_PFAD = env('IS_UNIT_TEST') ? 'app/Siteconfig/Tests' : '../app/Siteconfig/';
-        $this->yamlDataLib = new YamlDataLib();
 
         $this->sitecfg = siteconfig::where('key', $configname)->first();
 
@@ -79,63 +84,40 @@ class YamlData
 
     }
 
-    public function dataToString()
+    /**
+     * Das Data-Feld als String. Das ist das original.
+     *
+     * @return string|null
+     */
+    public function dataToString(): ?string
     {
         return $this->sitecfg->data;
     }
 
-    public function dataToArray()
+    /**
+     * Das Data-Feld als Array. Umgewandelt mit Yaml::parse
+     *
+     * @return array
+     */
+    public function dataToArray(): array
     {
-        $ary = Yaml::parse($this->sitecfg->data);
-        return $ary;
+        return Yaml::parse($this->dataToString());
     }
-
-//    /**
-//     * Liest ein yaml-File und gibt ein PHP-Array zurück
-//     *
-//     * @param string $yamlfile
-//     * @param string $itemKey
-//     * @return array
-//     * @throws Exception
-//     */
-//    public function readYamlDbToArray(string $yamlfile, string $itemKey = 'all'): array
-//    {
-//        $yamlData = new YamlData();
-//        $yamlstring = $yamlData->readYamlDbToText($yamlfile);
-//        $yamlarray = Yaml::parse($yamlstring);
-//
-//        return $yamlarray;
-//    }
-//
-
-//    /**
-//     * liest Daten aus der Yaml-DB als Text
-//     *
-//     * @param string $configname
-//     * @return string
-//     * @throws Exception
-//     */
-//    public function readYamlDbToText(string $configname): string
-//    {
-//        $sconfig = siteconfig::where('key', $configname)->first();
-//
-//        if(!$sconfig) {
-//            throw new Exception( "Der yaml '$configname' wurde nicht gefunden", );
-//        }
-//
-//        return $sconfig->data;
-//    }
 
     /**
      * updated Text Daten in der Yaml-DB
      *
-     * @param siteconfig $sconfig
+     * @param string $value
      * @return bool
      */
-    public function updateYamlDb(siteconfig $sconfig): bool
+    public function updateYamlDb(string $value): bool
     {
-//        $erg = $sconfig->save();
-        return $erg;
+        if ($this->sitecfg->data != $value) {
+            $this->sitecfg->data = $value;
+            return $this->sitecfg->save();
+        }
+
+        return true;
     }
 
 }
