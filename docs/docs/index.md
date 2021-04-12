@@ -21,8 +21,8 @@ some_url:
     URL: https://rkruggel.github.io/Larahorse-docs/
     
 
-# Larahorse und Stall
-Larahorse und Stall ist ein Programm zur selbsterstellung von Dantenverarbeitungen / -verwaltung. Als Beispiel haben wir eine Verwaltung von Pferdeställe und Pferdestallbetrieben beschrieben.
+# Larahorse
+Larahorse ist ein Programm zur Selbsterstellung von Datenverarbeitungen / -verwaltung. Als Beispiel haben wir eine Verwaltung von Pferdeställe und Pferdestallbetrieben beschrieben.
 
 ## Larahorse
 Larahorse ist ein vom Benutzer erweiterbares System. Es können verschiedene Tabellen und die dazugehörigen Webseiten erstellt werden. Alle Attribute der Tabellen und Seiten sind frei definierbar. Abhängigkeiten von verschiedenen Tabellen können ebenso definiert werden.
