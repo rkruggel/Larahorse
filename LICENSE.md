@@ -1,4 +1,4 @@
-# Gpl - License
+# LGPL - License
 
  -T-h-e- -M--- --i---n-s-e- -(-M-)-
 
