@@ -4,7 +4,7 @@ Larahorse ist ein Programm zum erstellen von Anwendungen die in erster Linie Dat
 
 Larahorse ist eine Webanwendung und benötigt zum benutzen nur einen Browser.
 
-Als Test und Demoprogramm implementiert Larahorse ein 'Programm zur Verwaltung von Pferdeställe und 
+Als Test und Demoprogramm implementiert Larahorse das Programm __Stall__ 'Programm zur Verwaltung von Pferdeställe und 
 Pferdestallbetrieben'.
 
 --  
