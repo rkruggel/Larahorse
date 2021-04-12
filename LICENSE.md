@@ -1,4 +1,5 @@
-### The MIT License (MIT)
+# Gpl
+ -T-h-e- -M-I-T- -L-i-c-e-n-s-e- -(-M-I-T-)-
 
 Copyright (c) Roland Kruggel,  2020, 2021
 
