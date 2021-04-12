@@ -1,6 +1,6 @@
-###The MIT License (MIT)
+### The MIT License (MIT)
 
-Copyright (c) 2020, Roland Kruggel
+Copyright (c) Roland Kruggel,  2020, 2021
 
 Permission is hereby granted, free of charge, to any person obtaining a 
 copy of this software and associated documentation files 
