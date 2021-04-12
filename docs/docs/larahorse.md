@@ -1,6 +1,6 @@
 ---
 title: Larahorse
-summary: Copyright und Texhnik
+summary: Copyright und Technik
 authors:
     - Roland Kruggel
 date: 2020-12-05
