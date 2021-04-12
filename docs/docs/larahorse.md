@@ -11,13 +11,13 @@ some_url:
 
 ## Copyright
 Author Roland Kruggel   
-Copyright (c) Roland Kruggel, Aug. 2020   
+Copyright (c) Roland Kruggel, Aug. 2020, 2021
 Alle Rechte vorbehalten
 
 Larahorse steht unter der MIT-Lizenz.
 
 ## Install
-Die Installation wird im moment noch von uns händisch durchgeführt. Sie bekommen eine URL und ein Account. Mehr ist ja nicht nötig.
+Die Installation wird im Moment noch von uns händisch durchgeführt. Sie bekommen eine URL und ein Account. Mehr ist ja nicht nötig.
 
 ## Technik
 Für die die es interessiert beschreibe ich hier die Technik die verwendet wird. Sie wird zwar nicht bis in kleinste
