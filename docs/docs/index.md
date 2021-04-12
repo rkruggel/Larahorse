@@ -22,14 +22,14 @@ some_url:
     
 
 # Larahorse
-Larahorse ist ein Programm zur Selbsterstellung von Datenverarbeitungen / -verwaltung. Als Beispiel haben wir eine Verwaltung von Pferdeställe und Pferdestallbetrieben beschrieben.
+_Larahorse_ ist ein Programm zum Erstellen von Anwendungen die in erster Linie Daten speichern, verwalten und mit Verknüpfungen untereinander verbinden. Es können alle Seiten und alle Felder frei definiert werden und mit beliebigen Verknüpfungen versehen werden. Somit lassen sich sehr viele Daten-Applikationen erstellen ohne das ein neues Programm geschrieben werden muss. Auch Erweiterungen sind einfach realisierbar.
 
-## Larahorse
-Larahorse ist ein vom Benutzer erweiterbares System. Es können verschiedene Tabellen und die dazugehörigen Webseiten erstellt werden. Alle Attribute der Tabellen und Seiten sind frei definierbar. Abhängigkeiten von verschiedenen Tabellen können ebenso definiert werden.
+_Larahorse_ ist ein vom Benutzer erweiterbares System. Es können verschiedene Tabellen und die dazugehörigen Webseiten erstellt werden. Alle Attribute der Tabellen und Seiten sind frei definierbar. Abhängigkeiten von verschiedenen Tabellen können ebenso definiert werden.
 
-Larahorse ist als Webanwendung erstellt und kann somit von überall aus aufgerufen werden vo ein Brauser und ein Internet zur Verfügung steht. 
+_Larahorse_ ist als Webanwendung erstellt und kann somit von überall aus aufgerufen werden vo ein Brauser und ein Internet zur Verfügung steht. 
+
 
 ## Stall
-Damit die Beispiele und Erklärungen nicht zu abstrakt und theoretisch werden, haben wir die Doku an ein festes Beispiel gehängt. Eine Pferde-Stallverwaltung namens *Stall*. Es hätte genausogut eine Lagerverwaltung für Maschinenteile oder eine Kunden- und Pflanzverwaltung für Friedhofsgärtner sein können.
+Damit die Beispiele und Erklärungen nicht zu abstrakt und theoretisch werden, haben wir die Doku an ein Beispiel gehängt. Ein _Programm zur Verwaltung von Pferdeställe und Pferdestallbetrieben_ namens *Stall*. Es hätte genausogut eine Lagerverwaltung für Maschinenteile oder eine Kunden- und Pflanzverwaltung für Friedhofsgärtner sein können.
 
 *Stall* ist hier nur eine exemplarische Anwendung.
