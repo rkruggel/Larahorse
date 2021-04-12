@@ -1,3 +1,3 @@
-#Larahorse  - Install
+# Larahorse - Install
 
 kommt noch
