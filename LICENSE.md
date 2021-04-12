@@ -1,5 +1,6 @@
-# Gpl
- -T-h-e- -M-I-T- -L-i-c-e-n-s-e- -(-M-I-T-)-
+# Gpl - License
+
+ -T-h-e- -M--- --i---n-s-e- -(-M-)-
 
 Copyright (c) Roland Kruggel,  2020, 2021
 
